@@ -1,0 +1,377 @@
+/**
+ * ORIGAMI ADVENTURE - DESIGN SYSTEM
+ * 
+ * This file contains all design tokens and theme variables for easy customization.
+ * Modify values here to change the entire look and feel of the game.
+ */
+
+/* ========================================
+   DESIGN TOKENS - CORE VALUES
+   ======================================== */
+
+:root {
+  /* --- SPACING SYSTEM --- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+
+  /* --- TYPOGRAPHY --- */
+  --font-primary: "Roboto", sans-serif;
+  --font-display: "Yuji Syuku", serif;
+
+  --font-size-xs: 0.85em;
+  --font-size-sm: 1em;
+  --font-size-base: 1.2em;
+  --font-size-md: 1.3em;
+  --font-size-lg: 1.4em;
+  --font-size-xl: 1.8em;
+  --font-size-2xl: 2.4em;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* --- BORDER RADIUS --- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 50%;
+
+  /* --- SIZING --- */
+  --button-size-sm: 40px;
+  --button-size-md: 48px;
+  --button-size-lg: 52px;
+
+  --icon-size-sm: 18px;
+  --icon-size-md: 22px;
+  --icon-size-lg: 28px;
+
+  /* --- TRANSITIONS --- */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.2s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+  --transition-theme: 0.3s;
+
+  /* --- Z-INDEX LAYERS --- */
+  --z-base: 1;
+  --z-elevated: 10;
+  --z-modal: 100;
+  --z-tooltip: 1000;
+}
+
+/* ========================================
+   LIGHT THEME (DEFAULT)
+   ======================================== */
+
+:root {
+  /* --- BACKGROUND COLORS --- */
+  --bg-main: #e0e0e0;
+  --bg-elevated: #f0f0f0;
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+
+  /* --- PANEL STYLES --- */
+  --panel-bg: rgba(240, 240, 240, 0.8);
+  --panel-bg-solid: #f0f0f0;
+  --panel-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* --- TEXT COLORS --- */
+  --text-primary: #121212;
+  --text-color: var(--text-primary);
+  --text-secondary: #555555;
+  --text-tertiary: #888888;
+
+  /* --- ACCENT COLORS --- */
+  --color-gold: #b8860b;
+  --color-success: #2e7d32;
+  --color-danger: #c62828;
+  --color-interactive: #3f51b5;
+  --color-puzzle: #ffa000;
+  --color-combat: #d32f2f;
+
+  /* --- BORDER & DIVIDERS --- */
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-width: 1px;
+  --divider-color: rgba(0, 0, 0, 0.1);
+
+  /* --- NEUMORPHIC SHADOWS --- */
+  --shadow-light-1: #bebebe;
+  --shadow-light-2: #ffffff;
+  --neu-shadow: 5px 5px 10px var(--shadow-light-1),
+    -5px -5px 10px var(--shadow-light-2);
+  --neu-shadow-inset: inset 5px 5px 10px var(--shadow-light-1),
+    inset -5px -5px 10px var(--shadow-light-2);
+
+  /* --- GLASS EFFECTS --- */
+  --glass-bg: rgba(240, 240, 240, 0.8);
+  --glass-blur: 12px;
+
+  /* --- SCROLLBAR --- */
+  --scrollbar-track: rgba(0, 0, 0, 0.2);
+  --scrollbar-thumb: rgba(136, 136, 136, 0.5);
+  --scrollbar-thumb-hover: rgba(136, 136, 136, 0.7);
+
+  /* --- BUTTONS --- */
+  --button-bg-start: #fefdf9;
+  --button-bg-end: #f3ede2;
+  --button-text: #2f2518;
+  --button-border: rgba(82, 67, 50, 0.25);
+  --button-shadow: 8px 10px 18px rgba(0, 0, 0, 0.08),
+    -4px -4px 12px rgba(255, 255, 255, 0.9);
+  --button-shadow-hover: 6px 8px 16px rgba(0, 0, 0, 0.12),
+    -3px -3px 10px rgba(255, 255, 255, 0.8);
+  --button-shadow-active: inset 4px 4px 8px rgba(0, 0, 0, 0.08),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+
+  /* --- GRADIENTS --- */
+  --gradient-radial-1: radial-gradient(
+    at 0% 0%,
+    hsla(0, 0%, 100%, 0.04) 0px,
+    transparent 50%
+  );
+  --gradient-radial-2: radial-gradient(
+    at 100% 100%,
+    hsla(0, 0%, 100%, 0.06) 0px,
+    transparent 50%
+  );
+}
+
+/* ========================================
+   DARK THEME
+   ======================================== */
+
+body.dark-mode {
+  /* --- BACKGROUND COLORS --- */
+  --bg-main: #111827; /* Cool dark gray (Gray 900) */
+  --bg-elevated: #1f2937; /* Gray 800 */
+  --bg-overlay: rgba(0, 0, 0, 0.85);
+
+  /* --- PANEL STYLES --- */
+  --panel-bg: rgba(31, 41, 55, 0.95); /* Less transparent for readability */
+  --panel-bg-solid: #1f2937;
+  --panel-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+
+  /* --- TEXT COLORS --- */
+  --text-primary: #f9fafb; /* Gray 50 - High contrast */
+  --text-color: var(--text-primary);
+  --text-secondary: #d1d5db; /* Gray 300 - WCAG AA Pass */
+  --text-tertiary: #9ca3af; /* Gray 400 - WCAG AA Pass */
+
+  /* --- ACCENT COLORS --- */
+  --color-gold: #fbbf24; /* Amber 400 - Brighter gold */
+  --color-success: #34d399; /* Emerald 400 */
+  --color-danger: #f87171; /* Red 400 */
+  --color-interactive: #818cf8; /* Indigo 400 */
+  --color-puzzle: #fbbf24;
+  --color-combat: #f87171;
+
+  /* --- BORDER & DIVIDERS --- */
+  --border-color: rgba(255, 255, 255, 0.15);
+  --divider-color: rgba(255, 255, 255, 0.1);
+
+  /* --- NEUMORPHIC SHADOWS (Dark on Dark) --- */
+  --shadow-dark-1: #0f131a;
+  --shadow-dark-2: #2a3544;
+  --neu-shadow: 5px 5px 10px var(--shadow-dark-1),
+    -5px -5px 10px var(--shadow-dark-2);
+  --neu-shadow-inset: inset 5px 5px 10px var(--shadow-dark-1),
+    inset -5px -5px 10px var(--shadow-dark-2);
+
+  /* --- GLASS EFFECTS --- */
+  --glass-bg: rgba(31, 41, 55, 0.8);
+  --glass-blur: 16px;
+
+  /* --- SCROLLBAR --- */
+  --scrollbar-track: #111827;
+  --scrollbar-thumb: #4b5563;
+  --scrollbar-thumb-hover: #6b7280;
+
+  /* --- BUTTONS --- */
+  --button-bg-start: #374151;
+  --button-bg-end: #1f2937;
+  --button-text: #f9fafb;
+  --button-border: rgba(255, 255, 255, 0.1);
+  --button-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --button-shadow-hover: 6px 6px 12px var(--shadow-dark-1),
+    -6px -6px 12px var(--shadow-dark-2);
+  --button-shadow-active: var(--neu-shadow-inset);
+
+  /* --- GRADIENTS --- */
+  --gradient-radial-1: radial-gradient(
+    at 0% 0%,
+    hsla(0, 0%, 100%, 0.02) 0px,
+    transparent 50%
+  );
+  --gradient-radial-2: radial-gradient(
+    at 100% 100%,
+    hsla(0, 0%, 100%, 0.03) 0px,
+    transparent 50%
+  );
+}
+
+/* ========================================
+   COMPONENT-SPECIFIC VARIABLES
+   ======================================== */
+
+:root {
+  /* --- ADVENTURE LOG --- */
+  --log-height: calc(30vh - 150px);
+  --log-min-height: 120px;
+  --log-bg: rgba(0, 0, 0, 0.2);
+  --log-padding: 0 var(--space-sm);
+
+  /* --- INPUT --- */
+  --input-padding: var(--space-md) var(--space-3xl);
+  --input-focus-ring: 0 0 0 2px var(--color-interactive);
+
+  /* --- LEVEL DISPLAY --- */
+  --level-display-size: 52px;
+  --level-display-border: 2px solid var(--color-success);
+
+  /* --- GUIDE BUTTONS --- */
+  --guide-button-height: 40px;
+  --guide-button-min-width: 110px;
+
+  /* --- INVENTORY --- */
+  --inventory-slot-size: 60px;
+  --inventory-grid-gap: var(--space-md);
+  --inventory-max-height: 250px;
+
+  /* --- EQUIPMENT SLOTS --- */
+  --equipment-slot-size: 60px;
+
+  /* --- MODAL --- */
+  --modal-max-width: 400px;
+  --modal-padding: var(--space-xl);
+}
+
+/* ========================================
+   UTILITY CLASSES FOR QUICK STYLING
+   ======================================== */
+
+.text-gold {
+  color: var(--color-gold);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-danger {
+  color: var(--color-danger);
+}
+
+.text-combat {
+  color: var(--color-combat);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-puzzle {
+  color: var(--color-puzzle);
+  font-weight: var(--font-weight-bold);
+}
+
+.shadow-neu {
+  box-shadow: var(--neu-shadow);
+}
+
+.shadow-neu-inset {
+  box-shadow: var(--neu-shadow-inset);
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+/* ========================================
+   ANIMATION DEFINITIONS
+   ======================================== */
+
+@keyframes damage-flash {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(220, 53, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+@keyframes border-flash {
+  0%,
+  100% {
+    box-shadow: var(--panel-shadow);
+  }
+  50% {
+    box-shadow: var(--panel-shadow), inset 0 0 0 4px var(--flash-color);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+:root {
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  :root {
+    --space-lg: 12px;
+    --space-xl: 16px;
+    --button-size-md: 40px;
+    --guide-button-min-width: 90px;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    --modal-max-width: 500px;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1024px) {
+  :root {
+    --modal-max-width: 480px;
+  }
+}

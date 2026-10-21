@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Aura Theme (Next-Gen Glass/Neumorphic)
+   ========================================================================== */
+
+.aura-theme {
+  --aura-bg: #10141c;
+  --aura-panel-bg: rgba(20, 30, 45, 0.6);
+  --aura-panel-border: rgba(100, 150, 255, 0.1);
+  --aura-panel-shadow-dark: rgba(0,0,0,0.3);
+  --aura-panel-shadow-light: rgba(120, 170, 255, 0.1);
+  --aura-text: #e0e8ff;
+  --aura-text-dim: #8a99b8;
+
+  /* Button Colors */
+  --aura-red: #ff416c;
+  --aura-orange: #ff4b2b;
+  --aura-green: #00b09b;
+  --aura-teal: #96c93d;
+  --aura-blue: #4e54c8;
+  --aura-purple: #8f94fb;
+  --aura-yellow: #ffc371;
+  --aura-gold: #ff5f6d;
+  --aura-pink: #da22ff;
+  --aura-violet: #9733ee;
+  --aura-grey: #bdc3c7;
+  --aura-white: #ecf0f1;
+}
+
+/* --- Base & Panels --- */
+.aura-theme {
+  background: var(--aura-bg) !important;
+  color: var(--aura-text) !important;
+  background-image: radial-gradient(circle at 100% 0%, rgba(100, 150, 255, 0.1) 0%, transparent 30%),
+                    radial-gradient(circle at 0% 100%, rgba(255, 100, 150, 0.1) 0%, transparent 30%);
+}
+
+.aura-theme .slot-panel,
+.aura-theme .item-insert-panel {
+  background: var(--aura-panel-bg) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border-radius: 24px !important;
+  border: 1px solid var(--aura-panel-border) !important;
+  /* Neumorphic Shadows for Glass */
+  box-shadow: 
+    10px 10px 30px var(--aura-panel-shadow-dark),
+    -10px -10px 30px transparent, /* reset */
+    inset 0 0 0 1px var(--aura-panel-border) !important;
+  clip-path: none !important;
+  transition: all 0.3s ease;
+}
+
+.aura-theme .slot-panel-title { color: var(--aura-text-dim) !important; }
+.aura-theme .slot-panel-name { color: var(--aura-text) !important; font-weight: 600 !important; }
+.aura-theme .slot-panel-subtitle { color: var(--aura-text-dim) !important; }
+
+
+/* --- Colorful Aura Buttons --- */
+.aura-theme .btn-action {
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5) !important;
+  
+  /* Reset other themes */
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2) !important;
+  transition: all 0.2s ease-in-out !important;
+  transform: scale(1.0) !important;
+}
+
+.aura-theme .btn-action:hover {
+  transform: scale(1.05) translateY(-2px) !important;
+  text-shadow: 0 0 5px #fff !important;
+}
+
+.aura-theme .btn-action:active {
+  transform: scale(1.0) translateY(1px) !important;
+  filter: brightness(0.9);
+}
+
+/* --- Button Specific Colors & Auras --- */
+
+/* ATTACK: Red/Orange */
+.aura-theme .btn-engage {
+  background: linear-gradient(45deg, var(--aura-red), var(--aura-orange)) !important;
+  box-shadow: 0 0 15px rgba(255, 75, 43, 0.4) !important;
+}
+.aura-theme .btn-engage:hover {
+  box-shadow: 0 0 25px rgba(255, 75, 43, 0.7) !important;
+}
+
+/* DEFEND: Green/Teal */
+.aura-theme .btn-scan {
+  background: linear-gradient(45deg, var(--aura-green), var(--aura-teal)) !important;
+  box-shadow: 0 0 15px rgba(0, 176, 155, 0.4) !important;
+}
+.aura-theme .btn-scan:hover {
+  box-shadow: 0 0 25px rgba(0, 176, 155, 0.7) !important;
+}
+
+/* PARLEY: Blue/Purple */
+.aura-theme .btn-parley {
+  background: linear-gradient(45deg, var(--aura-blue), var(--aura-purple)) !important;
+  box-shadow: 0 0 15px rgba(78, 84, 200, 0.4) !important;
+}
+.aura-theme .btn-parley:hover {
+  box-shadow: 0 0 25px rgba(78, 84, 200, 0.7) !important;
+}
+
+/* GAMBLE/BET: Yellow/Gold */
+.aura-theme .btn-wager,
+.aura-theme .btn-bet-even,
+.aura-theme .btn-bet-odd {
+  background: linear-gradient(45deg, var(--aura-yellow), var(--aura-gold)) !important;
+  box-shadow: 0 0 15px rgba(255, 195, 113, 0.4) !important;
+}
+.aura-theme .btn-wager:hover,
+.aura-theme .btn-bet-even:hover,
+.aura-theme .btn-bet-odd:hover {
+  box-shadow: 0 0 25px rgba(255, 195, 113, 0.7) !important;
+}
+
+/* HINT: Purple/Pink */
+.aura-theme .btn-hint {
+  background: linear-gradient(45deg, var(--aura-violet), var(--aura-pink)) !important;
+  box-shadow: 0 0 15px rgba(218, 34, 255, 0.4) !important;
+}
+.aura-theme .btn-hint:hover {
+  box-shadow: 0 0 25px rgba(218, 34, 255, 0.7) !important;
+}
+
+/* RETREAT: Orange/Yellow (Caution) */
+.aura-theme .btn-retreat {
+    background: linear-gradient(45deg, var(--aura-orange), var(--aura-yellow)) !important;
+    box-shadow: 0 0 15px rgba(255, 75, 43, 0.4) !important;
+}
+.aura-theme .btn-retreat:hover {
+    box-shadow: 0 0 25px rgba(255, 75, 43, 0.7) !important;
+}
+
+/* USE ITEM: Silver/White */
+.aura-theme #btn-use-item {
+  background: linear-gradient(45deg, var(--aura-grey), var(--aura-white)) !important;
+  color: #333 !important;
+  text-shadow: none !important;
+  box-shadow: 0 0 15px rgba(236, 240, 241, 0.4) !important;
+}
+.aura-theme #btn-use-item:hover {
+  box-shadow: 0 0 25px rgba(236, 240, 241, 0.7) !important;
+}
+
+/* Selected state should match hover state for consistency */
+.aura-theme .btn-action.btn-selected {
+    transform: scale(1.05) translateY(-2px) !important;
+}
+.aura-theme .btn-bet-even.btn-selected {
+    box-shadow: 0 0 25px rgba(255, 195, 113, 0.7) !important;
+}

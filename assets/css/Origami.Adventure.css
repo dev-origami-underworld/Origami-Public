@@ -1,0 +1,197 @@
+/* Reset & Container */
+#origami-dungeon-wrapper {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: transparent;
+  pointer-events: none; 
+}
+
+#origami-dungeon-wrapper > * {
+  pointer-events: auto;
+}
+
+#origami-dungeon-wrapper *, #origami-dungeon-wrapper *::before, #origami-dungeon-wrapper *::after {
+  box-sizing: inherit;
+}
+
+#origami-dungeon-wrapper *:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
+  z-index: 50;
+}
+
+/* Fluid Typography */
+#origami-dungeon-wrapper .fluid-heading {
+  font-size: clamp(1.2rem, 4vh, 1.8rem);
+  line-height: 1.1;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #111827;
+  font-family: "Crimson Text", serif;
+}
+
+#origami-dungeon-wrapper .fluid-sub {
+  font-size: clamp(0.8rem, 2.5vh, 1rem);
+  color: #4b5563;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: "Crimson Text", serif;
+}
+
+#origami-dungeon-wrapper .fluid-text {
+  font-size: clamp(0.95rem, 3vh, 1.15rem);
+  line-height: 1.5;
+  text-align: justify;
+  color: #1f2937;
+  font-family: "Crimson Text", serif;
+}
+
+#origami-dungeon-wrapper .fluid-adventure-text {
+  font-size: clamp(0.9rem, 3vh, 1.2rem);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Interactive Feature Text Link */
+#origami-dungeon-wrapper .interactive-feature {
+  color: #b45309;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-bottom: 1px dashed #b45309;
+}
+#origami-dungeon-wrapper .interactive-feature:hover {
+  color: #78350f;
+  border-bottom: 1px solid #78350f;
+  background-color: rgba(251, 191, 36, 0.1);
+}
+
+/* Card Style */
+#origami-dungeon-wrapper .event-card {
+  border: 2px solid #e5e7eb;
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 90%;
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+#origami-dungeon-wrapper .event-card-3d-container { width: 100%; height: 100px; position: relative; }
+#origami-dungeon-wrapper .event-card-icon { font-size: 2rem; margin-bottom: 0.1rem; animation: float 3s ease-in-out infinite; }
+
+/* Loot Circle Style */
+#origami-dungeon-wrapper .loot-circle-container { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+#origami-dungeon-wrapper .loot-circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+#origami-dungeon-wrapper .loot-circle:hover { transform: scale(1.1); border-color: #d97706; }
+
+#origami-dungeon-wrapper .page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start; 
+  padding: 10px 5px 3.5rem 5px;
+  cursor: pointer;
+}
+
+/* New Spine Effect */
+#origami-dungeon-wrapper .book-spine-effect {
+  background: linear-gradient(90deg, 
+    rgba(0,0,0,0) 0%, 
+    rgba(0,0,0,0.02) 20%,
+    rgba(0,0,0,0.1) 40%, 
+    rgba(0,0,0,0.25) 50%, 
+    rgba(0,0,0,0.1) 60%, 
+    rgba(0,0,0,0.02) 80%,
+    rgba(0,0,0,0) 100%
+  );
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Animations */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes popIn { 0% { opacity: 0; transform: scale(0); } 100% { opacity: 1; transform: scale(1); } }
+.pop-in-animation { animation: popIn 0.4s ease-out forwards; }
+
+#origami-dungeon-wrapper .perspective-1000 { perspective: 1500px; }
+#origami-dungeon-wrapper .transform-style-3d { transform-style: preserve-3d; }
+#origami-dungeon-wrapper .backface-hidden { backface-visibility: hidden; }
+
+#origami-dungeon-wrapper .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+#origami-dungeon-wrapper .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+#origami-dungeon-wrapper .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #a8a29e; border-radius: 20px; border: 2px solid #f1f1f1; }
+
+#origami-dungeon-wrapper .font-serif { font-family: "Crimson Text", serif; }
+
+@keyframes lantern-bloom { 0% { box-shadow: 0 0 5px rgba(252, 211, 77, 0.3); transform: scale(1); } 50% { box-shadow: 0 0 25px rgba(252, 211, 77, 0.9); transform: scale(1.08); border-color: #f59e0b; } 100% { box-shadow: 0 0 5px rgba(252, 211, 77, 0.3); transform: scale(1); } }
+.lantern-action { animation: lantern-bloom 1.5s ease-in-out 2; }
+
+.page-turning { animation: flipPage 0.8s ease-in-out forwards; }
+@keyframes flipPage { 0% { transform: rotateY(0deg); box-shadow: 5px 0 15px rgba(0,0,0,0.1); } 50% { box-shadow: 20px 0 50px rgba(0,0,0,0.2); background-color: #f7f5f0; } 100% { transform: rotateY(-180deg); box-shadow: -5px 0 15px rgba(0,0,0,0.1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-turning, .lantern-action, .pop-in-animation, .event-card-icon { animation: none !important; transition: none !important; transform: none !important; }
+  #book-flip-page { display: none !important; }
+}
+
+@keyframes mic-pulse { 0% { color: #9ca3af; } 50% { color: #ef4444; } 100% { color: #9ca3af; } }
+.listening-mode { animation: mic-pulse 1.5s infinite; color: #ef4444 !important; }
+.speaking-mode { color: #3b82f6 !important; }
+
+#origami-dungeon-wrapper .modal { display: none; position: absolute; z-index: 500; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(5px); justify-content: center; align-items: center; }
+.modal-panel { background-color: #fdfbf7; padding: 24px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); width: 90%; max-width: 400px; display: flex; flex-direction: column; gap: 16px; position: relative; border: 1px solid #e5e7eb; }
+
+#dnd-game-inventory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 12px; background: rgba(0, 0, 0, 0.05); padding: 16px; border-radius: 8px; max-height: 250px; overflow-y: auto; }
+.inventory-slot { width: 100%; aspect-ratio: 1 / 1; background-color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); cursor: pointer; }
+
+@media (max-width: 768px) {
+  #book-container {
+    flex-direction: row !important;
+  }
+  #book-page-left, #book-page-right {
+    padding: 0.25rem !important;
+    width: 50% !important;
+  }
+  #origami-dungeon-wrapper .fluid-text {
+      font-size: 0.85rem !important;
+      line-height: 1.3 !important;
+  }
+  #origami-dungeon-wrapper .fluid-heading {
+      font-size: 1.1rem !important;
+  }
+  #origami-dungeon-wrapper .event-card {
+      padding: 0.5rem !important;
+      min-height: auto !important;
+  }
+}

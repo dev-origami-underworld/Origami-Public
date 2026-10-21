@@ -1,0 +1,262 @@
+{
+  "adventureMapSystem": {
+    "dungeonConfig": {
+      "seed": 98765,
+      "theme": "origami_dojo",
+      "gridSize": { "cellSize": 3.0, "units": "meters" },
+      "defaultRoomHeight": 4.0,
+      "defaultCorridorWidth": 3.0
+    },
+    "visualProfiles": {
+      "wallProfiles": [
+        {
+          "id": "shoji_screen_a",
+          "texture": "textures/walls/shoji_paper_a",
+          "normalMap": "textures/walls/shoji_paper_a_n",
+          "roughness": 0.9
+        },
+        {
+          "id": "inked_paper_wall",
+          "texture": "textures/walls/ink_scroll_b",
+          "roughness": 0.95
+        }
+      ],
+      "floorProfiles": [
+        {
+          "id": "tatami_mat_a",
+          "texture": "textures/floors/tatami_weave",
+          "roughness": 0.7
+        },
+        {
+          "id": "polished_wood",
+          "texture": "textures/floors/dark_wood",
+          "roughness": 0.4
+        }
+      ],
+      "ceilingProfiles": [
+        {
+          "id": "wooden_rafters",
+          "texture": "textures/ceilings/wood_beams"
+        }
+      ],
+      "lightingProfiles": [
+        {
+          "id": "warm_lantern",
+          "baseIntensity": 0.8,
+          "color": "#ffebcd",
+          "falloff": "inverse_square",
+          "dynamicShadows": true
+        },
+        {
+          "id": "mystic_blue",
+          "baseIntensity": 0.6,
+          "color": "#a5b4fc",
+          "falloff": "linear",
+          "dynamicShadows": false
+        }
+      ]
+    },
+    "globalLighting": {
+      "ambientColor": "#ffffff",
+      "ambientIntensity": 0.6,
+      "fog": {
+        "enabled": false,
+        "color": "#ffffff",
+        "start": 20.0,
+        "end": 60.0
+      }
+    },
+    "rooms": [
+      {
+        "roomId": "room_001",
+        "roomName": "Folded Entrance",
+        "roomType": "entrance",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "length": 12,
+          "height": 4.0
+        },
+        "visual": {
+          "wallProfileId": "shoji_screen_a",
+          "floorProfileId": "tatami_mat_a",
+          "ceilingProfileId": "wooden_rafters",
+          "lightingProfileId": "warm_lantern",
+          "overrideLightIntensity": null
+        },
+        "connections": [
+          {
+            "toRoomId": "room_002",
+            "via": "corridor",
+            "doorId": "door_entrance_hall"
+          }
+        ],
+        "objects": {
+          "monsters": [],
+          "loot": [
+            {
+              "id": "loot_lantern_001",
+              "type": "lantern",
+              "rarity": "legendary",
+              "position": { "x": 6, "y": 0, "z": 6 },
+              "scaleFromMapSystem": true
+            }
+          ],
+          "traps": [],
+          "doors": [
+            {
+              "id": "door_entrance_hall",
+              "doorType": "paper_sliding",
+              "position": { "x": 12, "y": 0, "z": 6 },
+              "targetRoomId": "room_002",
+              "locked": false,
+              "scaleFromMapSystem": true
+            }
+          ],
+          "questItems": []
+        }
+      },
+      {
+        "roomId": "room_002",
+        "roomName": "Hall of Whispering Paper",
+        "roomType": "hallway",
+        "bounds": {
+          "x": 12,
+          "y": 4,
+          "width": 18,
+          "length": 4,
+          "height": 3.5
+        },
+        "visual": {
+          "wallProfileId": "inked_paper_wall",
+          "floorProfileId": "polished_wood",
+          "ceilingProfileId": "wooden_rafters",
+          "lightingProfileId": "mystic_blue",
+          "overrideLightIntensity": 0.4
+        },
+        "connections": [
+          {
+            "toRoomId": "room_001",
+            "via": "corridor",
+            "doorId": "door_entrance_hall"
+          },
+          {
+            "toRoomId": "room_003",
+            "via": "corridor",
+            "doorId": "door_hall_dojo"
+          }
+        ],
+        "objects": {
+          "monsters": [
+            {
+              "id": "mob_paper_crane_001",
+              "archetype": "paper_crane_sentry",
+              "position": { "x": 18, "y": 0, "z": 6 },
+              "facing": 270,
+              "scaleFromMapSystem": true
+            }
+          ],
+          "loot": [],
+          "traps": [
+            {
+              "id": "trap_ink_spill_001",
+              "trapType": "ink_slick",
+              "position": { "x": 20, "y": 0, "z": 6 },
+              "triggerRadius": 1.5,
+              "scaleFromMapSystem": true
+            }
+          ],
+          "doors": [
+            {
+              "id": "door_hall_dojo",
+              "doorType": "heavy_wood",
+              "position": { "x": 30, "y": 0, "z": 6 },
+              "targetRoomId": "room_003",
+              "locked": false,
+              "scaleFromMapSystem": true
+            }
+          ],
+          "questItems": []
+        }
+      },
+      {
+        "roomId": "room_003",
+        "roomName": "Grand Paper Dojo",
+        "roomType": "boss_arena",
+        "bounds": {
+          "x": 30,
+          "y": 0,
+          "width": 20,
+          "length": 20,
+          "height": 6.0
+        },
+        "visual": {
+          "wallProfileId": "shoji_screen_a",
+          "floorProfileId": "tatami_mat_a",
+          "ceilingProfileId": "wooden_rafters",
+          "lightingProfileId": "warm_lantern",
+          "overrideLightIntensity": 1.0
+        },
+        "connections": [
+          {
+            "toRoomId": "room_002",
+            "via": "corridor",
+            "doorId": "door_hall_dojo"
+          }
+        ],
+        "objects": {
+          "monsters": [
+            {
+              "id": "boss_origami_shogun",
+              "archetype": "origami_shogun",
+              "position": { "x": 40, "y": 0, "z": 10 },
+              "facing": 180,
+              "scaleFromMapSystem": true
+            },
+            {
+              "id": "mob_goblin_guard_01",
+              "archetype": "goblin_guard",
+              "position": { "x": 35, "y": 0, "z": 8 },
+              "facing": 135,
+              "scaleFromMapSystem": true
+            },
+            {
+              "id": "mob_goblin_guard_02",
+              "archetype": "goblin_guard",
+              "position": { "x": 35, "y": 0, "z": 12 },
+              "facing": 45,
+              "scaleFromMapSystem": true
+            }
+          ],
+          "loot": [
+            {
+              "id": "loot_chest_boss",
+              "type": "lacquered_chest",
+              "rarity": "epic",
+              "position": { "x": 48, "y": 0, "z": 10 },
+              "scaleFromMapSystem": true
+            }
+          ],
+          "traps": [],
+          "doors": [],
+          "questItems": [
+            {
+              "id": "quest_item_ancient_scroll",
+              "questId": "main_02",
+              "position": { "x": 48, "y": 0, "z": 10 },
+              "scaleFromMapSystem": true
+            }
+          ]
+        }
+      }
+    ],
+    "objectDefaults": {
+      "monsterScale": 1.0,
+      "lootScale": 0.8,
+      "trapScale": 1.0,
+      "doorScale": 1.2,
+      "questItemScale": 0.9
+    }
+  }
+}

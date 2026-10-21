@@ -1,0 +1,939 @@
+/* Moved from Origami.html */
+:root {
+  /* White Washi Theme (Default) */
+  --bg-theme-main: #e8e5de;
+  --text-theme-main: #2c2c2c;
+  --panel-bg-theme: rgba(255, 255, 255, 0.9);
+  --border-theme: #dcdcdc;
+  --text-secondary: #5a5a5a;
+  --accent: #d35400;
+  --accent-glow: rgba(211, 84, 0, 0.4);
+  --tile-wall: #eae8e1;
+  --tile-floor: #fff7eb;
+}
+
+/* Dark Mode (Matches design-system.css) */
+body.dark-mode {
+  /* --- BACKGROUND COLORS --- */
+  --bg-theme-main: #111827; /* Cool dark gray (Gray 900) */
+  --bg-elevated: #1f2937; /* Gray 800 */
+  --bg-overlay: rgba(0, 0, 0, 0.85);
+
+  /* --- PANEL STYLES --- */
+  --panel-bg-theme: rgba(
+    31,
+    41,
+    55,
+    0.95
+  ); /* Less transparent for readability */
+  --panel-bg-solid: #1f2937;
+  --panel-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+
+  /* --- TEXT COLORS --- */
+  --text-theme-main: #f9fafb; /* Gray 50 - High contrast */
+  --text-secondary: #d1d5db; /* Gray 300 - WCAG AA Pass */
+  --text-tertiary: #9ca3af; /* Gray 400 - WCAG AA Pass */
+
+  /* --- BORDER & DIVIDERS --- */
+  --border-theme: rgba(255, 255, 255, 0.15);
+  --divider-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Theme Utility Classes */
+.bg-theme-main {
+  background-color: var(--bg-theme-main);
+  transition: background-color 0.3s ease;
+}
+.text-theme-main {
+  color: var(--text-theme-main);
+  transition: color 0.3s ease;
+}
+
+/* Custom styles */
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  overflow: hidden; /* Prevent body scroll */
+  background-color: var(--bg-theme-main);
+  color: var(--text-theme-main);
+}
+
+/* Minimal utility classes used by the host layout */
+.h-full {
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.min-h-0 {
+  min-height: 0;
+}
+.gap-0 {
+  gap: 0;
+}
+.p-4 {
+  padding: 1rem;
+}
+.bg-gray-900 {
+  background-color: #111827;
+}
+.text-gray-200 {
+  color: #e5e7eb;
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.5rem;
+}
+.\!p-0 {
+  padding: 0 !important;
+}
+
+body.origami-host {
+  height: 100vh;
+}
+#fpv-panel,
+#map-panel {
+  flex-basis: 50%;
+  min-width: 0;
+}
+
+/* --- BUTTON STYLE --- */
+.panel-label-btn {
+  position: absolute;
+  top: 0.75rem; /* 12px */
+  right: 1rem; /* 16px */
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem;
+  font-weight: 600;
+  padding-top: 0.25rem; /* 4px */
+  padding-bottom: 0.25rem; /* 4px */
+  padding-left: 0.75rem; /* 12px */
+  padding-right: 0.75rem; /* 12px */
+  border-radius: 0.5rem; /* 8px */
+  border: 1px solid #9ca3af; /* border-gray-400 */
+  z-index: 41;
+  transition-property: background-color, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.panel-label-btn:hover {
+  background-color: #e5e7eb; /* hover:bg-gray-200 */
+  transform: scale(1.02);
+}
+.panel-label-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.panel-fps-indicator {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: var(--bg-theme-main);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-theme);
+}
+.panel-fps-indicator.fps-ok {
+  color: #22c55e;
+  border-color: rgba(34, 197, 94, 0.35);
+}
+.panel-fps-indicator.fps-warn {
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.35);
+}
+
+/* --- PANEL STYLES --- */
+.panel-content {
+  flex-grow: 1;
+  min-height: 0;
+  overflow-y: auto;
+  /* Smooth transition for when content appears/disappears */
+  transition: opacity 0.2s ease-in-out;
+  position: relative;
+}
+
+#top-row {
+  flex-basis: 58%;
+}
+
+#adventure-panel {
+  flex-basis: 42%;
+  min-height: 180px;
+}
+
+#adventure-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+#adventure-frame {
+  flex: 1 1 auto;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+/* Loading modal removed */
+
+.panel-content .embedded-view {
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0.5rem;
+  background: transparent;
+}
+
+.panel-base {
+  /* Base styles for all panels */
+  position: relative;
+  background-color: var(--panel-bg-theme); /* Replaced hardcoded rgba */
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid var(--border-theme); /* Replaced hardcoded border */
+  padding: 1rem; /* p-4 */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  transition: all 0.3s ease-in-out;
+  overflow: hidden; /* Default overflow */
+  z-index: 10;
+}
+
+/* Remove padding and styling for FPV/Map/Adventure panels to let content fill */
+#fpv-panel,
+#map-panel,
+#adventure-panel {
+  padding: 0 !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* --- STATE: .is-pip --- */
+/* This class is applied to a panel when its content is in PiP mode */
+.panel-is-pip {
+  /* The panel now disappears completely */
+  display: none !important;
+}
+
+/* Hide the content wrapper *inside* the collapsed panel */
+.panel-is-pip > .panel-content {
+  display: none;
+}
+
+/* --- Placeholder styling --- */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(55, 65, 81, 0.3); /* bg-gray-700/30 */
+  border-radius: 0.5rem; /* rounded-lg */
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #4b5563; /* border-gray-600 */
+  color: #6b7280; /* text-gray-500 */
+  font-weight: 500;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 767px) {
+  /* Stack the top row panels vertically */
+  #top-row {
+    flex-direction: column !important;
+    /* Ensure they have a reasonable basis in a column */
+    flex-basis: 70% !important;
+  }
+
+  /* Give each panel in the top row equal space when stacked */
+  #fpv-panel,
+  #map-panel {
+    flex-basis: 50% !important;
+    min-height: 200px; /* Give them a min-height */
+  }
+
+  /* This new class will override the 50% basis when a sibling is in PiP */
+  .expand-to-fill {
+    flex-basis: 100% !important;
+  }
+
+  /* Hide the vertical splitter on mobile */
+  #v-splitter {
+    display: none;
+  }
+
+  /* Adjust main container padding for smaller screens */
+  body {
+    padding: 0.5rem; /* p-2 */
+  }
+
+  /* Ensure horizontal splitter is still visible */
+  #h-splitter {
+    display: flex;
+  }
+}
+
+/* --- Splitter styles --- */
+.v-splitter {
+  width: 0.5rem; /* 8px */
+  background-color: rgba(3, 7, 18, 0.5); /* bg-gray-950/50 */
+  cursor: col-resize;
+  transition: all 0.3s ease-in-out;
+  z-index: 20;
+  flex-shrink: 0;
+}
+.v-splitter:hover {
+  background-color: #2563eb; /* hover:bg-blue-600 */
+}
+
+.h-splitter {
+  height: 0.5rem; /* 8px */
+  background-color: rgba(3, 7, 18, 0.5); /* bg-gray-950/50 */
+  cursor: row-resize;
+  transition: all 0.3s ease-in-out;
+  z-index: 20;
+  flex-shrink: 0;
+}
+.h-splitter:hover {
+  background-color: #2563eb; /* hover:bg-blue-600 */
+}
+
+#main-renderer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --- PiP Window styles --- */
+.pip-window {
+  position: fixed;
+  width: 24rem; /* 384px */
+  height: 16rem; /* 256px */
+  background-color: transparent; /* bg-gray-800 */
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid #374151; /* border-gray-700 */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  resize: both; /* Natively resizable */
+  overflow: hidden; /* Child content will scroll, not the window */
+  min-width: 200px;
+  min-height: 150px;
+}
+.pip-header {
+  background-color: var(--panel-bg-theme); /* bg-gray-900/70 */
+  padding: 0.5rem; /* p-2 */
+  display: flex;
+  justify-content: center; /* Title is now centered */
+  align-items: center;
+  cursor: move;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-top-left-radius: 0.75rem; /* rounded-t-xl */
+  border-top-right-radius: 0.75rem; /* rounded-t-xl */
+  height: 36px; /* Give header a consistent height */
+  position: relative; /* CRITICAL: Allows button to be positioned absolutely */
+}
+.pip-title {
+  font-size: 0.75rem; /* 12px - Matches button */
+  font-weight: 600;
+  color: #d1d5db; /* text-gray-300 */
+}
+
+.pip-content-wrapper {
+  padding: 0.5rem; /* p-2 */
+  flex-grow: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+/* This makes the nested panel-content fill the PiP wrapper */
+.pip-content-wrapper > .panel-content {
+  flex-grow: 1;
+  /* Remove padding from original panel to fit PiP */
+  padding: 0.25rem; /* p-1 */
+}
+
+.panel-hidden {
+  display: none !important;
+}
+
+/* --- COMBAT UI OVERLAY --- */
+.combat-ui-container {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 320px 1fr 320px;
+  gap: 20px;
+  align-items: end;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  transform-origin: bottom center;
+  transform: scale(0.85);
+  display: none; /* Hidden by default */
+}
+
+.combat-ui-container.active {
+  display: grid;
+  pointer-events: auto; /* Allow interaction when overlay is shown */
+}
+
+/* Panels */
+.slot-panel {
+  background: #fdfbf7; /* White Washi Paper */
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  pointer-events: auto;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #2c2c2c;
+}
+
+.slot-panel.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slot-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.slot-panel-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #5a5a5a; /* Darker secondary text */
+  font-weight: 700;
+}
+
+.slot-panel-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #2c2c2c; /* Dark text */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+}
+
+.slot-panel-subtitle {
+  font-size: 0.85rem;
+  color: #5a5a5a;
+  font-weight: 500;
+}
+
+/* Progress Bars */
+.progress-track {
+  height: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease-out;
+}
+
+.progress-fill.pax {
+  background: linear-gradient(90deg, #a855f7, #d8b4fe);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.progress-fill.hp {
+  background: linear-gradient(90deg, #84cc16, #eab308, #ef4444);
+}
+
+/* Chips */
+.chip-row {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.chip {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+.action-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-action {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: #2c2c2c;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.btn-action:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.btn-action:active {
+  transform: translateY(0);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn-parley {
+  background: rgba(34, 197, 94, 0.25);
+  color: #064e3b;
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.btn-wager {
+  background: rgba(234, 179, 8, 0.25);
+  color: #422006;
+  border-color: rgba(234, 179, 8, 0.4);
+}
+
+.btn-hint {
+  background: rgba(60, 30, 20, 0.25);
+  border: 1px solid rgba(146, 64, 14, 0.4);
+  color: #444;
+}
+
+.btn-engage {
+  background: rgba(34, 197, 94, 0.25);
+  color: #064e3b;
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.btn-retreat {
+  background: rgba(40, 40, 50, 0.25);
+  border: 1px solid rgba(107, 114, 128, 0.4);
+  color: #1f2937;
+}
+
+.btn-scan {
+  background: rgba(75, 85, 99, 0.25);
+  color: #1f2937;
+  border-color: rgba(75, 85, 99, 0.4);
+}
+
+/* Center Controls */
+.center-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 0;
+  pointer-events: auto;
+}
+
+.d-pad {
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-template-rows: 60px 60px;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.d-btn {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+    inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.d-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+    inset 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.d-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.d-up {
+  grid-column: 2;
+  grid-row: 1;
+}
+.d-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+.d-center {
+  grid-column: 2;
+  grid-row: 2;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 24px;
+  font-weight: bold;
+}
+.d-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+.d-down {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.feed-box {
+  background: rgba(10, 10, 15, 0.8);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.feed-text {
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.feed-sub {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.control-center-panel {
+  width: 100%;
+  margin-top: 18px;
+  padding: 18px 20px 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(12, 14, 18, 0.78);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 30px rgba(2, 6, 23, 0.45);
+}
+
+.control-center-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.control-center-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.control-center-subtitle {
+  font-size: 0.82rem;
+  color: #a5b4fc;
+  margin: 4px 0 0;
+}
+
+.control-center-form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.control-center-input {
+  flex: 1 1 auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(17, 24, 39, 0.8);
+  color: #f8fafc;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.control-center-input:focus {
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 2px rgba(165, 180, 252, 0.35);
+}
+
+.control-center-submit {
+  border: none;
+  border-radius: 14px;
+  padding: 0 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(120deg, #818cf8, #c084fc);
+  color: #0f172a;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.control-center-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(129, 140, 248, 0.4);
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  width: 100%;
+}
+
+.command-card {
+  position: relative;
+  width: 170px;
+  min-height: 190px;
+  padding: 18px 16px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.12),
+    rgba(15, 23, 42, 0.85)
+  );
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 15px 35px rgba(2, 6, 23, 0.5);
+}
+
+.command-card h4,
+.command-card .card-title {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.command-card p {
+  font-size: 0.78rem;
+  color: #cbd5f5;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.card-counter {
+  position: absolute;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.card-counter.top-right {
+  top: 10px;
+  right: 12px;
+}
+
+.card-counter.bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+
+.card-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #a5b4fc;
+  text-transform: uppercase;
+}
+
+.card-action {
+  margin-top: auto;
+  padding: 8px 0;
+  border-radius: 12px;
+  border: none;
+  background: rgba(129, 140, 248, 0.25);
+  color: #e0e7ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.card-action:hover:not(:disabled) {
+  background: rgba(165, 180, 252, 0.35);
+  transform: translateY(-1px);
+}
+
+.card-action:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.command-card.placeholder {
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(248, 250, 252, 0.6);
+  text-align: center;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.command-card.placeholder p {
+  color: rgba(226, 232, 240, 0.65);
+}
+
+/* Combat Mode Global Styles */
+body.combat-active #adventure-panel,
+body.combat-active #h-splitter,
+body.combat-active #map-panel,
+body.combat-active #v-splitter,
+body.combat-active .panel-label-btn {
+  display: none !important;
+}
+
+body.combat-active #top-row {
+  flex-basis: 100% !important;
+}
+
+body.combat-active #fpv-panel {
+  flex-basis: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Hide the FPV container border/bg in combat */
+body.combat-active #fpv-content-wrapper {
+  background: transparent;
+}
+
+/* Expand combat overlay to full width when active */
+body.combat-active .combat-ui-container {
+  max-width: 100%;
+  transform: scale(1);
+}
+/* Floating Combat Text */
+.floating-text {
+  position: absolute;
+  pointer-events: none;
+  font-family: "Impact", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.65);
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+.floating-text.hit {
+  color: #ef4444;
+  font-size: 38px;
+}
+.floating-text.crit {
+  color: #dc2626;
+  font-size: 50px;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.7);
+}
+.floating-text.miss {
+  color: #9ca3af;
+  font-size: 31px;
+}
+
+/* Utility classes for inline style replacements */
+.m-0 {
+  margin: 0;
+}
+.p-0 {
+  padding: 0;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.w-full-h-full {
+  width: 100%;
+  height: 100%;
+}
+.relative {
+  position: relative;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.grid-row-3 {
+  grid-row: 3;
+}

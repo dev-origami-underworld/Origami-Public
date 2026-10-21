@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Color Psychology Theme (Soft UI)
+   ========================================================================== */
+
+.color-psych-theme {
+  --color-bg: #eef0f4;
+  --color-panel-bg: #eef0f4;
+  --color-text: #5c677d;
+  --color-shadow-light: rgba(255, 255, 255, 0.9);
+  --color-shadow-dark: rgba(210, 215, 225, 0.8);
+  
+  /* Color Psychology Palette */
+  --color-comms: #2979ff;       /* Parley - Blue */
+  --color-risk: #ffc400;        /* Gamble - Yellow */
+  --color-wisdom: #aa00ff;      /* Hint - Purple */
+  --color-danger: #d50000;      /* Attack - Red */
+  --color-caution: #ff6d00;     /* Retreat - Orange */
+  --color-safety: #00c853;      /* Defend - Green */
+  --color-utility: #90a4ae;     /* Use Item - Grey */
+}
+
+/* --- Base & Panels --- */
+.color-psych-theme {
+  background-color: var(--color-bg) !important;
+}
+
+.color-psych-theme .slot-panel,
+.color-psych-theme .item-insert-panel {
+  background: var(--color-panel-bg) !important;
+  border-radius: 20px !important;
+  border: none !important;
+  box-shadow: 
+    8px 8px 16px var(--color-shadow-dark),
+    -8px -8px 16px var(--color-shadow-light) !important;
+  
+  /* Override other themes */
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  clip-path: none !important;
+}
+
+.color-psych-theme .slot-panel-title,
+.color-psych-theme .slot-panel-name,
+.color-psych-theme .slot-panel-subtitle {
+  color: var(--color-text) !important;
+}
+.color-psych-theme .slot-panel-name {
+    font-weight: 600 !important;
+}
+
+/* --- Buttons --- */
+.color-psych-theme .btn-action {
+  border-radius: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0px !important;
+  text-transform: none !important;
+  color: var(--color-text) !important;
+  background: var(--color-panel-bg) !important;
+  border: none !important;
+
+  /* Inset "unpressed" state */
+  box-shadow: 
+    inset 3px 3px 6px var(--color-shadow-dark),
+    inset -3px -3px 6px var(--color-shadow-light) !important;
+  
+  text-shadow: none !important;
+  transition: all 0.15s ease-out !important;
+}
+
+/* On hover, button "pops out" and fills with color */
+.color-psych-theme .btn-action:hover,
+.color-psych-theme .btn-action.btn-selected {
+  color: #fff !important;
+  box-shadow: 
+    4px 4px 8px var(--color-shadow-dark),
+    -4px -4px 8px var(--color-shadow-light) !important;
+  transform: translateY(0) !important; /* Override other theme transforms */
+}
+.color-psych-theme .btn-action:active {
+    box-shadow: 
+    inset 3px 3px 6px var(--color-shadow-dark),
+    inset -3px -3px 6px var(--color-shadow-light) !important;
+    transform: translateY(1px) !important;
+}
+
+/* --- Applying Color Psychology --- */
+
+/* Parley -> Blue (Communication) */
+.color-psych-theme .btn-parley:hover,
+.color-psych-theme .btn-parley.btn-selected {
+  background: var(--color-comms) !important;
+}
+/* Wager/Bet -> Yellow (Risk, Fortune) */
+.color-psych-theme .btn-wager:hover,
+.color-psych-theme .btn-bet-even:hover,
+.color-psych-theme .btn-bet-odd:hover,
+.color-psych-theme .btn-wager.btn-selected,
+.color-psych-theme .btn-bet-even.btn-selected,
+.color-psych-theme .btn-bet-odd.btn-selected {
+  background: var(--color-risk) !important;
+}
+/* Hint -> Purple (Wisdom) */
+.color-psych-theme .btn-hint:hover,
+.color-psych-theme .btn-hint.btn-selected {
+  background: var(--color-wisdom) !important;
+}
+
+/* Attack -> Red (Danger) */
+.color-psych-theme .btn-engage:hover,
+.color-psych-theme .btn-engage.btn-selected {
+  background: var(--color-danger) !important;
+}
+/* Retreat -> Orange (Caution) */
+.color-psych-theme .btn-retreat:hover,
+.color-psych-theme .btn-retreat.btn-selected {
+  background: var(--color-caution) !important;
+}
+/* Defend (Scan) -> Green (Safety) */
+.color-psych-theme .btn-scan:hover,
+.color-psych-theme .btn-scan.btn-selected {
+  background: var(--color-safety) !important;
+}
+/* Use Item -> Grey (Utility) */
+.color-psych-theme #btn-use-item:hover,
+.color-psych-theme #btn-use-item.btn-selected {
+  background: var(--color-utility) !important;
+}

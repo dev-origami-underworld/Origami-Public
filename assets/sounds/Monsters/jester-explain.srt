@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:05,000
+The more you use it and gain abilities, the more places it can take you to.
+
+2
+00:00:05,000 --> 00:00:10,600
+Try your first quest and win a chance at a magical item to help you on your journeys.
+
+3
+00:00:10,600 --> 00:00:12,000
+Best of luck!

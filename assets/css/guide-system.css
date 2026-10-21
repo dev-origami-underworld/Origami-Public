@@ -1,0 +1,160 @@
+/**
+ * Room Guide Button System Styles
+ * Unified styling for contextual navigation buttons
+ */
+
+.guide-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.guide-room-title {
+  width: 100%;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  font-family: "Crimson Text", serif;
+}
+
+.guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: "Inter", sans-serif;
+}
+
+.guide-icon {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+/* Default/Interact style */
+.guide-btn-interact {
+  background: #f3efe7;
+  color: #44403c;
+  border-color: rgba(68, 64, 60, 0.2);
+}
+
+.guide-btn-interact:hover {
+  background: #e8e4dc;
+  border-color: rgba(68, 64, 60, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Attack style */
+.guide-btn-attack {
+  background: #dc2626;
+  color: white;
+  border-color: #991b1b;
+}
+
+.guide-btn-attack:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+}
+
+/* Gamble style */
+.guide-btn-gamble {
+  background: #fbbf24;
+  color: #1f2937;
+  border-color: #d97706;
+}
+
+.guide-btn-gamble:hover {
+  background: #f59e0b;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+}
+
+/* Lantern/Special item style */
+.guide-btn-lantern {
+  background: #1f2937;
+  color: white;
+  border-color: #111827;
+}
+
+.guide-btn-lantern:hover {
+  background: #111827;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(31, 41, 55, 0.4);
+}
+
+/* Movement style */
+.guide-btn-move {
+  background: #3b82f6;
+  color: white;
+  border-color: #2563eb;
+}
+
+.guide-btn-move:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Disabled state */
+.guide-btn-disabled,
+.guide-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.guide-btn-disabled:hover,
+.guide-btn:disabled:hover {
+  background: inherit;
+  border-color: inherit;
+  box-shadow: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .guide-container {
+    gap: 0.375rem;
+    padding: 0.5rem;
+  }
+
+  .guide-btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  .guide-icon {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for new buttons */
+@keyframes guideSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.guide-btn {
+  animation: guideSlideIn 0.2s ease;
+}

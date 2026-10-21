@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Luminous Glass Theme (Next-Gen Gaming)
+   ========================================================================== */
+
+/* This theme is designed to work with a dark background and overrides other themes. */
+
+.luminous-theme {
+  --luminous-cyan: #00e5ff;
+  --luminous-cyan-glow: rgba(0, 229, 255, 0.5);
+  --luminous-bg-dark: #0a1423;
+  --luminous-panel-bg: rgba(15, 25, 40, 0.75);
+  --luminous-border-color: rgba(0, 229, 255, 0.3);
+}
+
+/* --- Panels --- */
+.luminous-theme .slot-panel,
+.luminous-theme .item-insert-panel {
+  background: var(--luminous-panel-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--luminous-border-color) !important;
+  border-radius: 16px;
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 1px 1px rgba(0, 229, 255, 0.1) !important;
+  
+  /* Override washi theme */
+  clip-path: none !important; 
+}
+
+.luminous-theme .slot-panel-title,
+.luminous-theme .slot-panel-name,
+.luminous-theme .slot-panel-subtitle {
+    color: #cceeff !important;
+}
+
+.luminous-theme .slot-panel-name {
+    color: var(--luminous-cyan) !important;
+}
+
+/* --- Buttons --- */
+.luminous-theme .btn-action {
+  background: linear-gradient(180deg, rgba(20, 35, 60, 0.9) 0%, rgba(10, 20, 40, 0.9) 100%) !important;
+  border: 1px solid var(--luminous-border-color) !important;
+  color: var(--luminous-cyan) !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  /* The Luminous/LCD glow */
+  text-shadow: 0 0 4px var(--luminous-cyan-glow), 0 0 8px var(--luminous-cyan-glow) !important;
+
+  /* Inner LCD Bevel */
+  box-shadow: 
+    inset 0 0 1px 1px rgba(0, 229, 255, 0.2),
+    0 2px 4px rgba(0,0,0,0.4) !important;
+  
+  transition: all 0.2s ease-out !important;
+}
+
+.luminous-theme .btn-action:hover {
+  background: linear-gradient(180deg, rgba(30, 50, 80, 0.9) 0%, rgba(20, 40, 70, 0.9) 100%) !important;
+  border-color: var(--luminous-cyan) !important;
+  color: #fff !important;
+  text-shadow: 0 0 8px var(--luminous-cyan), 0 0 16px var(--luminous-cyan-glow) !important;
+  box-shadow: 
+    inset 0 0 2px 1px rgba(0, 229, 255, 0.4),
+    0 2px 4px rgba(0,0,0,0.4),
+    0 0 15px var(--luminous-cyan-glow) !important; /* Outer glow */
+}
+
+/* Selected state for buttons */
+.luminous-theme .btn-action.btn-selected,
+.luminous-theme .btn-action:active {
+  background: var(--luminous-cyan) !important;
+  color: var(--luminous-bg-dark) !important;
+  text-shadow: none !important;
+  border-color: var(--luminous-cyan) !important;
+  box-shadow: 
+    inset 0 0 10px rgba(0,0,0,0.5),
+    0 0 20px var(--luminous-cyan) !important;
+  transform: translateY(1px);
+}
+
+/* Remove other theme button styles */
+.luminous-theme.washi-theme .btn-action.btn-selected {
+    transform: translateY(1px);
+}
+.luminous-theme.glass-theme .btn-action {
+    backdrop-filter: none;
+   -webkit-backdrop-filter: none;
+}
+

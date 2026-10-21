@@ -1,0 +1,11 @@
+Model Information:
+* title:	Colt Python (Low-Poly)
+* source:	https://sketchfab.com/3d-models/colt-python-low-poly-0a3a866268c746178c7f21ae17178dbb
+* author:	GoldbergR (https://sketchfab.com/GoldbergR)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Colt Python (Low-Poly)" (https://sketchfab.com/3d-models/colt-python-low-poly-0a3a866268c746178c7f21ae17178dbb) by GoldbergR (https://sketchfab.com/GoldbergR) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

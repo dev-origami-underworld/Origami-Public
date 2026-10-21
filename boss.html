@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BOSS INTRO — sandbox</title>
+<!--
+  boss.html — STANDALONE prototype for the boss-introduction cinematic (Mark 2026-07-26).
+  Isolated test harness — does NOT touch the live engine. Nail the look + the FAIR pause here, then port.
+  Layout: LEFT = promo-print name + red LIVE REC (broadcast lower-third). RIGHT = live zoom-in on the boss
+  monster doing a BOW → WAVE. Trigger pauses ALL keyboard + dungeon movement — player AND monsters (so
+  nobody gets free swings while the player is held). Rift: SilentBlade / DevilzDuel.
+  r128 to match the engine (assets/models/monster/goblin/new.goblin.glb = the supervisor rig; NlaTrack.002=bow,
+  NlaTrack.001=wave/agree, NlaTrack.004=idle).
+-->
+<link href="assets/fonts/fonts.css" rel="stylesheet">
+<style>
+  :root{
+    --boss-red:#ff2d47; --boss-gold:#ffd56a; --boss-ice:#9ff7ff; --ink:#02060b;
+    --promo:'Anton','Impact','Arial Black',sans-serif;
+    --mono:'SF Mono',ui-monospace,'Cascadia Mono',Menlo,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;background:#04070c;overflow:hidden;font-family:'Inter',system-ui,sans-serif;color:#eaf2f5;}
+  #scene{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0;}
+
+  /* ---- letterbox broadcast bars ---- */
+  .cinebar{position:fixed;left:0;right:0;height:0;background:#000;z-index:20;transition:height .5s cubic-bezier(.6,0,.2,1);pointer-events:none;}
+  .cinebar.top{top:0;} .cinebar.bottom{bottom:0;}
+  body.live .cinebar{height:8vh;}
+
+  /* ---- REC badge (top-right) ---- */
+  #rec{position:fixed;top:calc(8vh + 16px);right:20px;z-index:60;display:flex;align-items:center;gap:11px;
+       font-family:var(--mono);font-weight:700;font-size:17px;letter-spacing:.24em;color:#fff;
+       opacity:0;transition:opacity .5s ease .2s;text-shadow:0 2px 10px #000;
+       background:rgba(10,0,4,.55);border:1px solid rgba(255,45,71,.5);border-radius:8px;padding:8px 14px;
+       box-shadow:0 0 26px rgba(255,45,71,.35), inset 0 0 18px rgba(255,45,71,.12);}
+  body.live #rec{opacity:1;}
+  #rec .dot{width:15px;height:15px;border-radius:50%;background:var(--boss-red);box-shadow:0 0 14px var(--boss-red);animation:blink 1.1s steps(1) infinite;}
+  #rec .tc{color:var(--boss-gold);font-size:15px;letter-spacing:.14em;}
+  @keyframes blink{0%,55%{opacity:1;}56%,100%{opacity:.15;}}
+
+  /* ---- LEFT promo lower-third ---- */
+  #promo{position:fixed;top:0;bottom:0;left:0;width:min(46%,560px);z-index:25;
+    display:flex;flex-direction:column;justify-content:center;gap:14px;padding:9vh 30px 9vh 42px;
+    background:linear-gradient(100deg, rgba(4,7,12,.94) 60%, rgba(4,7,12,.55) 85%, transparent);
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+    opacity:0;transition:opacity .18s linear;}
+  body.live #promo{opacity:1;}   /* NO slide: the panel just appears and each LINE pops in (Mark 2026-07-26
+     "no combat text" — the 0.6s slide was moving the whole slab while the lines popped, so you never saw it) */
+  /* ── COMBAT-TEXT POP PER LINE (Mark 2026-07-26: "make each line of text for the boss to pop out like combat
+        text before placing"). Every line starts big, bright and offset — like a damage number spawning — then
+        SNAPS DOWN into its final slot. Staggered by --i so the dossier assembles line by line, not as a slab.
+        Overshoot easing (back-out) is what makes it read as a POP rather than a fade.                        */
+  #promo > *{opacity:0;}
+  body.live #promo > *{animation:popPlace .66s linear forwards;
+    animation-delay:calc(.12s + var(--i,0) * .17s);}   /* linear: the per-keyframe curves above own the timing */
+  /* SLAM: falls from ABOVE, accelerating, and CRASHES into place — then squashes, rebounds, settles.
+     The per-keyframe timing functions are what sell it: ease-IN on the fall (gravity), snap on the impact. */
+  @keyframes popPlace{
+    0%  {opacity:0; transform:translateY(-190px) scale(2.35); filter:blur(7px) brightness(3.2);
+         animation-timing-function:cubic-bezier(.62,0,.92,.24);}   /* accelerate DOWN */
+    40% {opacity:1; transform:translateY(0)      scale(1.22); filter:blur(0) brightness(2.8);
+         animation-timing-function:cubic-bezier(.2,1.4,.3,1);}     /* ── IMPACT ── */
+    52% {           transform:translateY(0) scale(1.14,.82);  filter:brightness(1.5);}  /* squash on landing */
+    66% {           transform:translateY(-6px) scale(.96,1.07); filter:brightness(1.15);} /* rebound */
+    80% {           transform:translateY(0) scale(1.03,.98);}
+    91% {           transform:translateY(0) scale(.99,1.01);}
+    100%{opacity:1; transform:translateY(0) scale(1);          filter:blur(0) brightness(1);}
+  }
+  /* impact flash — a hard white bar that blows out along the line on landing, then wipes away */
+  #promo > *{position:relative;}
+  body.live #promo > *::after{content:'';position:absolute;inset:-6px -14px;pointer-events:none;
+    background:linear-gradient(90deg,rgba(255,255,255,.9),rgba(255,120,140,.35) 45%,transparent 78%);
+    opacity:0;transform:scaleX(.2);transform-origin:left center;mix-blend-mode:screen;
+    animation:slamFlash .5s ease-out forwards;animation-delay:calc(.12s + var(--i,0) * .17s + .24s);}
+  @keyframes slamFlash{
+    0%{opacity:0;transform:scaleX(.15);} 18%{opacity:.95;transform:scaleX(1.06);}
+    100%{opacity:0;transform:scaleX(1.3);}
+  }
+  /* the stat chips pop individually too — a row of numbers landing one after another */
+  body.live #promo .stats .stat{opacity:0;animation:popPlace .58s linear forwards;
+    animation-delay:calc(.72s + var(--j,0) * .13s);}
+  .kicker{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-weight:700;font-size:12px;
+    letter-spacing:.28em;color:var(--boss-red);text-transform:uppercase;}
+  .kicker::before{content:"";width:34px;height:2px;background:var(--boss-red);box-shadow:0 0 12px var(--boss-red);}
+  .promo-name{font-family:var(--promo);font-weight:400;line-height:.86;color:#fff;text-transform:uppercase;
+    letter-spacing:.01em;font-size:clamp(46px,7.2vw,104px);text-shadow:0 6px 30px #000, 0 0 2px rgba(255,255,255,.3);}
+  .promo-name .sub{display:block;font-size:.36em;color:var(--boss-gold);letter-spacing:.06em;-webkit-text-stroke:0;}
+  .kanji{font-family:'Oswald',var(--promo);font-weight:700;font-size:clamp(20px,2.6vw,34px);color:var(--boss-ice);
+    letter-spacing:.18em;opacity:.9;}
+  .rule{height:2px;width:78%;background:linear-gradient(90deg,var(--boss-gold),transparent);}
+  .stats{display:flex;gap:10px;flex-wrap:wrap;}
+  .stat{border:1px solid rgba(159,247,255,.18);background:rgba(2,9,15,.6);padding:9px 13px;min-width:96px;}
+  .stat b{display:block;font-family:var(--mono);font-weight:700;font-size:16px;color:#fff;}
+  .stat small{display:block;margin-top:4px;font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:#7f9ca8;}
+  .notice{font-weight:600;font-size:14px;line-height:1.5;color:#cdd9dd;max-width:34ch;}
+  .notice b{color:var(--boss-red);letter-spacing:.06em;}
+
+  /* PRESS ANY KEY (Mark 2026-07-26) — the shot holds here until the player chooses to move on */
+  #anykey{position:fixed;left:50%;bottom:12vh;transform:translateX(-50%) translateY(14px);z-index:34;
+    display:none;flex-direction:column;align-items:center;gap:5px;text-align:center;pointer-events:none;}
+  body.await #anykey{display:flex;animation:akIn .45s cubic-bezier(.2,1.5,.3,1) forwards;}
+  #anykey .k{font-family:var(--mono);font-weight:700;font-size:19px;letter-spacing:.34em;color:#fff;
+    text-shadow:0 0 22px rgba(255,45,71,.9),0 2px 8px #000;animation:akPulse 1.25s ease-in-out infinite;}
+  #anykey .s{font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--boss-gold);opacity:.85;}
+  @keyframes akIn{from{opacity:0;transform:translateX(-50%) translateY(22px) scale(.9);}
+                  to{opacity:1;transform:translateX(-50%) translateY(0) scale(1);}}
+  @keyframes akPulse{0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.55;transform:scale(.975);}}
+  /* the progress bar stops meaning "about to vanish" — it fills, then the hold begins */
+  body.await #prog{opacity:.35;}
+
+  /* auto-dismiss progress */
+  #prog{position:fixed;left:0;bottom:0;height:4px;width:100%;transform-origin:left;transform:scaleX(0);z-index:31;
+    background:linear-gradient(90deg,var(--boss-red),var(--boss-gold),var(--boss-ice));box-shadow:0 0 18px rgba(255,87,102,.8);opacity:0;}
+  body.live #prog{opacity:1;}
+
+  /* PAUSE chip — the whole point: dungeon frozen, fair to the player */
+  #pausechip{position:fixed;left:50%;top:calc(8vh + 16px);transform:translateX(-50%);z-index:30;
+    font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.18em;color:#bfe9d0;
+    background:rgba(4,20,12,.72);border:1px solid rgba(90,220,150,.35);border-radius:999px;padding:7px 16px;
+    opacity:0;transition:opacity .4s ease;text-transform:uppercase;}
+  body.live #pausechip{opacity:1;}
+
+  /* ---- control dock (sandbox only — not part of the in-game cinematic) ---- */
+  #dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:40;display:flex;gap:10px;align-items:center;
+    background:rgba(10,14,20,.86);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px 14px;
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:opacity .4s;}
+  body.live #dock{opacity:.25;} body.live #dock:hover{opacity:1;}
+  #dock button{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.08em;cursor:pointer;
+    color:#eaf2f5;background:#1b2230;border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:9px 14px;transition:.15s;}
+  #dock button:hover{background:#27324a;border-color:var(--boss-ice);}
+  #dock .go{background:linear-gradient(180deg,#c11733,#7d0f22);border-color:#ff4d63;color:#fff;}
+  #dock .sep{width:1px;height:22px;background:rgba(255,255,255,.14);}
+  #dock label{font-family:var(--mono);font-size:11px;color:#93a4b3;letter-spacing:.06em;}
+  #dock input[type=range]{width:104px;accent-color:#ff3a54;}
+  #dock .val{font-family:var(--mono);font-size:11px;color:#e6eef6;min-width:38px;}
+  /* ── ANIMATION SEQUENCER (Mark 2026-07-26) ── stacked beats, each with its own clip + seconds ── */
+  #seqPanel{position:fixed;right:14px;bottom:96px;z-index:40;width:264px;padding:10px 11px;border-radius:10px;
+    background:rgba(8,12,20,.86);border:1px solid rgba(255,255,255,.12);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    font-family:var(--mono);font-size:11px;color:#cfe0ee;}
+  #seqPanel .seqHead{display:flex;align-items:center;justify-content:space-between;letter-spacing:.1em;color:#9fb3c4;margin-bottom:7px;}
+  #seqPanel .seqHead b{font-size:10px;letter-spacing:.14em;}
+  #seqPanel button{background:#182231;color:#e6eef6;border:1px solid rgba(255,255,255,.16);border-radius:6px;
+    cursor:pointer;font-family:var(--mono);}
+  #seqPanel .seqHead button{width:24px;height:22px;font-size:14px;line-height:1;}
+  #seqPanel .seqRow{display:flex;gap:5px;align-items:center;margin-bottom:5px;}
+  #seqPanel .seqRow select{flex:1;min-width:0;background:#0e1622;color:#e6eef6;border:1px solid rgba(255,255,255,.14);
+    border-radius:5px;padding:3px 4px;font-family:var(--mono);font-size:11px;}
+  #seqPanel .seqRow input{width:46px;background:#0e1622;color:#e6eef6;border:1px solid rgba(255,255,255,.14);
+    border-radius:5px;padding:3px 4px;font-family:var(--mono);font-size:11px;}
+  #seqPanel .seqRow .del{width:22px;height:22px;line-height:1;color:#ff8194;}
+  #seqPanel .seqFoot{margin-top:6px;color:#7d92a4;letter-spacing:.06em;}
+  #status{position:fixed;left:14px;top:10px;z-index:40;font-family:var(--mono);font-size:11px;color:#5f7484;letter-spacing:.05em;}
+  @media (max-width:820px){ #promo{width:70%;} }
+</style>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <div class="cinebar top"></div>
+  <div class="cinebar bottom"></div>
+
+  <div id="rec"><span class="dot"></span>LIVE REC <span class="tc" id="tc">00:00:00</span></div>
+  <div id="pausechip">⏸ DUNGEON PAUSED · player &amp; monsters frozen</div>
+
+  <!-- --i / --j drive the per-line combat-text pop stagger (see @keyframes popPlace) -->
+  <aside id="promo">
+    <div class="kicker" style="--i:0">Hostile authority detected</div>
+    <div class="promo-name" id="bname" style="--i:1">LEVEL<span class="sub">SUPERVISOR</span></div>
+    <div class="kanji" id="bkanji" style="--i:2">ヤクザ階層監督</div>
+    <div class="rule" style="--i:3"></div>
+    <div class="stats" style="--i:4">
+      <div class="stat" style="--j:0"><b id="bfloor">FLOOR 01</b><small>JURISDICTION</small></div>
+      <div class="stat" style="--j:1"><b id="bhp">500 / 500</b><small>VITAL FORCE</small></div>
+      <div class="stat" style="--j:2"><b>LEVEL KEY</b><small>POSSESSION</small></div>
+    </div>
+    <div class="notice" style="--i:5">He has seen you. <b>The house is no longer neutral.</b></div>
+  </aside>
+
+  <!-- PRESS ANY KEY — appears when the intro timer runs out; the shot HOLDS until the player acts -->
+  <div id="anykey"><span class="k">PRESS ANY KEY</span><span class="s">to engage</span></div>
+
+  <div id="prog"></div>
+
+  <div id="status">boss.html · sandbox · r128 · loading…</div>
+
+  <div id="dock">
+    <button class="go" id="btnGo">▶ BOSS INTRO</button>
+    <button id="btnStop">⏹ Dismiss (spin&nbsp;back)</button>
+    <div class="sep"></div>
+    <label>rift</label>
+    <button id="btnTrack">🎲 random</button>
+    <button id="btnBow">play sequence</button>
+    <div class="sep"></div>
+    <!-- DIRECTOR CONTROLS (Mark 2026-07-26: "move camera 90 to the right" + "intro timer length (slider so I can
+         see what to do)" + "the animation should have an + to add an additional animation and duration of it") -->
+    <label for="camYaw">cam°</label><input type="range" id="camYaw" title="orbit the camera around the boss" min="-180" max="180" step="5" value="-90"><span class="val" id="camYawV">-90°</span>
+    <label for="faceD">face°</label><input type="range" id="faceD" title="boss turn offset — 0 squares him to the lens" min="-180" max="180" step="5" value="-90"><span class="val" id="faceDV">-90°</span>
+    <label for="shiftD">shift</label><input type="range" id="shiftD" title="screen-space shift — push the boss into the right half" min="-40" max="40" step="1" value="-6"><span class="val" id="shiftDV">-6</span>
+    <label for="durS">intro</label><input type="range" id="durS" title="how long the intro stays on screen" min="1" max="20" step="0.5" value="5.4"><span class="val" id="durV">5.4s</span>
+  </div>
+
+  <!-- ANIMATION SEQUENCER — rows of clip + duration; ＋ appends another beat -->
+  <div id="seqPanel">
+    <div class="seqHead"><b>INTRO ANIMATION</b><button type="button" id="btnAdd" title="add another animation beat">＋</button></div>
+    <div id="seqRows"></div>
+    <div class="seqFoot"><span id="seqTotal">total 0.0s</span></div>
+  </div>
+
+  <script src="./vendor/three/r128/three.min.js"></script>
+  <script src="./vendor/three/r128/js/loaders/GLTFLoader.js"></script>
+  <script>
+  (function(){
+    'use strict';
+    const $ = id => document.getElementById(id);
+    const statusEl = $('status');
+    const setStatus = t => { statusEl.textContent = 'boss.html · sandbox · ' + t; };
+
+    // ── THREE r128 scene ─────────────────────────────────────────────────────────────
+    const canvas = $('scene');
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:false });
+    renderer.setPixelRatio(Math.min(2, window.devicePixelRatio||1));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x05080e);
+    scene.fog = new THREE.Fog(0x05080e, 6, 20);
+
+    const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+    // frame the boss on the RIGHT half (subject pushed right; promo panel owns the left)
+    // look LEFT of the boss so the boss sits in the RIGHT ~55% of frame, clear of the promo panel
+    // RELATIVE framing (Mark 2026-07-26 fix): the old presets were absolute world points that only framed the
+    // ORIGINAL pose. Once recenterOnBoss() moved the look-target onto the real model centre, the camera-to-target
+    // distance collapsed and the shot became an extreme close-up of the back of his head. Presets now carry a
+    // DISTANCE + a height rise, so the framing survives any recentre, any yaw and any rig size.
+    const CAM = { wide:{ dist:6.4, rise:0.55, side:-0.55, fov:44, tgt:new THREE.Vector3(0.55,1.35,0), pos:new THREE.Vector3() },
+                  close:{ dist:4.4, rise:0.30, side:-0.40, fov:34, tgt:new THREE.Vector3(0.72,1.5,0), pos:new THREE.Vector3() } };
+    let camGoal = CAM.wide, camSpin = 0;
+    // ── CAMERA ORBIT YAW (Mark 2026-07-26 "for boss, need to move camera 90 to the right") ──────────
+    // The framing above put the camera dead-in-front, which showed the supervisor in PROFILE. Rather than
+    // bake a guessed rotation, the camera now ORBITS the look-target by camYawDeg (default +90 = 90° right)
+    // and the slider dials it live — drag it and the framing updates on the next frame, no reload.
+    // ── HALF-AND-HALF FRAMING (Mark 2026-07-26 "shift camera to the right so the text doesnt clip the boss
+    //    1/2 1/2"). The old lateral `side` offset was applied BEFORE the yaw orbit, so at cam° -90 it pushed him
+    //    along the wrong axis and he drifted back under the dossier. filmOffset shifts the PROJECTION in screen
+    //    space — immune to yaw, costs nothing, and is the same lever the live engine's reveal uses. Negative =
+    //    subject moves right. Dial: the "shift" slider.
+    let filmOff = -6;   // measured: -13 shoved him off the right edge; -6 centres him in the right half
+    let faceDeg = -90;    // boss turn offset in DEGREES (slider). Mark 2026-07-26 "turn monster model 90 degrees
+                          // right, its facing too far to the left" — +90 put his BACK to the lens, so the rig's
+                          // forward is -X: -90 squares him to camera. Drag face° to re-aim without a reload.
+    let camYawDeg = -90;   // -90 not +90: at +90 the supervisor showed his BACK (Mark 2026-07-26 "boss is facing backwards"). Slider dials it live.
+    const _orbit = (v, tgt, deg) => { const a = deg * Math.PI / 180;
+      const dx = v.x - tgt.x, dz = v.z - tgt.z, ca = Math.cos(a), sa = Math.sin(a);
+      return new THREE.Vector3(tgt.x + dx*ca - dz*sa, v.y, tgt.z + dx*sa + dz*ca); };
+    // ── CENTER ON THE MODEL (Mark 2026-07-26 "make sure to center on model in the highlight") ─────────
+    // The look-targets above were hand-typed offsets that only happened to frame the old pose. Once the rig
+    // loads we MEASURE its bounding box and re-point both presets at its true centre (chest height), and aim
+    // the key spot + shadow at the same point — so the boss sits dead-centre of the lit pool at any yaw.
+    const bossCenter = new THREE.Vector3(0, 1.3, 0);
+    function recenterOnBoss(){
+      if (!boss) return;
+      const bb = new THREE.Box3().setFromObject(boss); const c = new THREE.Vector3(); bb.getCenter(c);
+      const H = Math.max(0.5, bb.max.y - bb.min.y);
+      bossCenter.set(c.x, bb.min.y + H * 0.52, c.z);   // mid-body: keeps head AND feet in frame through a deep bow
+      CAM.wide.tgt.copy(bossCenter); CAM.close.tgt.copy(bossCenter);
+      // ── FIT, DON'T GUESS (Mark 2026-07-26 "fix the boss.html" — he was cropped at head and knees). Hardcoded
+      //    distances can't know the rig's height, and a BOW leans him out of a tight frame. Derive the distance
+      //    from the model height + the lens: dist = (H * headroom / 2) / tan(fov/2). close keeps ~1.35 body
+      //    heights in frame, wide ~1.9 — so the whole supervisor is always inside the shot, bow and all.
+      const _fit = (fovDeg, headroom) => (H * headroom * 0.5) / Math.tan(fovDeg * Math.PI / 360);
+      CAM.close.dist = _fit(CAM.close.fov, 1.35);
+      CAM.wide.dist  = _fit(CAM.wide.fov,  1.90);
+      CAM.close.rise = H * 0.10; CAM.wide.rise = H * 0.16;
+      CAM.close.side = 0; CAM.wide.side = 0;   // lateral framing is filmOffset now (screen-space, yaw-proof)
+      key.target.position.copy(bossCenter); key.target.updateMatrixWorld(); scene.add(key.target);
+      ground.position.set(c.x, 0, c.z);   // shadow disc under him wherever he stands
+    }
+    // ── LIVE-REC RACK-IN (Mark 2026-07-26 "a dramatic zoom -- use LIVE REC red button for this, like a live
+    //    tv camera shot"). A broadcast camera does not lerp: it SNAPS wide as the red light comes on, holds a
+    //    beat, then racks in hard and overshoots slightly before settling. rackT drives exactly that curve;
+    //    the REC dot flares on the same clock, and clicking the REC badge re-fires the shot for framing tests.
+    let rackT = 1, rackOn = false;
+    const RACK_DUR = 1.25;
+    // ── HANDHELD OPERATOR (Mark 2026-07-26 "do a cute camera shake and focus - like its a real camera guy
+    //    doing it"). Three layers, all tiny — the trick is that none of them is regular:
+    //      breathe : two out-of-phase sines (different primes) = a person holding a heavy camera, never looping
+    //      jolt    : a decaying impulse fired WITH the rack — the operator gets shoved by his own zoom
+    //      focus   : he overshoots sharp, hunts back a hair, then nails it (CSS blur on the canvas; this
+    //                sandbox has no DOF pass, and a 2-frame blur reads exactly like a lens finding focus)
+    let jolt = 0, focusT = 1;
+    const SHAKE = () => (typeof window._camShake === 'number') ? window._camShake : 1;   // 0 = tripod, 1 = handheld, 2 = caffeinated
+
+    function fireRack(){ rackT = 0; rackOn = true; jolt = 1; focusT = 0; document.body.classList.add('racking');
+      const r = $('rec'); if (r){ r.classList.remove('flare'); void r.offsetWidth; r.classList.add('flare'); } }
+    // rack curve: 0→1 with a punch past the goal (overshoot) then settle — 1.0 = fully racked in
+    const rackEase = (t) => { if (t >= 1) return 1; const p = 1 - Math.pow(1 - t, 3); return p + Math.sin(t * Math.PI) * 0.16; };
+    const camPosFor = (g) => {
+      // build the shot from the TARGET outward: dist back on +Z, rise up, side-step to leave room for the panel
+      const base = _orbit(new THREE.Vector3(g.tgt.x + g.side, g.tgt.y + g.rise, g.tgt.z + g.dist), g.tgt, camYawDeg);
+      if (!rackOn) return base;
+      // pull the camera BACK along its view ray by the un-racked amount → the zoom-in you see is the rack
+      const k = 1 - rackEase(Math.min(1, rackT));
+      const dir = base.clone().sub(g.tgt);
+      return g.tgt.clone().add(dir.multiplyScalar(1 + k * 0.85));
+    };
+    camera.position.copy(camPosFor(CAM.wide));
+
+    // dramatic boss lighting — key + red rim + cool fill (no churn; static)
+    scene.add(new THREE.HemisphereLight(0x223047, 0x05070c, 0.65));
+    const key = new THREE.SpotLight(0xfff0d8, 2.2, 30, Math.PI/5, 0.5, 1.2);
+    key.position.set(4.5, 8, 6); key.castShadow = true; key.shadow.mapSize.set(1024,1024); scene.add(key);
+    const rim = new THREE.SpotLight(0xff3a54, 2.6, 30, Math.PI/4.5, 0.6, 1.3);
+    rim.position.set(-5, 5, -4); scene.add(rim);
+    const fill = new THREE.PointLight(0x9ff7ff, 0.5, 22); fill.position.set(-3,3,5); scene.add(fill);
+
+    // ground disc so the boss casts a shadow (grounds the promo shot)
+    const ground = new THREE.Mesh(new THREE.CircleGeometry(6, 48),
+      new THREE.MeshStandardMaterial({ color:0x0a0f16, roughness:0.95, metalness:0.0 }));
+    ground.rotation.x = -Math.PI/2; ground.receiveShadow = true; scene.add(ground);
+
+    // ── load the boss (supervisor rig = new.goblin.glb), scale up for menace ──────────
+    let mixer = null, clips = {}, boss = null, ready = false;
+    const BOSS_H = 2.35;               // oversized boss presence
+    const loader = new THREE.GLTFLoader();
+    loader.load('./assets/models/monster/goblin/new.goblin.glb', (gltf) => {
+      boss = gltf.scene;
+      boss.traverse(o => { if (o.isMesh){ o.castShadow = true; o.frustumCulled = false; } });
+      // fit to height + center on floor, pushed to the RIGHT of frame
+      const box = new THREE.Box3().setFromObject(boss);
+      const size = new THREE.Vector3(); box.getSize(size);
+      const s = BOSS_H / (size.y || 1); boss.scale.setScalar(s);
+      const box2 = new THREE.Box3().setFromObject(boss); const c = new THREE.Vector3(); box2.getCenter(c);
+      boss.position.x += (1.55 - c.x); boss.position.z += (0 - c.z);
+      boss.position.y += (0 - box2.min.y);
+      boss.rotation.y = -0.35;         // three-quarter toward camera-left (faces the "player")
+      scene.add(boss);
+      recenterOnBoss();   // centre camera + key light on the real model (Mark 2026-07-26)
+      // TURNTABLE PIVOT: re-seat the rig so its visual centre sits on boss.position — now rotation.y is a
+      // clean spin-in-place and the facing logic below can never swing him out of the shot.
+      { const _bb = new THREE.Box3().setFromObject(boss); const _c = new THREE.Vector3(); _bb.getCenter(_c);
+        const _dx = _c.x - boss.position.x, _dz = _c.z - boss.position.z;
+        boss.children.forEach(ch => { ch.position.x -= _dx; ch.position.z -= _dz; });
+        boss.position.x += _dx; boss.position.z += _dz; recenterOnBoss(); }
+      // clips: NlaTrack.004 idle · .002 bow · .001 wave(agree) · .007 laugh
+      mixer = new THREE.AnimationMixer(boss);
+      const byName = n => gltf.animations.find(a => a.name === n) || null;
+      clips.idle = byName('NlaTrack.004') || gltf.animations[0];
+      clips.bow  = byName('NlaTrack.002');
+      clips.wave = byName('NlaTrack.001');
+      clips.laugh= byName('NlaTrack.007');
+      if (clips.idle){ const a = mixer.clipAction(clips.idle); a.play(); }
+      // Feed the sequencer every clip on the rig (friendly labels for the four we know), then seed the
+      // default intro = the old hardcoded bow→wave, so the sandbox opens exactly as it behaved before.
+      const _known = { 'NlaTrack.004':'idle', 'NlaTrack.002':'bow', 'NlaTrack.001':'wave', 'NlaTrack.007':'laugh' };
+      allClips = gltf.animations.map(c => ({ name: c.name, clip: c, label: (_known[c.name] ? _known[c.name] + ' (' + c.name + ')' : c.name) + ' · ' + c.duration.toFixed(1) + 's' }));
+      seq = [];
+      if (clips.bow)  seq.push({ name: clips.bow.name,  dur: +(clips.bow.duration  || 1.5).toFixed(1) });
+      if (clips.wave) seq.push({ name: clips.wave.name, dur: +(clips.wave.duration || 1.5).toFixed(1) });
+      if (!seq.length && allClips.length) seq.push({ name: allClips[0].name, dur: 2 });
+      renderSeq();
+      ready = true;
+      setStatus('ready — press ▶ BOSS INTRO   (clips: ' + gltf.animations.map(a=>a.name).slice(0,6).join(',') + '…)');
+    }, undefined, (err) => { setStatus('MODEL LOAD FAILED: ' + (err && err.message || err)); });
+
+    // ── bow → wave one-shot chain ─────────────────────────────────────────────────────
+    function playOnce(clip, next){
+      if (!mixer || !clip){ if (next) next(); return; }
+      const a = mixer.clipAction(clip);
+      a.reset(); a.setLoop(THREE.LoopOnce, 1); a.clampWhenFinished = true;
+      a.fadeIn(0.15).play();
+      const onFin = (e) => { if (e.action !== a) return; mixer.removeEventListener('finished', onFin); a.fadeOut(0.35); if (next) next(); };
+      mixer.addEventListener('finished', onFin);
+    }
+    function idleLoop(){ if (mixer && clips.idle){ const a = mixer.clipAction(clips.idle); a.reset().fadeIn(0.4).play(); } }
+
+    // ── ANIMATION SEQUENCER (Mark 2026-07-26: "the animation should have an + to add an additional animation
+    //    and duration of it"). The intro is no longer the hardcoded bow→wave: it is a LIST of beats, each with
+    //    its own clip and its own duration in seconds. ＋ appends a beat, ✕ removes one. A beat's duration is
+    //    authoritative — the clip is time-scaled to fill exactly that many seconds (so "bow for 3s" really is
+    //    3s, whatever the rig's native clip length) — then the chain advances. Empty list → straight to idle.
+    let allClips = [];                          // [{name, clip}] — filled once the GLB lands
+    let seq = [];                               // [{name, dur}] — the authored beats
+    let seqTimer = null;
+    function renderSeq(){
+      const rows = $('seqRows'); if (!rows) return;
+      rows.innerHTML = '';
+      seq.forEach((beat, i) => {
+        const row = document.createElement('div'); row.className = 'seqRow';
+        const sel = document.createElement('select');
+        allClips.forEach(c => { const o = document.createElement('option'); o.value = c.name; o.textContent = c.label || c.name; sel.appendChild(o); });
+        sel.value = beat.name;
+        sel.title = 'which animation plays in this beat';
+        sel.addEventListener('change', () => { beat.name = sel.value; });
+        const dur = document.createElement('input');
+        dur.type = 'number'; dur.min = '0.2'; dur.max = '30'; dur.step = '0.1'; dur.value = String(beat.dur);
+        dur.title = 'seconds this beat lasts';
+        dur.addEventListener('change', () => { beat.dur = Math.max(0.2, parseFloat(dur.value) || 1); updTotal(); });
+        const del = document.createElement('button');
+        del.type = 'button'; del.className = 'del'; del.textContent = '✕'; del.title = 'remove this beat';
+        del.addEventListener('click', () => { seq.splice(i, 1); renderSeq(); });
+        row.appendChild(sel); row.appendChild(dur); row.appendChild(del);
+        rows.appendChild(row);
+      });
+      updTotal();
+    }
+    function updTotal(){ const t = seq.reduce((a, b) => a + (b.dur || 0), 0);
+      const el = $('seqTotal'); if (el) el.textContent = 'total ' + t.toFixed(1) + 's'; }
+    function stopSeq(){ if (seqTimer){ clearTimeout(seqTimer); seqTimer = null; } }
+    // Play beat i: retime the clip to the authored duration, hold the last pose, then advance.
+    function playSeq(i){
+      if (!mixer || i >= seq.length){ idleLoop(); return; }
+      const beat = seq[i];
+      const entry = allClips.find(c => c.name === beat.name);
+      if (!entry || !entry.clip){ playSeq(i + 1); return; }
+      const a = mixer.clipAction(entry.clip);
+      a.reset(); a.setLoop(THREE.LoopOnce, 1); a.clampWhenFinished = true;
+      const nat = entry.clip.duration || 1;
+      a.timeScale = nat / Math.max(0.2, beat.dur);   // stretch/squeeze the clip to fill the authored beat
+      a.fadeIn(0.15).play();
+      seqTimer = setTimeout(() => { a.fadeOut(0.3); playSeq(i + 1); }, beat.dur * 1000);
+    }
+    function runSequence(){ stopSeq(); playSeq(0); }
+    function bowThenWave(){ runSequence(); }   // kept as the button's entry point (now sequence-driven)
+
+    // ── audio (the rift) ──────────────────────────────────────────────────────────────
+    const RIFTS = ['./assets/sounds/BG-OLD/SilentBlade.mp3','./assets/sounds/BG-OLD/DevilzDuel.mp3'];
+    let riftEl = null, forcedTrack = -1;
+    function playRift(){
+      const i = forcedTrack >= 0 ? forcedTrack : (Math.random()*RIFTS.length)|0;
+      try { if (riftEl){ riftEl.pause(); } } catch(_){}
+      riftEl = new Audio(RIFTS[i]); riftEl.volume = 0.55; riftEl.loop = true;
+      const p = riftEl.play(); if (p && p.catch) p.catch(()=>{});
+      $('btnTrack').textContent = '🎵 ' + RIFTS[i].split('/').pop().replace('.mp3','');
+    }
+    function stopRift(){ try { if (riftEl){ riftEl.pause(); riftEl.currentTime = 0; } } catch(_){} }
+
+    // ── the cinematic: PAUSE everything, run the intro, then SPIN BACK ─────────────────
+    let live = false, tSince = 0, timecode = 0, autoAt = 0;
+    let DUR = 5.4; // seconds on screen before auto-dismiss — LIVE via the "intro" slider (Mark 2026-07-26)
+    function startIntro(){
+      if (!ready || live) return;
+      live = true; tSince = 0; timecode = 0; autoAt = DUR;
+      document.body.classList.add('live');
+      camGoal = CAM.close; camSpin = 0;
+      fireRack();   // LIVE REC red light → dramatic broadcast rack-in (Mark 2026-07-26)
+      $('prog').style.transition = 'none'; $('prog').style.transform = 'scaleX(0)';
+      requestAnimationFrame(()=>{ $('prog').style.transition = 'transform ' + DUR + 's linear'; $('prog').style.transform = 'scaleX(1)'; });
+      bowThenWave();
+      playRift();
+      // each slam lands a punch on the camera — text impact and operator jolt on the same beat
+      const _lines = document.querySelectorAll('#promo > *');
+      _lines.forEach((_el, i) => setTimeout(() => { if (live) jolt = Math.max(jolt, i === 1 ? 0.85 : 0.5); },
+        (0.12 + i * 0.17 + 0.26) * 1000));
+      // IN THE REAL GAME: here we set the hard-pause flag that freezes BOTH the player's keyboard/movement
+      // AND every monster's AI tick — so combat holds still and nobody trades free swings. (Sandbox: no dungeon to freeze.)
+      setStatus('LIVE — dungeon paused (player + monsters). Click / Space / Esc / Dismiss to spin back.');
+    }
+    function endIntro(){
+      if (!live) return;
+      live = false;
+      document.body.classList.remove('live'); document.body.classList.remove('await');
+      camGoal = CAM.wide; camSpin = Math.PI * 2;   // SPIN BACK to normal view (Mark: "spin back to normal view for player")
+      $('prog').style.transition = 'transform .4s ease'; $('prog').style.transform = 'scaleX(0)';
+      rackOn = false; rackT = 1; focusT = 1; jolt = 0.35; canvas.style.filter = ''; document.body.classList.remove('racking');
+      stopSeq(); stopRift(); idleLoop();
+      setStatus('dismissed — spun back to normal view. ▶ to run it again.');
+    }
+
+    // dismiss on click / Space / Enter / Esc — and note ALL keys are swallowed while live (mimics the pause)
+    canvas.addEventListener('click', () => { if (live) endIntro(); });
+    window.addEventListener('keydown', (e) => {
+      if (!live) return;
+      // WHILE LIVE, EAT EVERY KEY (this is the "pauses all keyboard interaction" contract).
+      e.preventDefault(); e.stopPropagation();
+      if (['Space','Enter','Escape'].includes(e.code)) endIntro();
+    }, true);
+    const _rec = $('rec'); if (_rec){ _rec.style.cursor = 'pointer'; _rec.title = 'refire the rack-in (live TV zoom)';
+      _rec.addEventListener('click', () => { if (live) fireRack(); }); }
+    $('btnGo').addEventListener('click', startIntro);
+    $('btnStop').addEventListener('click', endIntro);
+    $('btnBow').addEventListener('click', () => { if (ready) runSequence(); });
+    // ── DIRECTOR CONTROLS (Mark 2026-07-26) — all live, no reload ────────────────────────────────────
+    $('camYaw').addEventListener('input', (e) => { camYawDeg = parseFloat(e.target.value) || 0;
+      $('camYawV').textContent = camYawDeg + '°'; });
+    $('faceD').addEventListener('input', (e) => { faceDeg = parseFloat(e.target.value) || 0;
+      $('faceDV').textContent = faceDeg + '\u00B0'; });
+    $('shiftD').addEventListener('input', (e) => { filmOff = parseFloat(e.target.value) || 0;
+      $('shiftDV').textContent = String(filmOff); });
+    $('durS').addEventListener('input', (e) => { DUR = parseFloat(e.target.value) || 5.4;
+      $('durV').textContent = DUR.toFixed(1) + 's';
+      if (live){ autoAt = DUR;   // retime a running intro so the bar + auto-dismiss follow the slider
+        $('prog').style.transition = 'none'; $('prog').style.transform = 'scaleX(' + Math.min(1, tSince / DUR) + ')';
+        requestAnimationFrame(()=>{ $('prog').style.transition = 'transform ' + Math.max(0, DUR - tSince) + 's linear'; $('prog').style.transform = 'scaleX(1)'; }); } });
+    $('btnAdd').addEventListener('click', () => {   // ＋ = append another animation beat
+      if (!allClips.length) return;
+      const last = seq[seq.length - 1];
+      const next = allClips.find(c => c.name !== (last && last.name)) || allClips[0];
+      seq.push({ name: next.name, dur: +(next.clip.duration || 1.5).toFixed(1) });
+      renderSeq(); });
+    $('btnTrack').addEventListener('click', () => { forcedTrack = (forcedTrack + 2) % (RIFTS.length + 1) - 1; // -1(random)→0→1→-1
+      $('btnTrack').textContent = forcedTrack < 0 ? '🎲 random' : '🎵 ' + RIFTS[forcedTrack].split('/').pop().replace('.mp3',''); });
+
+    // ── render loop ───────────────────────────────────────────────────────────────────
+    const clock = new THREE.Clock();
+    function fmtTC(t){ const cs=Math.floor((t*100)%100), s=Math.floor(t)%60, m=Math.floor(t/60)%60;
+      const p=(n)=>String(n).padStart(2,'0'); return p(m)+':'+p(s)+':'+p(cs); }
+    function resize(){ const w=innerWidth,h=innerHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+    window.addEventListener('resize', resize); resize();
+
+    function tick(){
+      requestAnimationFrame(tick);
+      const dt = Math.min(0.05, clock.getDelta());
+      if (mixer) mixer.update(dt);   // boss keeps animating even while "paused" (its mixer is ticked deliberately)
+      // ease camera toward the goal + apply the spin-back
+      if (rackOn && rackT < 1){ rackT = Math.min(1, rackT + dt / RACK_DUR); if (rackT >= 1) document.body.classList.remove('racking'); }
+      const g = camGoal; const ease = Math.min(1, dt*3.4);
+      camera.position.lerp(camPosFor(g), ease);   // orbit-aware goal (camYawDeg slider — Mark 2026-07-26)
+      const _fovGoal = rackOn ? (g.fov + (1 - rackEase(Math.min(1, rackT))) * 16) : g.fov;   // wide at rack start, tight at settle
+      camera.fov += (_fovGoal - camera.fov) * ease;
+      camera.filmOffset = filmOff;   // screen-space half/half shift (Mark 2026-07-26)
+      camera.updateProjectionMatrix();
+      if (camSpin > 0.001){ const step = Math.min(camSpin, dt*Math.PI*3.2); const a = camSpin; camSpin -= step;
+        // orbit the camera around the target as it returns (the "spin back")
+        const t = g.tgt; const dx = camera.position.x - t.x, dz = camera.position.z - t.z;
+        const ca = Math.cos(step), sa = Math.sin(step);
+        camera.position.x = t.x + dx*ca - dz*sa; camera.position.z = t.z + dx*sa + dz*ca;
+      }
+      camera.lookAt(g.tgt);
+      // ── FACE THE CAMERA (Mark 2026-07-26 "boss is facing backwards"): orbiting the camera used to swing round
+      //    to his back. The supervisor now turns to keep the lens, with a three-quarter offset so it still reads
+      //    as a posed portrait rather than a mugshot. Off: window._bossFaceCam=false · angle: window._bossFaceOff
+      if (boss && window._bossFaceCam !== false){
+        // Rotate about the model's VISUAL centre (bossCenter), not boss.position — the rig's mesh origin sits
+        // off to one side, so turning about it swung his body out of frame instead of pivoting on the spot.
+        const _off = faceDeg * Math.PI / 180;
+        const _want = Math.atan2(camera.position.x - bossCenter.x, camera.position.z - bossCenter.z) + _off;
+        let _d = _want - boss.rotation.y; while (_d > Math.PI) _d -= Math.PI*2; while (_d < -Math.PI) _d += Math.PI*2;
+        boss.rotation.y += _d * Math.min(1, dt * 4.5);   // eased so the turn is a performance, not a snap
+      }
+      // ── handheld: breathe + jolt, applied after lookAt so it reads as the OPERATOR moving ───────────
+      const _amp = SHAKE();
+      if (_amp > 0.001){
+        const t = performance.now() * 0.001;
+        jolt = Math.max(0, jolt - dt * 2.6);                       // impulse decays over ~0.4s
+        const j = jolt * jolt;                                     // quadratic = a snap, not a slide
+        const bx = Math.sin(t * 1.7) * 0.0075 + Math.sin(t * 2.9) * 0.0042;
+        const by = Math.sin(t * 1.3 + 1.1) * 0.0062 + Math.sin(t * 3.7) * 0.0028;
+        camera.position.x += (bx + Math.sin(t * 31) * 0.05 * j) * _amp;
+        camera.position.y += (by + Math.cos(t * 27) * 0.05 * j) * _amp;
+        camera.rotation.z += (Math.sin(t * 0.9) * 0.0022 + Math.sin(t * 23) * 0.011 * j) * _amp;
+      }
+      // ── focus hunt: soft → past-sharp → settle, on the rack's clock ─────────────────────────────────
+      if (focusT < 1){
+        focusT = Math.min(1, focusT + dt / (RACK_DUR * 0.85));
+        const f = focusT;
+        const blur = f < 0.62 ? (1 - f / 0.62) * 3.4          // racking in, still soft
+                   : (f < 0.82 ? (f - 0.62) / 0.2 * 0.9        // hunts a hair past sharp
+                              : (1 - (f - 0.82) / 0.18) * 0.9); // and settles
+        canvas.style.filter = blur > 0.02 ? ('blur(' + blur.toFixed(2) + 'px)') : '';
+        if (focusT >= 1) canvas.style.filter = '';
+      }
+      // gentle idle sway on the boss backdrop light for a living broadcast feel
+      rim.intensity = 2.2 + Math.sin(performance.now()*0.002)*0.5;
+      if (live){ tSince += dt; timecode += dt; $('tc').textContent = fmtTC(timecode);
+        // HOLD FOR THE PLAYER (Mark 2026-07-26 "have a PRESS ANY KEY so player can see this before moving
+        // on"): the timer no longer yanks the shot away — at the end it parks and waits for input. Auto-
+        // dismiss returns with window._bossAutoDismiss=true (then the intro slider is the whole duration).
+        if (tSince >= autoAt){
+          if (window._bossAutoDismiss === true){ endIntro(); }
+          else if (!document.body.classList.contains('await')) document.body.classList.add('await');
+        } }
+      renderer.render(scene, camera);
+    }
+    tick();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+PWA ICON DROP-ZONE — Origami Underworld
+=======================================
+manifest.json (repo root) references these four files. Drop the PNGs here with the
+EXACT names below. All must be SQUARE (the brand origami-logo.svg is 2:1 wide, so it
+cannot be used directly — compose the logo centered on a square dark canvas).
+
+Background to composite on: #05080a (matches manifest background_color).
+
+1. icon-192.png            192 x 192   — standard icon ("any"). Logo fills ~90% of frame.
+2. icon-512.png            512 x 512   — standard hi-res icon ("any"). Logo fills ~90%.
+3. icon-maskable-512.png   512 x 512   — MASKABLE. Logo must sit inside the inner 80%
+                                          "safe zone" (≈51px padding all sides) so Android
+                                          can crop to a circle/squircle without clipping art.
+4. apple-touch-icon-180.png 180 x 180  — iOS home-screen icon (referenced by <link rel=
+                                          "apple-touch-icon"> in NewOrigami.8.html).
+                                          No transparency — iOS adds its own rounding.
+
+After adding the files:
+- No code change needed; the manifest + HTML already point here.
+- Verify in Chrome DevTools → Application → Manifest (icons should resolve, no 404s).
+- The temporary SVG fallback in manifest.json (assets/brand/origami-logo.svg) can be
+  removed once the square PNGs are in place, since it letterboxes in a square slot.

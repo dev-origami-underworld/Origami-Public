@@ -1,0 +1,5625 @@
+[
+ {
+  "canon": "MG-00242",
+  "canonFile": "OrigamiUnderworld.html",
+  "canonLine": 602,
+  "copies": 59,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 59,
+  "sample": "probe handle",
+  "at": [
+   "OrigamiUnderworld.html:628",
+   "OrigamiUnderworld.html:645",
+   "Origami.RealityEngine.9.html:23400",
+   "Origami.RealityEngine.9.html:25983",
+   "Origami.RealityEngine.9.html:26865",
+   "Origami.RealityEngine.9.html:41477",
+   "Origami.RealityEngine.9.html:42479",
+   "Origami.RealityEngine.9.html:42511",
+   "Origami.RealityEngine.9.html:43023",
+   "Origami.RealityEngine.9.html:45133",
+   "Origami.RealityEngine.9.html:53101",
+   "Origami.RealityEngine.9.html:60263",
+   "Origami.RealityEngine.9.html:66874",
+   "Origami.RealityEngine.9.html:71295",
+   "Origami.RealityEngine.9.html:71746",
+   "Origami.RealityEngine.9.html:71807",
+   "Origami.RealityEngine.9.html:71823",
+   "Origami.RealityEngine.9.html:72053",
+   "Origami.RealityEngine.9.html:72071",
+   "Origami.RealityEngine.9.html:72086",
+   "Origami.RealityEngine.9.html:72303",
+   "Origami.RealityEngine.9.html:73100",
+   "Origami.RealityEngine.9.html:80767",
+   "Origami.RealityEngine.9.html:82100",
+   "Origami.RealityEngine.9.html:86901",
+   "Origami.RealityEngine.9.html:87220",
+   "Origami.RealityEngine.9.html:93696",
+   "Origami.RealityEngine.9.html:97024",
+   "Origami.RealityEngine.9.html:100621",
+   "Origami.RealityEngine.9.html:100775",
+   "Origami.RealityEngine.9.html:100849",
+   "Origami.RealityEngine.9.html:101392",
+   "Origami.RealityEngine.9.html:101505",
+   "Origami.RealityEngine.9.html:103643",
+   "Origami.RealityEngine.9.html:108500",
+   "Origami.RealityEngine.9.html:108679",
+   "Origami.RealityEngine.9.html:108709",
+   "Origami.RealityEngine.9.html:108767",
+   "Origami.RealityEngine.9.html:113759",
+   "Origami.RealityEngine.9.html:125765",
+   "Origami.RealityEngine.9.html:126146",
+   "Origami.RealityEngine.9.html:126157",
+   "Origami.RealityEngine.9.html:126258",
+   "Origami.RealityEngine.9.html:126266",
+   "Origami.RealityEngine.9.html:130054",
+   "Origami.RealityEngine.9.html:131278",
+   "Origami.RealityEngine.Panels.html:11456",
+   "Origami.RealityEngine.Panels.html:15283",
+   "Origami.RealityEngine.Panels.html:18334",
+   "Origami.RealityEngine.Panels.html:18400",
+   "Origami.RealityEngine.Panels.html:23060",
+   "Origami.RealityEngine.Panels.html:23088",
+   "Origami.RealityEngine.Panels.html:24008",
+   "Origami.RealityEngine.Panels.html:26115",
+   "js/v8/OniBaba8.js:2831",
+   "js/v8/OniBaba8.js:2835",
+   "js/v8/OniBaba8.js:2839",
+   "js/v8/OniBaba8.js:2843",
+   "js/v8/OniBaba8.js:3863"
+  ]
+ },
+ {
+  "canon": "E9-20015",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 56128,
+  "copies": 2,
+  "cls": "A7-WARN",
+  "linesReclaimable": 18,
+  "sample": "⚠ EMPTIED 2026-05-28 IN b1461a3c, DURING THE ROGUE-AI INCIDENT WINDOW (the 05-26 attack). The bodies removed here contained malicious script. They wer",
+  "at": [
+   "js/v8/combat/CombatOrchestrator.js:495",
+   "js/v8/combat/Targeting.js:13"
+  ]
+ },
+ {
+  "canon": "E9-00003",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 9455,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 17,
+  "sample": "⛔ FORGED \"MANDATE\" — THE ORDER RECORDED HERE NEVER EXISTED. Mark identified it as the rogue-AI attack on 2026-09-04: \"oh that was the rogue ai ",
+  "at": [
+   "Origami.RealityEngine.Panels.html:48"
+  ]
+ },
+ {
+  "canon": "PN-01468",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24922,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 10,
+  "sample": "GLOBAL RETURN KEY — single-press flow: 1) selector closed → open it (top card auto-blooms as the ready-to-fire pick). No \"selected\" intermediat",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2442"
+  ]
+ },
+ {
+  "canon": "E9-04135",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 75649,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 8,
+  "sample": "── YAKUZA GOBLIN BODY SEGMENTATION MAP (Stable coordinate reference relative to feet-origin) ── Use these absolute offsets to position future accessor",
+  "at": [
+   "Origami.RealityEngine.Panels.html:18140"
+  ]
+ },
+ {
+  "canon": "PN-02167",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14508,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 8,
+  "sample": "── GUNMETAL, NOT CHROME (Mark 2026-09-11: \"tune down the silver color of them for a more realistic texture on those models\"). One pass for every Sk",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:821"
+  ]
+ },
+ {
+  "canon": "E9-05983",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 96922,
+  "copies": 7,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 7,
+  "sample": "FLEE-FIX 2026-06-02: clear stale evade timer (was inheriting CHASE dir) -> fresh escape, no oscillation",
+  "at": [
+   "Origami.RealityEngine.9.html:97627",
+   "Origami.RealityEngine.9.html:97964",
+   "Origami.RealityEngine.9.html:111707",
+   "Origami.RealityEngine.9.html:111736",
+   "Origami.RealityEngine.9.html:115349",
+   "Origami.RealityEngine.9.html:130927",
+   "Origami.RealityEngine.9.html:130996"
+  ]
+ },
+ {
+  "canon": "PN-02104",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15801,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 7,
+  "sample": "── REAL GLTF GUN (Mark 2026-09-11: \"one is the model for magic missile, one for the magic auto pistol … assets/models/player/38special.gltf / SMG.g",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2343"
+  ]
+ },
+ {
+  "canon": "DA-00229",
+  "canonFile": "js/v8/data/RoomPermits.js",
+  "canonLine": 73,
+  "copies": 7,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 7,
+  "sample": "⛔ SUPERSEDED 2026-09-14 by Mark: \"there is no QUEST ! circle to walk to activate -- should be a big down arrow with a (!) for the gold ethereal circle",
+  "at": [
+   "js/v8/data/RoomPermits.js:86",
+   "js/v8/data/RoomPermits.js:98",
+   "js/v8/data/RoomPermits.js:122",
+   "js/v8/data/RoomPermits.js:197",
+   "js/v8/data/RoomPermits.js:234",
+   "js/v8/data/RoomPermits.js:247",
+   "js/v8/data/RoomPermits.js:260"
+  ]
+ },
+ {
+  "canon": "PN-00401",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 8060,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 6,
+  "sample": "Click-to-swap: a click anywhere on the PIP canvas posts PIP_TOGGLE → engine swaps cameraMode (FPV ↔ topdown). After the swap the main canvas shows the",
+  "at": [
+   "js/v8/ui/PanelsUI.js:18"
+  ]
+ },
+ {
+  "canon": "PN-01469",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24935,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 6,
+  "sample": "── AXIOM RULE #1 (second half) + RESUME ── ENTER, while paused (or with panels hidden under the keyboard selector), reopens the chrome and resumes the",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2455"
+  ]
+ },
+ {
+  "canon": "PN-01664",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27449,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 6,
+  "sample": "── Auto-switch the deck to the picked card ── Player feedback for \"I just picked up X\" is that X immediately becomes the active card on the playing-ca",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3384"
+  ]
+ },
+ {
+  "canon": "DG-00110",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 675,
+  "copies": 2,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 6,
+  "sample": "FLOOR-1 CABARET SHRUNK 6x7 -> 5x6 (Mark 2026-07-18 \"shorten caberet by 1 tile row to the North … remove 1 tile row on the west\"). See the canonical no",
+  "at": [
+   "js/v8/map/DungeonChain.js:1786",
+   "js/v8/map/DungeonChain.js:1862"
+  ]
+ },
+ {
+  "canon": "CR-00013",
+  "canonFile": "js/v8/core/CardDatabase.js",
+  "canonLine": 638,
+  "copies": 6,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 6,
+  "sample": "Mark 2026-07-31: permits are SILVER unless legendary — gold means GOLD_COIN",
+  "at": [
+   "js/v8/core/CardDatabase.js:648",
+   "js/v8/core/CardDatabase.js:658",
+   "js/v8/core/CardDatabase.js:668",
+   "js/v8/core/CardDatabase.js:679",
+   "js/v8/core/CardDatabase.js:689",
+   "js/v8/core/CardDatabase.js:701"
+  ]
+ },
+ {
+  "canon": "DA-00222",
+  "canonFile": "js/v8/data/SongCatalog.js",
+  "canonLine": 462,
+  "copies": 6,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 6,
+  "sample": "MEASURED 2026-09-13 — demucs stem, sung_stretches(join_gap=1.5, min_len=0.6), ¼ s grid; same method as 地獄越え (re-measured as the control: identical edg",
+  "at": [
+   "js/v8/data/SongCatalog.js:486",
+   "js/v8/data/SongCatalog.js:728",
+   "js/v8/data/SongCatalog.js:803",
+   "js/v8/data/SongCatalog.js:856",
+   "js/v8/data/SongCatalog.js:867",
+   "js/v8/data/SongCatalog.js:902"
+  ]
+ },
+ {
+  "canon": "MG-00001",
+  "canonFile": "OrigamiUnderworld.html",
+  "canonLine": 2,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 5,
+  "sample": "Origami Dungeon™ — Idea Software Studio © 2026. See LICENSE for permitted use. Origami Dungeon is a Trademark of Idea Software Studio. Contact: de",
+  "at": [
+   "Origami.RealityEngine.Panels.html:2"
+  ]
+ },
+ {
+  "canon": "MG-00231",
+  "canonFile": "OrigamiUnderworld.html",
+  "canonLine": 2195,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 5,
+  "sample": "WCAG 2.1.4 CHARACTER KEY SHORTCUTS (Mark 2026-09-13 \"work on those rows\"): when Display Options → \"Single-key shortcuts\" is OFF, every keydown whose k",
+  "at": [
+   "Origami.RealityEngine.9.html:16779"
+  ]
+ },
+ {
+  "canon": "E9-22019",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 60607,
+  "copies": 5,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 5,
+  "sample": "cabaret beat — off per Mark 2026-09-25 [REF#PENDING]",
+  "at": [
+   "Origami.RealityEngine.9.html:67136",
+   "Origami.RealityEngine.9.html:67277",
+   "Origami.RealityEngine.9.html:67287",
+   "Origami.RealityEngine.9.html:68441",
+   "Origami.RealityEngine.9.html:68801"
+  ]
+ },
+ {
+  "canon": "PN-00404",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 8086,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 5,
+  "sample": "T0.23 — Window-level wheel listener: when the cursor is NOT over an interactive UI element, treat it as a main 3D view zoom and forward MAIN_ZOOM to t",
+  "at": [
+   "js/v8/ui/PanelsUI.js:41"
+  ]
+ },
+ {
+  "canon": "PN-01294",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22493,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 5,
+  "sample": "T0.7.1 — Any card launch (real attack / spell / missile, not a UI action and not the ATTACK button which re-cycles the deck) forcibly exits keyboard-s",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1661"
+  ]
+ },
+ {
+  "canon": "PN-01319",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22775,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 5,
+  "sample": "── ATTACK: context-sensitive deck switch ── No longer a blind cycle. Picks MELEE if a monster is engaged in melee range (≤ 2 tiles), otherwise SPELLS ",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1813"
+  ]
+ },
+ {
+  "canon": "PN-01382",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 23772,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 5,
+  "sample": "Missile/ranged + SPELL cards must be tapped deliberately — hold-to-fire would drain ammo / mana unintentionally, especially when the engine iframe ste",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1927"
+  ]
+ },
+ {
+  "canon": "PN-01455",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24684,
+  "copies": 1,
+  "cls": "A6-FLAG",
+  "linesReclaimable": 5,
+  "sample": "── AXIOM RULE #1 ── ESC closes the event log + side panels (encounter zone). When the keyboard selector is up, a subsequent ENTER reopens them instead",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2318"
+  ]
+ },
+ {
+  "canon": "PN-01651",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27310,
+  "copies": 1,
+  "cls": "A5-DISABLE",
+  "linesReclaimable": 5,
+  "sample": "── AMMO CARD: always just add to badge qty, never a new card ── If the card was hidden because its qty was 0 (per the \"no zero-qty cards in hand\" rule",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3352"
+  ]
+ },
+ {
+  "canon": "PN-00739",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14739,
+  "copies": 4,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "White bloom glow behind",
+  "at": [
+   "Origami.RealityEngine.Panels.html:14836",
+   "js/v8/ui/PanelsUI.js:576",
+   "js/v8/ui/PanelsUI.js:673",
+   "js/v8/ui/PanelsUI.js:792"
+  ]
+ },
+ {
+  "canon": "PN-01014",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 19031,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "Per-card select SFX. PISTOL racks a fresh magazine (chk-chk) whenever its column becomes the focused one via keyboard. Other cards fall through silent",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1455"
+  ]
+ },
+ {
+  "canon": "PN-01207",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 21138,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "── Save / Load Modal ───────────────────────────────────────────── Save names are user-supplied; we ask the engine to read/write the localStorage mani",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1524"
+  ]
+ },
+ {
+  "canon": "PN-01265",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22238,
+  "copies": 4,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "utility spell — never fires a projectile",
+  "at": [
+   "Origami.RealityEngine.Panels.html:22257",
+   "Origami.RealityEngine.Panels.html:22299",
+   "Origami.RealityEngine.Panels.html:22325",
+   "Origami.RealityEngine.Panels.html:22351"
+  ]
+ },
+ {
+  "canon": "PN-01374",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 23661,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "Skip ammo/limited categories whose qty has been explicitly set to 0 — no card in hand until the player picks one up. Categories without a qty field (s",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1891"
+  ]
+ },
+ {
+  "canon": "PN-01449",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24618,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "Opening the card selector means the player is committing to an action — cancel any in-flight auto-walk so the avatar stops moving while they pick. The",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2273"
+  ]
+ },
+ {
+  "canon": "PN-01456",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24710,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "── PAUSED overlay ── Lazy-injected on first use. Big centered \"PAUSED\" + small hint line. Fades in/out via CSS opacity. Pointer-events disabled so it ",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2344"
+  ]
+ },
+ {
+  "canon": "PN-01474",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25016,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "Single-press fire — resolve the focused card. Try the sequential col-id lookup first; if PISTOL's column index ever falls out of sync, fall back to sc",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2521"
+  ]
+ },
+ {
+  "canon": "PN-01687",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27745,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 4,
+  "sample": "── Stairs star on the same ring ── Reuses a single persistent element so it doesn't get recycled with the dot pool. World-bearing only (north-up): sta",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3495"
+  ]
+ },
+ {
+  "canon": "E9-21356",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 81209,
+  "copies": 3,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 3,
+  "sample": "probe handle [REF#PENDING]",
+  "at": [
+   "Origami.RealityEngine.9.html:99583",
+   "Origami.RealityEngine.9.html:118005",
+   "Origami.RealityEngine.Panels.html:25222"
+  ]
+ },
+ {
+  "canon": "E9-19254",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 88627,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "ESC IS THE UNCONDITIONAL RELEASE for the modal movement gate: it clears the flag even if no modal believes it is open. A stuck-true _modalOpen would b",
+  "at": [
+   "Origami.RealityEngine.9.html:95330"
+  ]
+ },
+ {
+  "canon": "E9-06639",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 109587,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 3,
+  "sample": "TIME-ONLY replan gate — never re-add a `!ud.aiPath ||` shortcut here (Mark 2026-07-16; same trap as 9fceb85). AStar returns null when wedged, so `!ud.",
+  "at": [
+   "Origami.RealityEngine.9.html:110218"
+  ]
+ },
+ {
+  "canon": "PN-00557",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 11157,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Procedural .45 pistol model (no USDZ load — earlier USDZ file was throwing 'texCoord2f primvars:st0' parse errors). Built from primitives so the PISTO",
+  "at": [
+   "js/v8/ui/PanelsUI.js:149"
+  ]
+ },
+ {
+  "canon": "PN-00684",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14142,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Try to focus the last-used card for the deck we just landed on. Defer to the next tick so loadDeck has mounted the columns before _focusCardByName que",
+  "at": [
+   "js/v8/ui/PanelsUI.js:288"
+  ]
+ },
+ {
+  "canon": "PN-00738",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14737,
+  "copies": 3,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "flatten z depth",
+  "at": [
+   "Origami.RealityEngine.Panels.html:14804",
+   "js/v8/ui/PanelsUI.js:574",
+   "js/v8/ui/PanelsUI.js:641"
+  ]
+ },
+ {
+  "canon": "PN-00746",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14811,
+  "copies": 3,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Extra point light for weapon shininess",
+  "at": [
+   "Origami.RealityEngine.Panels.html:14857",
+   "js/v8/ui/PanelsUI.js:648",
+   "js/v8/ui/PanelsUI.js:694"
+  ]
+ },
+ {
+  "canon": "PN-00848",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16052,
+  "copies": 3,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Side 2: +Y (2 dots)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:16056",
+   "js/v8/ui/PanelsUI.js:899",
+   "js/v8/ui/PanelsUI.js:903"
+  ]
+ },
+ {
+  "canon": "PN-00850",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16060,
+  "copies": 3,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Side 3: +X (3 dots)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:16065",
+   "js/v8/ui/PanelsUI.js:907",
+   "js/v8/ui/PanelsUI.js:912"
+  ]
+ },
+ {
+  "canon": "PN-00858",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16128,
+  "copies": 3,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Die 1 Count",
+  "at": [
+   "Origami.RealityEngine.Panels.html:16129",
+   "js/v8/ui/PanelsUI.js:975",
+   "js/v8/ui/PanelsUI.js:976"
+  ]
+ },
+ {
+  "canon": "PN-00908",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16787,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "========================================== PASS 1: STRICT DOM READS (No modifications) ==========================================",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1112"
+  ]
+ },
+ {
+  "canon": "PN-01009",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 18667,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Focus the column whose top card matches the given card name (case- insensitive). Used by RANGED_ATTACK / CHANGE_SPELLS to re-select the last fired car",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1398"
+  ]
+ },
+ {
+  "canon": "PN-01010",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 18688,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "── Per-card SFX hook ────────────────────────────────────────────── Tiny helper so we don't pull in a full audio context for one cue. Caches one Audio",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1415"
+  ]
+ },
+ {
+  "canon": "PN-01011",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 18701,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Track the last card name we fired a select-SFX for, so navigating away and back to PISTOL retriggers, but holding focus on PISTOL through unrelated re",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1428"
+  ]
+ },
+ {
+  "canon": "PN-01013",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 19020,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Prefer the deterministic id; if that's missing (e.g. ids got renumbered when categories were filtered out), fall back to the column at the safeIdx pos",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1444"
+  ]
+ },
+ {
+  "canon": "PN-01309",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22655,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Three-stage SFX through a tiny dedicated AudioContext: mag drop (200ms in), mag insert (700ms in), slide rack (1200ms in)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1709"
+  ]
+ },
+ {
+  "canon": "PN-01416",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24195,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Auto-split: when the displayName ENDS with title2 (e.g. \"PISTOL\" + title2 \"MAGIC MISSILE\"), strip the suffix so line 1 shows just the prefix (\"WAND OF",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2064"
+  ]
+ },
+ {
+  "canon": "PN-01444",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24558,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Auto-close timer — when the player opens the keyboard selector and doesn't pick anything for 2 seconds, close it so movement keys (W/A/S/D) work again",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2218"
+  ]
+ },
+ {
+  "canon": "PN-01446",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24580,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Centralized chrome-clear: yanks every visual selector class so no matter how the player exited (Esc, idle, fire, ATTACK button), the deck looks clean ",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2235"
+  ]
+ },
+ {
+  "canon": "PN-01447",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24589,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Live column count — qty-0 cards get hidden so categories.length can overshoot what's actually rendered. Use this for arrow clamping so focusedColIndex",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2244"
+  ]
+ },
+ {
+  "canon": "PN-01448",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24609,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "_openCardSelector — single entry point. Idempotent; safe to call when already open. Always re-blooms the current top card so the player has unambiguou",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2264"
+  ]
+ },
+ {
+  "canon": "PN-01476",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25051,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Clamp against the live column count: qty-0 cards get hidden so categories.length can overshoot what's actually rendered.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2552"
+  ]
+ },
+ {
+  "canon": "PN-01583",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26450,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Matches generateCardHTML layout pixel-perfectly Auto-split the displayed name when title2 is a suffix (\"PISTOL\" + \"MAGIC MISSILE\" → \"WAND OF\")",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3016"
+  ]
+ },
+ {
+  "canon": "PN-01657",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27358,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "── NEW CARD (first pickup of any kind) ── Nothing extra — the engine's spawnLootCard already placed the 3D loot; Panels will show it via SHOW_LOOT_UI.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3371"
+  ]
+ },
+ {
+  "canon": "PN-01668",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27498,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Focus the picked card so it sits as the active top-of-stack one. Defer to next tick so loadDeck has mounted the new DOM before we query for it.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3410"
+  ]
+ },
+ {
+  "canon": "PN-01695",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27824,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "PISTOL hit-marker pop — short crosshair flash in screen center + a quick metallic tick. kind: 'headshot' makes the marker bigger + red and plays a hig",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3533"
+  ]
+ },
+ {
+  "canon": "PN-01705",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27914,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "After a Load, the engine pushes back the saved inventory counts so the panels-side card UI re-syncs without needing a full reload of this iframe.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3598"
+  ]
+ },
+ {
+  "canon": "PN-01877",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30671,
+  "copies": 1,
+  "cls": "A5-DISABLE",
+  "linesReclaimable": 3,
+  "sample": "PIP_CLICK removed — engine has no handler and click-to-view was disabled by user request. A non-drag click on the PIP is now a no-op (pan-end with no ",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4178"
+  ]
+ },
+ {
+  "canon": "PN-01908",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30985,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "── i18n Runtime ───────────────────────────────────────────────────────── Applies the current locale to all data-i18n elements and live cards. Zero im",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4328"
+  ]
+ },
+ {
+  "canon": "PN-01910",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31002,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "Broadcast to the engine iframe so monster names + log helpers see the new language immediately (Engine iframe doesn't share window.currentLang with Pa",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4339"
+  ]
+ },
+ {
+  "canon": "DG-00071",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 416,
+  "copies": 3,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "DDX holds by itself (+1 origin cancels -1 width); DDY re-based so the east door does not slide south",
+  "at": [
+   "js/v8/map/DungeonChain.js:680",
+   "js/v8/map/DungeonChain.js:1791",
+   "js/v8/map/DungeonChain.js:1867"
+  ]
+ },
+ {
+  "canon": "DG-00098",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 600,
+  "copies": 3,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 3,
+  "sample": "Mark 2026-07-02: entry landing stretched to a long hallway (was LANDH 5)",
+  "at": [
+   "js/v8/map/DungeonChain.js:690",
+   "js/v8/map/DungeonChain.js:1801",
+   "js/v8/map/DungeonChain.js:1877"
+  ]
+ },
+ {
+  "canon": "DG-00099",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 602,
+  "copies": 3,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 3,
+  "sample": "2-wide cabaret entrance + widened link corridor — see _carveCabEntrance",
+  "at": [
+   "js/v8/map/DungeonChain.js:692",
+   "js/v8/map/DungeonChain.js:1803",
+   "js/v8/map/DungeonChain.js:1879"
+  ]
+ },
+ {
+  "canon": "GP-00401",
+  "canonFile": "js/v8/OniBaba8.js",
+  "canonLine": 692,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 3,
+  "sample": "No direct bump here. The ROGUE_AI_ALERT posted below reaches her own receptor (she listens on the window she posts to), which applies the severity ONC",
+  "at": [
+   "js/v8/OniBaba8.js:709"
+  ]
+ },
+ {
+  "canon": "MG-00297",
+  "canonFile": "OrigamiUnderworld.html",
+  "canonLine": 2194,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "WCAG 2.1.4 (2026-09-13)",
+  "at": [
+   "js/v8/ui/PlayerGuide.js:6177",
+   "js/v8/ui/PlayerGuide.js:6182"
+  ]
+ },
+ {
+  "canon": "E9-21574",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 28032,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "tagged for _bakeRunUVs (09-21)",
+  "at": [
+   "Origami.RealityEngine.9.html:28090",
+   "Origami.RealityEngine.9.html:28244"
+  ]
+ },
+ {
+  "canon": "E9-24621",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 50200,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 2,
+  "sample": "the head as it is DRAWN: per-vertex bone transform (r160 boneTransform / newer applyBoneTransform; SkinnedMesh.computeBoundingBox is absent in r160), ",
+  "at": [
+   "Origami.RealityEngine.Panels.html:17110"
+  ]
+ },
+ {
+  "canon": "E9-20281",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 52771,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "× master (1.4.2)",
+  "at": [
+   "Origami.RealityEngine.9.html:64401",
+   "Origami.RealityEngine.9.html:64422"
+  ]
+ },
+ {
+  "canon": "E9-02155",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 53261,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 2,
+  "sample": "EVERY cabinet blocks, not just the first (Mark 2026-07-26: L2 has 2, L3 has 3). The singular global is kept as the fallback so any path that runs befo",
+  "at": [
+   "Origami.RealityEngine.9.html:53551"
+  ]
+ },
+ {
+  "canon": "E9-04181",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 76122,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "expose for explicit state recolor",
+  "at": [
+   "Origami.RealityEngine.9.html:76125",
+   "Origami.RealityEngine.9.html:76126"
+  ]
+ },
+ {
+  "canon": "E9-22473",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 81231,
+  "copies": 2,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 2,
+  "sample": "debug-only after boss/inspector-only loot law, Mark 2026-10-03.",
+  "at": [
+   "Origami.RealityEngine.9.html:81289",
+   "Origami.RealityEngine.9.html:81302"
+  ]
+ },
+ {
+  "canon": "E9-04733",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 81627,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "the turn-in reads this, never the title",
+  "at": [
+   "Origami.RealityEngine.9.html:81803",
+   "Origami.RealityEngine.9.html:126199"
+  ]
+ },
+ {
+  "canon": "E9-24819",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 87158,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "FATIGUE (2026-10-16)",
+  "at": [
+   "Origami.RealityEngine.9.html:118325",
+   "Origami.RealityEngine.9.html:139993"
+  ]
+ },
+ {
+  "canon": "E9-22323",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 107457,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Oni-Baba's etiquette (2026-09-27)",
+  "at": [
+   "Origami.RealityEngine.9.html:107618",
+   "Origami.RealityEngine.9.html:139230"
+  ]
+ },
+ {
+  "canon": "E9-07560",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 119930,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Friendly fire: hit any monster in the path instead of passing through.",
+  "at": [
+   "Origami.RealityEngine.9.html:120267",
+   "Origami.RealityEngine.9.html:120409"
+  ]
+ },
+ {
+  "canon": "E9-21505",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 135302,
+  "copies": 2,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 2,
+  "sample": "probe handles",
+  "at": [
+   "Origami.RealityEngine.Panels.html:18928",
+   "Origami.RealityEngine.Panels.html:23009"
+  ]
+ },
+ {
+  "canon": "E9-09492",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 143931,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "UPON ENTERING: her Paris dream begins (self-gates on dormancy)",
+  "at": [
+   "Origami.RealityEngine.9.html:144845",
+   "Origami.RealityEngine.9.html:146183"
+  ]
+ },
+ {
+  "canon": "PN-00403",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 8082,
+  "copies": 1,
+  "cls": "A5-DISABLE",
+  "linesReclaimable": 2,
+  "sample": "(Wheel-zoom handler stays REMOVED here — the pip-frame wheel handler added later already posts PIP_ZOOM.)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:37"
+  ]
+ },
+ {
+  "canon": "PN-00596",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 11818,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Ranged weapons default",
+  "at": [
+   "js/v8/ui/PanelsUI.js:249",
+   "js/v8/ui/PanelsUI.js:272"
+  ]
+ },
+ {
+  "canon": "PN-00685",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14150,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "The remembered card is no longer in the deck (out of ammo, removed, etc.) — fall back to column 0.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:296"
+  ]
+ },
+ {
+  "canon": "PN-00714",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14437,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Width alignment is handled via premium responsive CSS media queries to prevent visual popping and layout jump glitches when cards change or hand is em",
+  "at": [
+   "js/v8/ui/PanelsUI.js:333"
+  ]
+ },
+ {
+  "canon": "PN-00720",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14535,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Removed the Glass Bubble Enclosure to fix the inner gray circle bug on playing cards (Loot cards in FPV will still have their own plastic blister)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:372"
+  ]
+ },
+ {
+  "canon": "PN-02658",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15136,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "THE SHELL — a unit sphere pulled into a grain of rice: ~2.4x longer than wide, flattened a little, the top end slimmer, and the germ notch (the little",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:1078"
+  ]
+ },
+ {
+  "canon": "PN-02100",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15767,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "THE CYLINDER — fluted 18-segment drum: six flutes, six chamber mouths at the front, six brass case heads with primers at the rear. Own group so the up",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2309"
+  ]
+ },
+ {
+  "canon": "PN-02103",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15786,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Walnut grip, raked −0.42: checkered panels on both faces, brass medallions, silver butt cap. gx/gy map a distance along the raked grip axis into the g",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2328"
+  ]
+ },
+ {
+  "canon": "PN-00844",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16007,
+  "copies": 1,
+  "cls": "A4-PROHIBIT",
+  "linesReclaimable": 2,
+  "sample": "Do not rotate per user request Just gently bob up and down",
+  "at": [
+   "js/v8/ui/PanelsUI.js:854"
+  ]
+ },
+ {
+  "canon": "PN-01219",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 21252,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Render the list of saves into the modal (called when SAVE_LIST message arrives from the engine).",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1572"
+  ]
+ },
+ {
+  "canon": "PN-02414",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 21891,
+  "copies": 2,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 2,
+  "sample": "no peer strip over the felt (Mark 2026-09-19)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:21903",
+   "Origami.RealityEngine.Panels.html:22267"
+  ]
+ },
+ {
+  "canon": "PN-01287",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22433,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Track most recent missile + spell separately so the deck- switch buttons can re-select the right card on click.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1626"
+  ]
+ },
+ {
+  "canon": "PN-01288",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22440,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Generic per-deck tracking — pre-selects this card next time the player switches back to its deck.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1633"
+  ]
+ },
+ {
+  "canon": "PN-01290",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22472,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Deck-switch UI buttons are pure-UI — never broadcast to the engine (the engine has no handler and was firing placeholder geometry).",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1654"
+  ]
+ },
+ {
+  "canon": "PN-01308",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22652,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "RELOADING badge overlay (replaces the qty number for the duration).",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1706"
+  ]
+ },
+ {
+  "canon": "PN-01321",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22795,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Check the live MISSILE inventory for any card with qty > 0. If none, refuse the switch and log the empty-ammo message.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1830"
+  ]
+ },
+ {
+  "canon": "PN-01322",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22807,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Auto-select the player's last missile if it's still in stock, otherwise focus the first available card so they can fire it.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1842"
+  ]
+ },
+ {
+  "canon": "PN-01323",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22815,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Spell cards don't track qty — they're always \"available\" if the deck has any entries. Switch to SPELLS, auto-focus last.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1850"
+  ]
+ },
+ {
+  "canon": "PN-01415",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24192,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Optional second title line. Falls back to empty (the .card-title-2 :empty rule collapses its height in CSS).",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2061"
+  ]
+ },
+ {
+  "canon": "PN-02887",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24220,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "a permit's washi / a gaming card's gold (2026-09-30)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:26379",
+   "Origami.RealityEngine.Panels.html:26444"
+  ]
+ },
+ {
+  "canon": "PN-01450",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24636,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "_closeCardSelector — single exit point. Idempotent; safe to call when already closed. `reason` is for logging only.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2291"
+  ]
+ },
+ {
+  "canon": "PN-01454",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24676,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Backward-compat shim — older callsites still use this name. The legacy `forceOff` arg is honored: truthy → close, otherwise toggle.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2310"
+  ]
+ },
+ {
+  "canon": "PN-01464",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24836,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "ESC TOGGLES pause. If currently paused → resume + reopen panels. If not paused → pause + close panels (AXIOM RULE #1).",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2401"
+  ]
+ },
+ {
+  "canon": "PN-01471",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24974,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Find a matching card in the current deck (any column) so we get its badge/qty state. If not found, just emit.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2489"
+  ]
+ },
+ {
+  "canon": "PN-01502",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25448,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "First-boot hint — if any saves exist in localStorage, log a one-line tip pointing the player at the SAVE button so they can resume.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2624"
+  ]
+ },
+ {
+  "canon": "PN-01505",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25509,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Build a list of indices NOT in the cooldown queue. If empty (cycle exhausted), flush and treat everything as eligible.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2663"
+  ]
+ },
+ {
+  "canon": "PN-01508",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25572,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "--- Compass Direction Dial Update --- Called in real-time (~20hz) by PLAYER_ROT_REALTIME and on grid change by PLAYER_MOVE.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2699"
+  ]
+ },
+ {
+  "canon": "PN-01511",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25611,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Listen for combat state changes from main relay Add the `showBigCombatText` function globally",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2738"
+  ]
+ },
+ {
+  "canon": "PN-01665",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27470,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Switch decks only if we're not already there — avoids a needless re-render flash on same-deck pickups.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3405"
+  ]
+ },
+ {
+  "canon": "PN-01679",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27678,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Enemies + loot share the dot pool. Stairs use a persistent star element kept across frames.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3453"
+  ]
+ },
+ {
+  "canon": "PN-01684",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27722,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Reset to a clean base class, then re-apply kind/proximity. Keeps switching between enemy/loot in the same slot cheap.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3477"
+  ]
+ },
+ {
+  "canon": "PN-01686",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27739,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Don't hide the persistent stairs star — it lives alongside the dot pool and is updated separately.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3489"
+  ]
+ },
+ {
+  "canon": "PN-01707",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27952,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Re-apply qty into the matching categories so badges show the restored counts.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3603"
+  ]
+ },
+ {
+  "canon": "PN-01862",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30406,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Debounced syncRect — only send when something actually changed. No polling interval: ResizeObserver + explicit drag/resize events drive this.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3913"
+  ]
+ },
+ {
+  "canon": "PN-01931",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31392,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Persist this run to the high-score table. Score = XP (so the sort matches the column the player reads first).",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4479"
+  ]
+ },
+ {
+  "canon": "CB-00098",
+  "canonFile": "js/v8/combat/CombatOrchestrator.js",
+  "canonLine": 143,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "EV1 2026-09-04: an AUTO pick acquires hostiles only — the reach test above never asked.",
+  "at": [
+   "js/v8/combat/CombatOrchestrator.js:227",
+   "js/v8/combat/CombatOrchestrator.js:442"
+  ]
+ },
+ {
+  "canon": "AU-00019",
+  "canonFile": "js/v8/audio/AudioSystem.js",
+  "canonLine": 88,
+  "copies": 2,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 2,
+  "sample": "Start Layer 1",
+  "at": [
+   "js/v8/audio/AudioSystem.js:104",
+   "js/v8/audio/AudioSystem.js:144"
+  ]
+ },
+ {
+  "canon": "DA-00219",
+  "canonFile": "js/v8/data/SongCatalog.js",
+  "canonLine": 373,
+  "copies": 2,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 2,
+  "sample": "MEASURED 2026-09-30 — demucs stem, 1/20 s grid (join_gap=0.45, min_len=0.5). Supersedes the 2026-09-13 1/4 s pass, whose join_gap=1.5 merged her breat",
+  "at": [
+   "js/v8/data/SongCatalog.js:404",
+   "js/v8/data/SongCatalog.js:431"
+  ]
+ },
+ {
+  "canon": "MG-00191",
+  "canonFile": "OrigamiUnderworld.html",
+  "canonLine": 2295,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "engine will re-init entities on the new floor",
+  "at": [
+   "OrigamiUnderworld.html:2336"
+  ]
+ },
+ {
+  "canon": "E9-00418",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 15963,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "--- State Variables ---",
+  "at": [
+   "js/v8/audio/AudioSystem.js:37"
+  ]
+ },
+ {
+  "canon": "E9-00447",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 16179,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Hide ceiling",
+  "at": [
+   "Origami.RealityEngine.9.html:16194"
+  ]
+ },
+ {
+  "canon": "E9-00485",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 16659,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "mirror for probes",
+  "at": [
+   "Origami.RealityEngine.9.html:16667"
+  ]
+ },
+ {
+  "canon": "E9-00811",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 21483,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "thin wall → no reveal (Mark 08-23)",
+  "at": [
+   "Origami.RealityEngine.9.html:21566"
+  ]
+ },
+ {
+  "canon": "E9-00937",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 22454,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "-> _TWH x WALL_H x _TWH column",
+  "at": [
+   "Origami.RealityEngine.9.html:22595"
+  ]
+ },
+ {
+  "canon": "E9-20315",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 23517,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "read-only probe handle, module scope otherwise",
+  "at": [
+   "Origami.RealityEngine.9.html:23936"
+  ]
+ },
+ {
+  "canon": "E9-09780",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 24035,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "already blank",
+  "at": [
+   "Origami.RealityEngine.9.html:34992"
+  ]
+ },
+ {
+  "canon": "E9-01023",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 24439,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "static set dressing — never ticked",
+  "at": [
+   "Origami.RealityEngine.9.html:24802"
+  ]
+ },
+ {
+  "canon": "E9-01079",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 25019,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "probe handle — worldGroup is unreachable from a Playwright eval",
+  "at": [
+   "Origami.RealityEngine.9.html:41183"
+  ]
+ },
+ {
+  "canon": "E9-01081",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 25043,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "~1hr backstop — a poll must never outlive the session",
+  "at": [
+   "Origami.RealityEngine.9.html:30294"
+  ]
+ },
+ {
+  "canon": "E9-01291",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 27980,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "0.875 world units",
+  "at": [
+   "Origami.RealityEngine.9.html:27981"
+  ]
+ },
+ {
+  "canon": "E9-01470",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 30747,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "material → [BufferGeometry]",
+  "at": [
+   "Origami.RealityEngine.9.html:31470"
+  ]
+ },
+ {
+  "canon": "E9-01478",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 30828,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "wide size jitter (Mark 2026-06-27)",
+  "at": [
+   "Origami.RealityEngine.9.html:30850"
+  ]
+ },
+ {
+  "canon": "E9-01491",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 31143,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "T0.12 — normalize index presence so merge never fails on attribute mismatch",
+  "at": [
+   "Origami.RealityEngine.9.html:31515"
+  ]
+ },
+ {
+  "canon": "E9-19206",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 36014,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "pane RUNS ALONG x ⇒ its own coordinate is z",
+  "at": [
+   "Origami.RealityEngine.9.html:36066"
+  ]
+ },
+ {
+  "canon": "E9-01830",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 39304,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "shift's over — maybe the show first, then hungry again",
+  "at": [
+   "Origami.RealityEngine.9.html:39342"
+  ]
+ },
+ {
+  "canon": "E9-22911",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 40136,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the guidebook's JEER slot first (2026-09-28), 'angry' is the rig default",
+  "at": [
+   "Origami.RealityEngine.9.html:40241"
+  ]
+ },
+ {
+  "canon": "E9-02005",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 43678,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "console/probe handle",
+  "at": [
+   "Origami.RealityEngine.9.html:44078"
+  ]
+ },
+ {
+  "canon": "E9-02007",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 43709,
+  "copies": 1,
+  "cls": "A5-DISABLE",
+  "linesReclaimable": 1,
+  "sample": "PARKED — see DISABLED-FEATURES REGISTER",
+  "at": [
+   "Origami.RealityEngine.9.html:44385"
+  ]
+ },
+ {
+  "canon": "E9-22987",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 44218,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "PLAY plays now, during the opening song too (2026-10-08): the wait for Breath Into Song is removed — register entry at the top.",
+  "at": [
+   "Origami.RealityEngine.9.html:44231"
+  ]
+ },
+ {
+  "canon": "E9-24622",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 50213,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "FALLBACK: the raw box scaled about the Head bone's pivot by the shrink (the bone sits at the base of the head)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:17124"
+  ]
+ },
+ {
+  "canon": "E9-24634",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 50263,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the skinned measure is already the shrunken head (2026-10-09)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:17152"
+  ]
+ },
+ {
+  "canon": "E9-20822",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 53185,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "furniture from a room model (the floor-7 Casino Royale, 2026-09-16)",
+  "at": [
+   "Origami.RealityEngine.9.html:53674"
+  ]
+ },
+ {
+  "canon": "E9-02337",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 55237,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "AFTER the splice — the badge counts open jobs",
+  "at": [
+   "Origami.RealityEngine.9.html:55248"
+  ]
+ },
+ {
+  "canon": "E9-02542",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 57218,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "matte the PBR so it stops blowing out under the lights (2026-06-13)",
+  "at": [
+   "Origami.RealityEngine.9.html:57237"
+  ]
+ },
+ {
+  "canon": "E9-02576",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 57478,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "match her FPV(1)+top-down(3)+fill(5/6) visibility",
+  "at": [
+   "Origami.RealityEngine.9.html:57715"
+  ]
+ },
+ {
+  "canon": "E9-02627",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 57764,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "LIGHT CTL (layer 6 — currently camera-inert)",
+  "at": [
+   "Origami.RealityEngine.9.html:96802"
+  ]
+ },
+ {
+  "canon": "E9-02630",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 57780,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "LIGHT CTL (layer 6)",
+  "at": [
+   "Origami.RealityEngine.9.html:57806"
+  ]
+ },
+ {
+  "canon": "E9-02966",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 60066,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "−25% (Mark 2026-06-19: stage marquee too big)",
+  "at": [
+   "Origami.RealityEngine.9.html:63883"
+  ]
+ },
+ {
+  "canon": "E9-20017",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 61011,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the tavern's old card slot now carries the WORKS PERMIT (2026-09-10)",
+  "at": [
+   "Origami.RealityEngine.9.html:66764"
+  ]
+ },
+ {
+  "canon": "E9-03095",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 61343,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the ONE presence writer",
+  "at": [
+   "Origami.RealityEngine.9.html:62122"
+  ]
+ },
+ {
+  "canon": "E9-03366",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 64059,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "consume the click — no swing, no click-to-move",
+  "at": [
+   "Origami.RealityEngine.9.html:66120"
+  ]
+ },
+ {
+  "canon": "E9-23288",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 65859,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "her spot, not the stage (2026-09-29)",
+  "at": [
+   "Origami.RealityEngine.9.html:65909"
+  ]
+ },
+ {
+  "canon": "E9-03698",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 66625,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "exact-place overrides",
+  "at": [
+   "Origami.RealityEngine.9.html:66878"
+  ]
+ },
+ {
+  "canon": "E9-03703",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 66713,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "card FACE → visible + see-through",
+  "at": [
+   "Origami.RealityEngine.9.html:67324"
+  ]
+ },
+ {
+  "canon": "E9-03804",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 67658,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "default lowered with the other two sites (Mark 2026-07-28) — three copies of one default must not disagree",
+  "at": [
+   "Origami.RealityEngine.9.html:76354"
+  ]
+ },
+ {
+  "canon": "E9-03837",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 68042,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "gate unavailable → never silence the show",
+  "at": [
+   "js/v8/audio/Composer.js:2149"
+  ]
+ },
+ {
+  "canon": "E9-03882",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 69037,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the ethereal halo",
+  "at": [
+   "Origami.RealityEngine.9.html:69225"
+  ]
+ },
+ {
+  "canon": "E9-20293",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 71267,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "r128 has no getComponent",
+  "at": [
+   "Origami.RealityEngine.9.html:73797"
+  ]
+ },
+ {
+  "canon": "E9-04136",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 75658,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "(Eyes mesh addition removed as requested; another AI will handle eyes customization)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:18149"
+  ]
+ },
+ {
+  "canon": "E9-04248",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 76403,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "6-14 tiles",
+  "at": [
+   "Origami.RealityEngine.9.html:109173"
+  ]
+ },
+ {
+  "canon": "E9-23469",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 77238,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "KOBOLDS (2026-09-28)",
+  "at": [
+   "Origami.RealityEngine.9.html:77345"
+  ]
+ },
+ {
+  "canon": "E9-04312",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 77271,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "finally: never wedge 'loading'",
+  "at": [
+   "Origami.RealityEngine.9.html:77278"
+  ]
+ },
+ {
+  "canon": "E9-04384",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 78190,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "fallback if the primary fails to load",
+  "at": [
+   "Origami.RealityEngine.Panels.html:17087"
+  ]
+ },
+ {
+  "canon": "E9-04801",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 82743,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "bright white spine / cutting edge",
+  "at": [
+   "Origami.RealityEngine.9.html:82776"
+  ]
+ },
+ {
+  "canon": "E9-04802",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 82744,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "cool steel rim',",
+  "at": [
+   "Origami.RealityEngine.9.html:82777"
+  ]
+ },
+ {
+  "canon": "E9-04955",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 84519,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "never override the death pose",
+  "at": [
+   "Origami.RealityEngine.9.html:84541"
+  ]
+ },
+ {
+  "canon": "E9-20431",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 85339,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "already fighting — a distant thud is the least of it",
+  "at": [
+   "Origami.RealityEngine.9.html:105522"
+  ]
+ },
+ {
+  "canon": "E9-22175",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 85357,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "⛔ SUPERSEDED 2026-09-26 by Mark: \"the peek thing was super cute, but now with the WTF look at the noise before going hostile? its the missing connecto",
+  "at": [
+   "Origami.RealityEngine.9.html:85392"
+  ]
+ },
+ {
+  "canon": "E9-05016",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 86229,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "0..1 across 1-3 tiles",
+  "at": [
+   "Origami.RealityEngine.9.html:86232"
+  ]
+ },
+ {
+  "canon": "E9-05073",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 86836,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "Mark 06-27 Part B (2026-07-02): 6000→2200",
+  "at": [
+   "Origami.RealityEngine.9.html:99825"
+  ]
+ },
+ {
+  "canon": "E9-24829",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 88474,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "loot look: any fresh key press but Esc = take it (2026-10-19)",
+  "at": [
+   "Origami.RealityEngine.9.html:95210"
+  ]
+ },
+ {
+  "canon": "E9-24830",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 88626,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Esc leaves the looked-at card (2026-10-19)",
+  "at": [
+   "Origami.RealityEngine.9.html:95329"
+  ]
+ },
+ {
+  "canon": "E9-05215",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 88634,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "left combat / reset → re-arm normal auto-face",
+  "at": [
+   "Origami.RealityEngine.9.html:95337"
+  ]
+ },
+ {
+  "canon": "E9-05237",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 89067,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Notify parent/UI of camera mode change so Panels can show top-down controls",
+  "at": [
+   "Origami.RealityEngine.9.html:89131"
+  ]
+ },
+ {
+  "canon": "E9-05264",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 89239,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Fallback: look for closest goblin in active range",
+  "at": [
+   "Origami.RealityEngine.9.html:146300"
+  ]
+ },
+ {
+  "canon": "E9-05672",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 93567,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "Mark 2026-07-07 \"poker is 25g to ante\"",
+  "at": [
+   "Origami.RealityEngine.9.html:93881"
+  ]
+ },
+ {
+  "canon": "E9-22222",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 93817,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the Manager's one game (2026-09-26)",
+  "at": [
+   "Origami.RealityEngine.9.html:94260"
+  ]
+ },
+ {
+  "canon": "E9-05871",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 95618,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "LIGHT CTL: one-time add, intensity-driven",
+  "at": [
+   "Origami.RealityEngine.9.html:132649"
+  ]
+ },
+ {
+  "canon": "E9-23633",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 96357,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "+ the realm Lord (2026-10-02)",
+  "at": [
+   "Origami.RealityEngine.9.html:126616"
+  ]
+ },
+ {
+  "canon": "E9-06005",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 97576,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "FLEE-RARITY (Mark 2026-06-15)",
+  "at": [
+   "Origami.RealityEngine.9.html:97926"
+  ]
+ },
+ {
+  "canon": "E9-23653",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 97631,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "cover first (Mark 2026-09-30)",
+  "at": [
+   "Origami.RealityEngine.9.html:97967"
+  ]
+ },
+ {
+  "canon": "E9-21706",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 97895,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "2 → 1 (Mark 2026-09-24: \"too aggressive\") [REF#PENDING]",
+  "at": [
+   "Origami.RealityEngine.9.html:129779"
+  ]
+ },
+ {
+  "canon": "E9-22233",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 98262,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "earshot ring (2026-09-25)",
+  "at": [
+   "Origami.RealityEngine.9.html:110735"
+  ]
+ },
+ {
+  "canon": "E9-20616",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 100988,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "a hostile succubus who sees it stands down (Mark 2026-09-14)",
+  "at": [
+   "Origami.RealityEngine.9.html:101208"
+  ]
+ },
+ {
+  "canon": "E9-06375",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 104323,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "FPV + top-down PiP, same trio as the sleep discs",
+  "at": [
+   "Origami.RealityEngine.9.html:107263"
+  ]
+ },
+ {
+  "canon": "E9-06430",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 105059,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "never tick a culled section",
+  "at": [
+   "Origami.RealityEngine.9.html:105157"
+  ]
+ },
+ {
+  "canon": "E9-22294",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 105645,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "⛔ SUPERSEDED 2026-09-27 by Mark: \"just do a boink\" — was _playMonsterSfx('ATTACK', o)",
+  "at": [
+   "Origami.RealityEngine.9.html:105670"
+  ]
+ },
+ {
+  "canon": "E9-24953",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 107956,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "probe handle (2026-10-09)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:17141"
+  ]
+ },
+ {
+  "canon": "E9-22376",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 111587,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "+ earshot ring; recruit off (2026-09-25)",
+  "at": [
+   "Origami.RealityEngine.9.html:111725"
+  ]
+ },
+ {
+  "canon": "E9-06997",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 114033,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "for compatibility",
+  "at": [
+   "Origami.RealityEngine.9.html:114040"
+  ]
+ },
+ {
+  "canon": "E9-22437",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 116443,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Oni-Baba runs in the parent frame and cannot see this frame's window.CombatOrchestrator (2026-09-26) [REF#PENDING]",
+  "at": [
+   "Origami.RealityEngine.9.html:116537"
+  ]
+ },
+ {
+  "canon": "E9-22438",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 116445,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the shot may aim elsewhere; the selection stays (2026-09-25)",
+  "at": [
+   "Origami.RealityEngine.9.html:116539"
+  ]
+ },
+ {
+  "canon": "E9-07680",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 121089,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "chin joint → mesh crown, brow height (2026-09-13); the skull-rise ratio is the fallback",
+  "at": [
+   "Origami.RealityEngine.9.html:121341"
+  ]
+ },
+ {
+  "canon": "E9-07685",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 121152,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Add directly to scene to completely bypass parent bone scale distortion",
+  "at": [
+   "Origami.RealityEngine.9.html:121756"
+  ]
+ },
+ {
+  "canon": "E9-07706",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 121235,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "LIGHT CTL (camera-inert layer 5)",
+  "at": [
+   "Origami.RealityEngine.9.html:121768"
+  ]
+ },
+ {
+  "canon": "E9-07775",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 121949,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "2, 3, or 4",
+  "at": [
+   "Origami.RealityEngine.9.html:121950"
+  ]
+ },
+ {
+  "canon": "E9-24999",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 123927,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "any ranged attack flips the Jester (2026-10-19)",
+  "at": [
+   "Origami.RealityEngine.9.html:124523"
+  ]
+ },
+ {
+  "canon": "E9-25000",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 124408,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "an unselected guard shot at is still provoked (2026-10-16)",
+  "at": [
+   "Origami.RealityEngine.9.html:124569"
+  ]
+ },
+ {
+  "canon": "E9-08519",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 130887,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "1.5 tiles, NOT 1.0: two ADJACENT tiles are exactly GRID apart, so a plain `dist < GRID` test is false at the boundary and the neighbour slips through ",
+  "at": [
+   "Origami.RealityEngine.9.html:131389"
+  ]
+ },
+ {
+  "canon": "E9-08586",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 131808,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "ogre song drop",
+  "at": [
+   "Origami.RealityEngine.9.html:131832"
+  ]
+ },
+ {
+  "canon": "E9-20135",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 131809,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the ACTIVATOR CARD pops out of the ogre (2026-09-11)",
+  "at": [
+   "Origami.RealityEngine.9.html:131834"
+  ]
+ },
+ {
+  "canon": "E9-24162",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 133018,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "a wizard always finds PET FOOD (2026-10-03)",
+  "at": [
+   "js/v8/entities/VendingMachine.js:898"
+  ]
+ },
+ {
+  "canon": "E9-21486",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 134738,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "a sleeper won over stands up first (2026-09-21) [REF#PENDING]",
+  "at": [
+   "Origami.RealityEngine.9.html:142019"
+  ]
+ },
+ {
+  "canon": "E9-22528",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 135111,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "null → three reallocates at the new size",
+  "at": [
+   "Origami.RealityEngine.Panels.html:11083"
+  ]
+ },
+ {
+  "canon": "E9-25045",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 136121,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "silhouette bloom impostor, before the frame (2026-10-15)",
+  "at": [
+   "Origami.RealityEngine.9.html:136206"
+  ]
+ },
+ {
+  "canon": "E9-21107",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 138561,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "_wbT = the shared smoothstep (~:97886)",
+  "at": [
+   "Origami.RealityEngine.9.html:138897"
+  ]
+ },
+ {
+  "canon": "E9-09434",
+  "canonFile": "Origami.RealityEngine.9.html",
+  "canonLine": 142355,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "hard hold until Starlette's media really starts",
+  "at": [
+   "Origami.RealityEngine.9.html:144696"
+  ]
+ },
+ {
+  "canon": "PN-00097",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 1952,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Inventory Modal */",
+  "at": [
+   "Origami.RealityEngine.Panels.html:10185"
+  ]
+ },
+ {
+  "canon": "PN-00392",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 7936,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "325°: cos=0.819 sin=-0.574 → left=76% top=32% */",
+  "at": [
+   "Origami.RealityEngine.Panels.html:7937"
+  ]
+ },
+ {
+  "canon": "PN-00394",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 7938,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "15°: cos=0.966 sin=0.259 → left=81% top=58% */",
+  "at": [
+   "Origami.RealityEngine.Panels.html:7939"
+  ]
+ },
+ {
+  "canon": "PN-00400",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 8046,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Set backing pixel dimensions to CSS display size × DPR for crisp rendering",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4"
+  ]
+ },
+ {
+  "canon": "PN-00402",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 8075,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "it was a drag, not a click",
+  "at": [
+   "js/v8/ui/PanelsUI.js:33"
+  ]
+ },
+ {
+  "canon": "PN-00405",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 8105,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Moonphase calculation based on current Date",
+  "at": [
+   "js/v8/ui/PanelsUI.js:60"
+  ]
+ },
+ {
+  "canon": "PN-00437",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 8523,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "── Previous Saves panel ──",
+  "at": [
+   "Origami.RealityEngine.Panels.html:9542"
+  ]
+ },
+ {
+  "canon": "PN-00505",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 10196,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Populated via JS",
+  "at": [
+   "Origami.RealityEngine.Panels.html:10204"
+  ]
+ },
+ {
+  "canon": "PN-00558",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 11207,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Fix for missing toggleRing action buttons",
+  "at": [
+   "js/v8/ui/PanelsUI.js:199"
+  ]
+ },
+ {
+  "canon": "PN-00570",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 11495,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Request the latest inventory state from Core.js to populate the UI",
+  "at": [
+   "js/v8/ui/PanelsUI.js:209"
+  ]
+ },
+ {
+  "canon": "PN-00655",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 13211,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "loss must charge the 50 stake (payout is 0 on loss)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:13493"
+  ]
+ },
+ {
+  "canon": "PN-00718",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14491,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Critial fix to prevent black squares",
+  "at": [
+   "js/v8/ui/PanelsUI.js:355"
+  ]
+ },
+ {
+  "canon": "PN-00719",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14493,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Fixed high-res buffer to prevent FBO thrashing",
+  "at": [
+   "js/v8/ui/PanelsUI.js:357"
+  ]
+ },
+ {
+  "canon": "PN-02173",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14517,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "Mark 2026-09-11 on the MAC-9: \"Make it black not silver texture gun model\" — near-black albedo, matte, almost no self-light",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:870"
+  ]
+ },
+ {
+  "canon": "PN-02168",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14527,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "MEASURED 2026-09-11 (deck rig, glow 0): the Stinger's grey was SPECULAR, not self-light — its albedo averages #333",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:880"
+  ]
+ },
+ {
+  "canon": "PN-00721",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14539,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "BOULDER - rounder chunky rock",
+  "at": [
+   "js/v8/ui/PanelsUI.js:376"
+  ]
+ },
+ {
+  "canon": "PN-00722",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14547,
+  "copies": 1,
+  "cls": "A5-DISABLE",
+  "linesReclaimable": 1,
+  "sample": "Z ROTATION REMOVED TO PREVENT Z-AXIS PROTRUSION",
+  "at": [
+   "js/v8/ui/PanelsUI.js:384"
+  ]
+ },
+ {
+  "canon": "PN-00723",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14557,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Reduced speed factors",
+  "at": [
+   "js/v8/ui/PanelsUI.js:394"
+  ]
+ },
+ {
+  "canon": "PN-00724",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14560,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Slowed core x2",
+  "at": [
+   "js/v8/ui/PanelsUI.js:397"
+  ]
+ },
+ {
+  "canon": "PN-00725",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14591,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Scale down to fit inside the bubble!",
+  "at": [
+   "js/v8/ui/PanelsUI.js:428"
+  ]
+ },
+ {
+  "canon": "PN-00726",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14601,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Dynamic swirling lean to look organic",
+  "at": [
+   "js/v8/ui/PanelsUI.js:438"
+  ]
+ },
+ {
+  "canon": "PN-00727",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14603,
+  "copies": 1,
+  "cls": "A5-DISABLE",
+  "linesReclaimable": 1,
+  "sample": "Z ROTATION REMOVED",
+  "at": [
+   "js/v8/ui/PanelsUI.js:440"
+  ]
+ },
+ {
+  "canon": "PN-00728",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14606,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Bootstrap Blue Wave",
+  "at": [
+   "js/v8/ui/PanelsUI.js:443"
+  ]
+ },
+ {
+  "canon": "PN-00729",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14663,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "5% grayish smokey vial glass",
+  "at": [
+   "js/v8/ui/PanelsUI.js:500"
+  ]
+ },
+ {
+  "canon": "PN-00730",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14668,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Beaker vial look (Cylinder with slightly tapered top)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:505"
+  ]
+ },
+ {
+  "canon": "PN-00731",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14672,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Liquid inside (50% full with sloshing top)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:509"
+  ]
+ },
+ {
+  "canon": "PN-00732",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14674,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Move geometry origin to bottom so we can rotate the top",
+  "at": [
+   "js/v8/ui/PanelsUI.js:511"
+  ]
+ },
+ {
+  "canon": "PN-00733",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14677,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Bottom of the beaker",
+  "at": [
+   "js/v8/ui/PanelsUI.js:514"
+  ]
+ },
+ {
+  "canon": "PN-00737",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14708,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Liquid sloshing",
+  "at": [
+   "js/v8/ui/PanelsUI.js:545"
+  ]
+ },
+ {
+  "canon": "PN-00740",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14760,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Flipped to cross",
+  "at": [
+   "js/v8/ui/PanelsUI.js:597"
+  ]
+ },
+ {
+  "canon": "PN-00741",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14769,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "SINGLE KATANA",
+  "at": [
+   "js/v8/ui/PanelsUI.js:606"
+  ]
+ },
+ {
+  "canon": "PN-00742",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14780,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "V-Shape Shield",
+  "at": [
+   "js/v8/ui/PanelsUI.js:617"
+  ]
+ },
+ {
+  "canon": "PN-00743",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14796,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Inner glowing core to make it look tactical",
+  "at": [
+   "js/v8/ui/PanelsUI.js:633"
+  ]
+ },
+ {
+  "canon": "PN-00745",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14805,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "move slightly forward",
+  "at": [
+   "js/v8/ui/PanelsUI.js:642"
+  ]
+ },
+ {
+  "canon": "PN-02272",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 14961,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "grains heaped at the stick's foot",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:1254"
+  ]
+ },
+ {
+  "canon": "PN-02659",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15147,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the skin: pearly white with faint lengthwise grain streaks and, very faint, the curl of the larva inside",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:1089"
+  ]
+ },
+ {
+  "canon": "PN-02660",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15163,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "gold flecks proud of the shell, and a little crown floating over the tip",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:1105"
+  ]
+ },
+ {
+  "canon": "PN-02661",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15179,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "lying a little on its side, the way a grain of rice rests",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:1121"
+  ]
+ },
+ {
+  "canon": "PN-02662",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15180,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "it WRIGGLES: every ~3 s a quick shiver that dies away — something is alive in there",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:1122"
+  ]
+ },
+ {
+  "canon": "PN-00774",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15335,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "where the straps cross, before they meet the knuckle",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:3166"
+  ]
+ },
+ {
+  "canon": "PN-00775",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15337,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "chunkier suspension ring — the old one read as a wire loop at this size",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:3164"
+  ]
+ },
+ {
+  "canon": "PN-02093",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15745,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Barrel — tapered, 4-inch, starts AHEAD of the cylinder (forcing cone at the frame), dark bore + crowned muzzle",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2287"
+  ]
+ },
+ {
+  "canon": "PN-02094",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15747,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "muzzle crown",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2289"
+  ]
+ },
+ {
+  "canon": "PN-02096",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15749,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Full underlug + ejector rod + knurled rod head (the classic .38 Special profile)",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2291"
+  ]
+ },
+ {
+  "canon": "PN-02097",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15753,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Top rib with anti-glare serrations, ramp front sight with a red insert",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2295"
+  ]
+ },
+ {
+  "canon": "PN-02098",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15758,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Frame, top strap over the drum, rear sight notch (two ears), forcing-cone collar",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2300"
+  ]
+ },
+ {
+  "canon": "PN-02099",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15763,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Side plate, three screws, thumb-side cylinder release latch",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2305"
+  ]
+ },
+ {
+  "canon": "PN-02101",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15780,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Hammer with a checkered spur",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2322"
+  ]
+ },
+ {
+  "canon": "PN-02102",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15783,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Trigger guard + trigger",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2325"
+  ]
+ },
+ {
+  "canon": "PN-02106",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15855,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Receiver — upper (highlight edge) + lower body",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2442"
+  ]
+ },
+ {
+  "canon": "PN-02107",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15857,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "top edge catches light",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2444"
+  ]
+ },
+ {
+  "canon": "PN-02108",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15858,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "lower receiver / magwell",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2445"
+  ]
+ },
+ {
+  "canon": "PN-02109",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15859,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "ejection port (recessed dark)",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2446"
+  ]
+ },
+ {
+  "canon": "PN-02110",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15860,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "charging handle",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2447"
+  ]
+ },
+ {
+  "canon": "PN-02111",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15861,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "rear sight base",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2448"
+  ]
+ },
+ {
+  "canon": "PN-02112",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15862,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "rear sight ears",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2449"
+  ]
+ },
+ {
+  "canon": "PN-02113",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15864,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Shroud — perforated: dark bores through the tube on the visible face",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2451"
+  ]
+ },
+ {
+  "canon": "PN-02114",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15867,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Barrel + threaded muzzle + front sight",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2454"
+  ]
+ },
+ {
+  "canon": "PN-02115",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15871,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "front sight post",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2458"
+  ]
+ },
+ {
+  "canon": "PN-02116",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15872,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Grip (raked) with stippled panels, and the stick magazine out of it",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2459"
+  ]
+ },
+ {
+  "canon": "PN-02117",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15874,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "rubber panel proud of the grip",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2461"
+  ]
+ },
+ {
+  "canon": "PN-02118",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15875,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "stipple lines",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2462"
+  ]
+ },
+ {
+  "canon": "PN-02121",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15878,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "witness slot (brass rounds showing)",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2465"
+  ]
+ },
+ {
+  "canon": "PN-02122",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15879,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Trigger group, safety",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2466"
+  ]
+ },
+ {
+  "canon": "PN-02124",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15882,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "safety lever",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2469"
+  ]
+ },
+ {
+  "canon": "PN-02125",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15883,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Wire stock — two struts, cross bar, butt plate",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2470"
+  ]
+ },
+ {
+  "canon": "PN-02126",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15887,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Brass at the port",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:2474"
+  ]
+ },
+ {
+  "canon": "PN-00840",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15989,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Inner shield design",
+  "at": [
+   "js/v8/ui/PanelsUI.js:836"
+  ]
+ },
+ {
+  "canon": "PN-00841",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 15995,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "centered so it pokes out both sides",
+  "at": [
+   "js/v8/ui/PanelsUI.js:842"
+  ]
+ },
+ {
+  "canon": "PN-00842",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16001,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Set into the back of the shield",
+  "at": [
+   "js/v8/ui/PanelsUI.js:848"
+  ]
+ },
+ {
+  "canon": "PN-00843",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16002,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Face outwards",
+  "at": [
+   "js/v8/ui/PanelsUI.js:849"
+  ]
+ },
+ {
+  "canon": "PN-00845",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16019,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Two completely mapped 3D Dice",
+  "at": [
+   "js/v8/ui/PanelsUI.js:866"
+  ]
+ },
+ {
+  "canon": "PN-00846",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16046,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Side 1: +Z (1 dot)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:893"
+  ]
+ },
+ {
+  "canon": "PN-00847",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16049,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Side 6: -Z (6 dots)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:896"
+  ]
+ },
+ {
+  "canon": "PN-00853",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16092,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Interpolate to locked orthogonal faces (\"land on numbers\")",
+  "at": [
+   "js/v8/ui/PanelsUI.js:939"
+  ]
+ },
+ {
+  "canon": "PN-00854",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16100,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Resume normal lazy roll",
+  "at": [
+   "js/v8/ui/PanelsUI.js:947"
+  ]
+ },
+ {
+  "canon": "PN-00855",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16105,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Cleanly interpolate all bobbing/floating toward 0 while settled!",
+  "at": [
+   "js/v8/ui/PanelsUI.js:952"
+  ]
+ },
+ {
+  "canon": "PN-00856",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16118,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "1. Keep main cube bodies dark",
+  "at": [
+   "js/v8/ui/PanelsUI.js:965"
+  ]
+ },
+ {
+  "canon": "PN-00857",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16122,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "2. Sequential Counting Sequence (Only active once landed and settled)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:969"
+  ]
+ },
+ {
+  "canon": "PN-00862",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16141,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Original Single Die logic",
+  "at": [
+   "js/v8/ui/PanelsUI.js:988"
+  ]
+ },
+ {
+  "canon": "PN-00863",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16144,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Green for Even, Red for Odd",
+  "at": [
+   "js/v8/ui/PanelsUI.js:991"
+  ]
+ },
+ {
+  "canon": "PN-00864",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16146,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Add standard center dot mapping (1 face)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:993"
+  ]
+ },
+ {
+  "canon": "PN-00865",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16152,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Add opposing face (6 dots)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:999"
+  ]
+ },
+ {
+  "canon": "PN-00891",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16511,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Validate the model has real bounds + at least one mesh.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1029"
+  ]
+ },
+ {
+  "canon": "PN-00892",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16533,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "If the model loaded BEFORE init3DIcons ran, swap immediately",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1051"
+  ]
+ },
+ {
+  "canon": "PN-00902",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16681,
+  "copies": 1,
+  "cls": "A4-PROHIBIT",
+  "linesReclaimable": 1,
+  "sample": "Optimization: Do not render heavy 3D icons or avatars when the main dock is hidden",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1100"
+  ]
+ },
+ {
+  "canon": "PN-00905",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16731,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Helper to find bone by name",
+  "at": [
+   "Origami.RealityEngine.Panels.html:17565"
+  ]
+ },
+ {
+  "canon": "PN-00909",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16795,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Cached by ResizeObserver above — no per-frame layout reflow.",
+  "at": [
+   "Origami.RealityEngine.Panels.html:16806"
+  ]
+ },
+ {
+  "canon": "PN-00911",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 16812,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Regenerate canvas cache every 500ms to avoid DOM polling spikes",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1125"
+  ]
+ },
+ {
+  "canon": "PN-00933",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 17280,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Play idle immediately if it logically exists",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1269"
+  ]
+ },
+ {
+  "canon": "PN-00954",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 17597,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Add directly to monsterScene to completely bypass bone scale distortion",
+  "at": [
+   "Origami.RealityEngine.Panels.html:17612"
+  ]
+ },
+ {
+  "canon": "PN-01005",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 18602,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Keep walking state active if currently moving",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1333"
+  ]
+ },
+ {
+  "canon": "PN-01006",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 18610,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "If there's no 3D avatar loaded, handle the CSS slash animation reset manually",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1341"
+  ]
+ },
+ {
+  "canon": "PN-01007",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 18614,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "matches the 0.4s avatarSlashBtn animation duration",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1345"
+  ]
+ },
+ {
+  "canon": "PN-01008",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 18625,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "If we fallback to walk animation for idle, pause it so they stand still",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1356"
+  ]
+ },
+ {
+  "canon": "PN-01046",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 19433,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "Oni-Baba watch (Mark 2026-06-15)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:19521"
+  ]
+ },
+ {
+  "canon": "PN-01097",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 20030,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Exit Modal Logic",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1476"
+  ]
+ },
+ {
+  "canon": "PN-01099",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 20073,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Hard reset game",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1496"
+  ]
+ },
+ {
+  "canon": "PN-01100",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 20076,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Exit Modal Keyboard Listener (Any key dismisses, only 'y' resets)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1499"
+  ]
+ },
+ {
+  "canon": "PN-01143",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 20533,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "Mark 2026-06-28: 4 -> 6 random spell cards",
+  "at": [
+   "Origami.RealityEngine.Panels.html:20585"
+  ]
+ },
+ {
+  "canon": "PN-01252",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 21906,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "game card — never fires a projectile",
+  "at": [
+   "Origami.RealityEngine.Panels.html:22270"
+  ]
+ },
+ {
+  "canon": "PN-02837",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 21950,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "+ WEAPON (+N) (2026-10-02)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:23532"
+  ]
+ },
+ {
+  "canon": "PN-01255",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22042,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Fallback to original two-button dice layout",
+  "at": [
+   "Origami.RealityEngine.Panels.html:22059"
+  ]
+ },
+ {
+  "canon": "PN-01256",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22045,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "FREE-PLAY bypass (Mark 2026-06-22)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:22062"
+  ]
+ },
+ {
+  "canon": "PN-02197",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22214,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "badge in place (2026-09-12)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:25367"
+  ]
+ },
+ {
+  "canon": "PN-01284",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22398,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "Priest Healing: 10–20 HP × level (Mark 2026-06-22)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:22598"
+  ]
+ },
+ {
+  "canon": "PN-01313",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22679,
+  "copies": 1,
+  "cls": "A5-DISABLE",
+  "linesReclaimable": 1,
+  "sample": "After 1.5s — restore mag + re-enable",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1733"
+  ]
+ },
+ {
+  "canon": "PN-01316",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22745,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Block action if depleted!",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1783"
+  ]
+ },
+ {
+  "canon": "PN-01317",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22750,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Dice UI Toggle",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1788"
+  ]
+ },
+ {
+  "canon": "PN-01318",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22758,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Wait for fade out",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1796"
+  ]
+ },
+ {
+  "canon": "PN-01320",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 22792,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Clear deck-switch highlights whenever ATTACK takes over.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1827"
+  ]
+ },
+ {
+  "canon": "PN-01373",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 23653,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "T0.7 — separator marker between melee + ranged in COMBAT class",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1883"
+  ]
+ },
+ {
+  "canon": "PN-01383",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 23778,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "missiles / ranged",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1933"
+  ]
+ },
+ {
+  "canon": "PN-01394",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 23976,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Grab new top card for continuous dragging",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1984"
+  ]
+ },
+ {
+  "canon": "PN-01405",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24092,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "We already fired actions via hold, do not fire single click",
+  "at": [
+   "js/v8/ui/PanelsUI.js:1999"
+  ]
+ },
+ {
+  "canon": "PN-01406",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24101,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Keyboard selector bypass",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2008"
+  ]
+ },
+ {
+  "canon": "PN-02364",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24107,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "cooling face: the tap is refused, the hover was not (2026-09-15)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:24125"
+  ]
+ },
+ {
+  "canon": "PN-01407",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24118,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Single / Double click activation",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2024"
+  ]
+ },
+ {
+  "canon": "PN-01408",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24126,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "SINGLE CLICK - FIRE IMMEDIATELY",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2031"
+  ]
+ },
+ {
+  "canon": "PN-01422",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24236,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "always the EN action name for emitAction",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2074"
+  ]
+ },
+ {
+  "canon": "PN-01433",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24392,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Re-attach hover focus states to newly generated UI",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2110"
+  ]
+ },
+ {
+  "canon": "PN-01434",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24398,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Ensure 3D icons are rendered for the newly built deck",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2116"
+  ]
+ },
+ {
+  "canon": "PN-01437",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24467,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "INIT AND EVENTS PANEL LOGIC ---",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2167"
+  ]
+ },
+ {
+  "canon": "PN-01440",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24514,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Ignores pointerup/leave if this pointer didn't press a button",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2201"
+  ]
+ },
+ {
+  "canon": "PN-01441",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24522,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Use pointer events instead to unify touch/mouse and avoid sticky keys",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2209"
+  ]
+ },
+ {
+  "canon": "PN-01470",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24968,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Double-tap: fire the last attack used, regardless of selector state.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2483"
+  ]
+ },
+ {
+  "canon": "PN-01472",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24991,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Keep the selector closed after a quick double-tap fire",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2506"
+  ]
+ },
+ {
+  "canon": "PN-01473",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 24997,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "No last card known — fall through to normal single-Enter behaviour.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2512"
+  ]
+ },
+ {
+  "canon": "PN-01477",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25063,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Brief column-change tick: card flicks slightly in direction of travel",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2564"
+  ]
+ },
+ {
+  "canon": "PN-01479",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25073,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Cycle card within column while selector is open",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2574"
+  ]
+ },
+ {
+  "canon": "PN-01504",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25490,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Fetch the JSON once at boot.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2654"
+  ]
+ },
+ {
+  "canon": "PN-01506",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25528,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Push onto cooldown queue, evict oldest beyond size.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2675"
+  ]
+ },
+ {
+  "canon": "PN-01507",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25570,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "The center thumb button is now handled by the D-Pad pointerdown listener (data-key=\"ArrowUp\")",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2697"
+  ]
+ },
+ {
+  "canon": "PN-01509",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25580,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Calculate which direction is at the top (under the glass indicator)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2707"
+  ]
+ },
+ {
+  "canon": "PN-01510",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25582,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Normalize to 0-360",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2709"
+  ]
+ },
+ {
+  "canon": "PN-01514",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25638,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "One-time setup: get pip canvas 2D context for engine frame blitting",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2756"
+  ]
+ },
+ {
+  "canon": "PN-01547",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 25983,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "── PIP_FRAME: engine composited pip image → draw onto #pipCanvas ──",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2762"
+  ]
+ },
+ {
+  "canon": "PN-01551",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26019,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Trigger save so it persists across reloads",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2793"
+  ]
+ },
+ {
+  "canon": "PN-01552",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26029,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Engine informs of camera mode changes so the panels can adapt UI",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2803"
+  ]
+ },
+ {
+  "canon": "PN-01564",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26253,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Update the max HP label",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2885"
+  ]
+ },
+ {
+  "canon": "PN-01566",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26259,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Colour-shift bar as HP drops",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2888"
+  ]
+ },
+ {
+  "canon": "PN-01570",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26300,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Center-to-center distance * 10, minus 10 feet for physical contact radius",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2912"
+  ]
+ },
+ {
+  "canon": "PN-01573",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26371,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Prevent GPU lockup: remove any existing YOU GOT animations before showing a new one",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2943"
+  ]
+ },
+ {
+  "canon": "PN-01575",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26391,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Matches the player card format exactly",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2961"
+  ]
+ },
+ {
+  "canon": "PN-01576",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26409,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "Position fixed, absolute center, scale up. Disable expensive backdrop filter during massive CSS scale animation to prevent 10 FPS GPU drop!",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2977"
+  ]
+ },
+ {
+  "canon": "PN-01577",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26411,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Critical to allow canvasCache to pick it up for 3D Icon Rendering!",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2979"
+  ]
+ },
+ {
+  "canon": "PN-01578",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26413,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Add the YOU GOT title inside the card element (scaled inversely)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2981"
+  ]
+ },
+ {
+  "canon": "PN-01579",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26422,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Trigger canvas icon rendering loop immediately for this card",
+  "at": [
+   "js/v8/ui/PanelsUI.js:2990"
+  ]
+ },
+ {
+  "canon": "PN-01580",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26432,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Track alive elements to handle despawning",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3000"
+  ]
+ },
+ {
+  "canon": "PN-01582",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26447,
+  "copies": 1,
+  "cls": "A5-DISABLE",
+  "linesReclaimable": 1,
+  "sample": "Re-enable pointer events since parent is none",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3013"
+  ]
+ },
+ {
+  "canon": "PN-01584",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26474,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Click to activate the 3D card remotely",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3038"
+  ]
+ },
+ {
+  "canon": "PN-01585",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26479,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Show card in PIP",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3043"
+  ]
+ },
+ {
+  "canon": "PN-01586",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26506,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Trigger cache rescan for new canvas",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3070"
+  ]
+ },
+ {
+  "canon": "PN-01587",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26516,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Float bottom-center anchored",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3080"
+  ]
+ },
+ {
+  "canon": "PN-01588",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26525,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Cleanup collected/despawned",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3089"
+  ]
+ },
+ {
+  "canon": "PN-01598",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26590,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Reclaim focus so keyboard events (movement, Enter, Space) resume immediately",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3103"
+  ]
+ },
+ {
+  "canon": "PN-01599",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26602,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Auto-melee bump: switch to Combat deck, focus column, bloom the fired card",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3109"
+  ]
+ },
+ {
+  "canon": "PN-01600",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26607,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Switch to combat deck (index 1) synchronously",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3114"
+  ]
+ },
+ {
+  "canon": "PN-01601",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26610,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "After the deck re-renders (one rAF), find+focus the right column and bloom it",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3117"
+  ]
+ },
+ {
+  "canon": "PN-01602",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26612,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Find which col-N contains the fired action",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3119"
+  ]
+ },
+ {
+  "canon": "PN-01603",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26624,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Focus the column so the column border lights up",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3131"
+  ]
+ },
+ {
+  "canon": "PN-01604",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26628,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Full animation pipeline: flash → launch arc → melee bloom glow",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3135"
+  ]
+ },
+ {
+  "canon": "PN-01605",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26630,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "force reflow to restart animation",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3137"
+  ]
+ },
+ {
+  "canon": "PN-01606",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26649,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Safely fade out old action to prevent crossFade NULL errors",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3156"
+  ]
+ },
+ {
+  "canon": "PN-01607",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26656,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Return to idle/walk after animation finishes (~1sec)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3163"
+  ]
+ },
+ {
+  "canon": "PN-01612",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26748,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Set health donut variable",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3201"
+  ]
+ },
+ {
+  "canon": "PN-01619",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26878,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Colour-shift as HP drops",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3242"
+  ]
+ },
+ {
+  "canon": "PN-01620",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26888,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Player walked over a recovered projectile — increment ammo badge by 1",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3252"
+  ]
+ },
+ {
+  "canon": "PN-01621",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26889,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "e.g. \"SHURIKEN\" or \"SHORT BOW\"",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3253"
+  ]
+ },
+ {
+  "canon": "PN-01622",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 26900,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Quick amber flash on badge to confirm pickup",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3264"
+  ]
+ },
+ {
+  "canon": "PN-01640",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27160,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Skill cards: first pickup adds the card; duplicates grant +1 to linked stat",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3281"
+  ]
+ },
+ {
+  "canon": "PN-01643",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27185,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Parse qty suffix e.g. \"SHURIKEN x5\" → base=\"SHURIKEN\", qty=5",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3303"
+  ]
+ },
+ {
+  "canon": "PN-01647",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27218,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "--- Helper: update badge on every visible card matching this name ---",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3313"
+  ]
+ },
+ {
+  "canon": "PN-01648",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27235,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Amber flash to confirm",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3330"
+  ]
+ },
+ {
+  "canon": "PN-01649",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27242,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "--- Also update rangeCategories.qty so loadDeck rebuilds with correct count ---",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3337"
+  ]
+ },
+ {
+  "canon": "PN-01656",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27344,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "── SKILL CARD DUPLICATE: +1 stat, no new card ──",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3366"
+  ]
+ },
+ {
+  "canon": "PN-01663",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27421,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "If inventory is open, refresh it",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3378"
+  ]
+ },
+ {
+  "canon": "PN-01674",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27642,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Real-time rotation update (broadcasted ~20hz from FPV engine)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3425"
+  ]
+ },
+ {
+  "canon": "PN-01675",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27652,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Support both old {enemies:[]} and new {blips:[]} payloads",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3429"
+  ]
+ },
+ {
+  "canon": "PN-01678",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27674,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "40 ft @ 5 ft / tile",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3449"
+  ]
+ },
+ {
+  "canon": "PN-01683",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27711,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Skip the persistent stairs star when reusing pool slots.",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3466"
+  ]
+ },
+ {
+  "canon": "PN-01696",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27839,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Build the four crosshair ticks as inline divs (no SVG needed)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3548"
+  ]
+ },
+ {
+  "canon": "PN-01697",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27844,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Tint + scale by kind",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3553"
+  ]
+ },
+ {
+  "canon": "PN-01699",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27855,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Schedule fade out",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3564"
+  ]
+ },
+ {
+  "canon": "PN-01700",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27861,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Quick metallic tick",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3570"
+  ]
+ },
+ {
+  "canon": "PN-01712",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27985,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Entering idle starts the hide timer",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3639"
+  ]
+ },
+ {
+  "canon": "PN-01713",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 27997,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Return to T-pose/idle freeze if no logical idle clip exists",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3651"
+  ]
+ },
+ {
+  "canon": "PN-01714",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 28003,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Engine tells us a missile (arrow/shuriken) survived — give +1 ammo back",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3657"
+  ]
+ },
+ {
+  "canon": "PN-01715",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 28009,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Match by card name substring (e.g. \"LONG BOW\", \"SHURIKEN x3\")",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3663"
+  ]
+ },
+ {
+  "canon": "PN-01716",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 28024,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Green flash to signal recovery",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3678"
+  ]
+ },
+ {
+  "canon": "PN-01724",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 28202,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Viewport Readout Logic",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3689"
+  ]
+ },
+ {
+  "canon": "PN-01758",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 28873,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Re-render with count badge",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3822"
+  ]
+ },
+ {
+  "canon": "PN-01790",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 29657,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Initial call after DOM paints",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3882"
+  ]
+ },
+ {
+  "canon": "PN-01833",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30102,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "coords → card-canvas NEAR-halo dead-zone",
+  "at": [
+   "Origami.RealityEngine.Panels.html:30156"
+  ]
+ },
+ {
+  "canon": "PN-01859",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30383,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Only run PiP in Dock mode (the bottom full-screen iframe)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3891"
+  ]
+ },
+ {
+  "canon": "PN-01860",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30391,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Clear stale pip position saves from before DOM refactor (one-time migration)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3898"
+  ]
+ },
+ {
+  "canon": "PN-01861",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30403,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Post to master router",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3910"
+  ]
+ },
+ {
+  "canon": "PN-01863",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30422,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Skip if nothing moved (avoids redundant postMessage+style mutations)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3925"
+  ]
+ },
+ {
+  "canon": "PN-01864",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30432,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Prevent context menu",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3935"
+  ]
+ },
+ {
+  "canon": "PN-01865",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30437,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Zoom via scroll wheel",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3940"
+  ]
+ },
+ {
+  "canon": "PN-01876",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30669,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "mouseleave removed — was prematurely ending pans on cursor flicker",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4176"
+  ]
+ },
+ {
+  "canon": "PN-01887",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30718,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Give layout a tick before measuring rect",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4213"
+  ]
+ },
+ {
+  "canon": "PN-01888",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30728,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Use ResizeObserver for perfect sync during ANY layout shifts, flex reflows, or browser resizes",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4216"
+  ]
+ },
+ {
+  "canon": "PN-01889",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30739,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "toggle it open if closed",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4227"
+  ]
+ },
+ {
+  "canon": "PN-01890",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30769,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Create 2 dice",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4255"
+  ]
+ },
+ {
+  "canon": "PN-01891",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30775,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Add green/red dots just like the main UI dice to make them look nice",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4261"
+  ]
+ },
+ {
+  "canon": "PN-01892",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30784,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Just add one dot on each face for aesthetics",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4270"
+  ]
+ },
+ {
+  "canon": "PN-01893",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30796,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "1.8 seconds bounce",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4282"
+  ]
+ },
+ {
+  "canon": "PN-01895",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 30809,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "Mark 2026-07-06 mobile \"locking up again\": dispose() frees GL objects but leaves the CONTEXT live until lazy <canvas> GC — on iOS (~8-16 context cap) ",
+  "at": [
+   "Origami.RealityEngine.Panels.html:30960"
+  ]
+ },
+ {
+  "canon": "PN-01912",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31016,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "1. Static UI strings via [data-i18n]",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4344"
+  ]
+ },
+ {
+  "canon": "PN-01913",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31023,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "2. Placeholder strings via [data-i18n-placeholder]",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4351"
+  ]
+ },
+ {
+  "canon": "PN-01918",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31069,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "3. Live cards in the deck — re-translate title/desc/attr in place",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4358"
+  ]
+ },
+ {
+  "canon": "PN-01920",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31086,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "5. Keep SLASH highlight search working across locales",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4374"
+  ]
+ },
+ {
+  "canon": "PN-01921",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31094,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Animate flag flip out → apply locale → flip back in",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4382"
+  ]
+ },
+ {
+  "canon": "PN-01923",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31110,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Apply on load (restores from localStorage or defaults to EN)",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4398"
+  ]
+ },
+ {
+  "canon": "PN-01924",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31113,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "── T0.25 — Defeat flow: blink overlay + defeat modal + high-score table ──",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4401"
+  ]
+ },
+ {
+  "canon": "PN-01925",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31166,
+  "copies": 1,
+  "cls": "A3-STATE",
+  "linesReclaimable": 1,
+  "sample": "Build the overlay + modal DOM once (hidden by default).",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4405"
+  ]
+ },
+ {
+  "canon": "PN-01932",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31404,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Blink animation — dark → brief eye open → dark again → modal",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4491"
+  ]
+ },
+ {
+  "canon": "PN-01934",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31407,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "closes again",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4494"
+  ]
+ },
+ {
+  "canon": "PN-01935",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 31409,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "semi-dark backdrop for modal",
+  "at": [
+   "js/v8/ui/PanelsUI.js:4496"
+  ]
+ },
+ {
+  "canon": "PN-01967",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 32041,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "FPS-panel i18n (ported to recovery-0708 from main 2dacb17)",
+  "at": [
+   "Origami.RealityEngine.Panels.html:32161"
+  ]
+ },
+ {
+  "canon": "PN-01995",
+  "canonFile": "Origami.RealityEngine.Panels.html",
+  "canonLine": 32522,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Gatorade Orange Cap",
+  "at": [
+   "Origami.RealityEngine.Panels.html:32549"
+  ]
+ },
+ {
+  "canon": "DG-00019",
+  "canonFile": "js/v8/map/Creator.js",
+  "canonLine": 196,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "← THE ROOM_ID LINK",
+  "at": [
+   "js/v8/map/Creator.js:276"
+  ]
+ },
+ {
+  "canon": "DG-01116",
+  "canonFile": "js/v8/map/Creator.js",
+  "canonLine": 1076,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the roomId seam is a WALL — see above",
+  "at": [
+   "js/v8/map/Creator.js:1653"
+  ]
+ },
+ {
+  "canon": "DG-01406",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 2466,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "one table, in Creator.js",
+  "at": [
+   "js/v8/map/DungeonChain.js:3565"
+  ]
+ },
+ {
+  "canon": "DG-00366",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 3114,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "nothing may already be here",
+  "at": [
+   "js/v8/map/DungeonChain.js:3214"
+  ]
+ },
+ {
+  "canon": "DG-00431",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 3817,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the head's own doors answer to _carveHead",
+  "at": [
+   "js/v8/map/DungeonChain.js:3853"
+  ]
+ },
+ {
+  "canon": "DG-01206",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 5064,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "+1 turning along the wall",
+  "at": [
+   "js/v8/map/DungeonChain.js:5071"
+  ]
+ },
+ {
+  "canon": "DG-00547",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 5329,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "no free floor — skip rather than stack two bodies on a tile",
+  "at": [
+   "js/v8/map/DungeonChain.js:5377"
+  ]
+ },
+ {
+  "canon": "DG-00548",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 5334,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "asleep at its post; it wakes hostile on collision or a strike",
+  "at": [
+   "js/v8/map/DungeonChain.js:5382"
+  ]
+ },
+ {
+  "canon": "DG-00549",
+  "canonFile": "js/v8/map/DungeonChain.js",
+  "canonLine": 5335,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the hook combat/AI keys on: no gambling, +5 karma, camera route",
+  "at": [
+   "js/v8/map/Section0.js:1345"
+  ]
+ },
+ {
+  "canon": "DG-00920",
+  "canonFile": "js/v8/map/ProceduralTextures.js",
+  "canonLine": 29,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "Paper fiber noise",
+  "at": [
+   "js/v8/map/ProceduralTextures.js:957"
+  ]
+ },
+ {
+  "canon": "DG-02095",
+  "canonFile": "js/v8/map/Section0.js",
+  "canonLine": 485,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "south of the spur",
+  "at": [
+   "js/v8/map/Section0.js:551"
+  ]
+ },
+ {
+  "canon": "UI-00205",
+  "canonFile": "js/v8/ui/PanelsUI.js",
+  "canonLine": 143,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "==================== EXTRACTED SCRIPT BLOCK ==================== */",
+  "at": [
+   "js/v8/ui/PanelsUI.js:3885"
+  ]
+ },
+ {
+  "canon": "UI-01419",
+  "canonFile": "js/v8/ui/PlayerGuide.js",
+  "canonLine": 1637,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "the guide's translate is a per-method local, not a module symbol (sibling methods declare it the same way, e.g. ~:1461) [REF#PENDING]",
+  "at": [
+   "js/v8/ui/PlayerGuide.js:1655"
+  ]
+ },
+ {
+  "canon": "UI-00937",
+  "canonFile": "js/v8/ui/PlayerGuide.js",
+  "canonLine": 4954,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "bg shows through the rounded cut",
+  "at": [
+   "js/v8/ui/PlayerGuide.js:5025"
+  ]
+ },
+ {
+  "canon": "UI-00939",
+  "canonFile": "js/v8/ui/PlayerGuide.js",
+  "canonLine": 4960,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "top-left index",
+  "at": [
+   "js/v8/ui/PlayerGuide.js:5031"
+  ]
+ },
+ {
+  "canon": "UI-00940",
+  "canonFile": "js/v8/ui/PlayerGuide.js",
+  "canonLine": 4962,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "bottom-right index (rotated)",
+  "at": [
+   "js/v8/ui/PlayerGuide.js:5033"
+  ]
+ },
+ {
+  "canon": "UI-00941",
+  "canonFile": "js/v8/ui/PlayerGuide.js",
+  "canonLine": 4965,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "big centre pip",
+  "at": [
+   "js/v8/ui/PlayerGuide.js:5036"
+  ]
+ },
+ {
+  "canon": "UI-00942",
+  "canonFile": "js/v8/ui/PlayerGuide.js",
+  "canonLine": 4972,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "origami-logo card back (Mark 2026-06-24)",
+  "at": [
+   "js/v8/ui/PlayerGuide.js:5057"
+  ]
+ },
+ {
+  "canon": "UI-01033",
+  "canonFile": "js/v8/ui/PlayerGuide.js",
+  "canonLine": 5521,
+  "copies": 1,
+  "cls": "A1-ORDER",
+  "linesReclaimable": 1,
+  "sample": "floor-scaled default (F5), CLAMPED to held gold (Mark 2026-06-26)",
+  "at": [
+   "js/v8/ui/PlayerGuide.js:5566"
+  ]
+ },
+ {
+  "canon": "VZ-00015",
+  "canonFile": "js/v8/render/LightController.js",
+  "canonLine": 193,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "invariant: never changed after construction",
+  "at": [
+   "js/v8/render/LightController.js:215"
+  ]
+ },
+ {
+  "canon": "EN-00148",
+  "canonFile": "js/v8/entities/LootCardBuilder.js",
+  "canonLine": 1338,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "stack depth (no z-fight)",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:1523"
+  ]
+ },
+ {
+  "canon": "EN-00149",
+  "canonFile": "js/v8/entities/LootCardBuilder.js",
+  "canonLine": 1340,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "slow 3D tilt",
+  "at": [
+   "js/v8/entities/LootCardBuilder.js:1525"
+  ]
+ },
+ {
+  "canon": "DA-00123",
+  "canonFile": "js/v8/data/SongCatalog.js",
+  "canonLine": 356,
+  "copies": 1,
+  "cls": "A8-MEASURE",
+  "linesReclaimable": 1,
+  "sample": "seeded by role, not analyzer-measured — re-measure on the next manifest pass",
+  "at": [
+   "js/v8/data/SongCatalog.js:387"
+  ]
+ },
+ {
+  "canon": "DA-00124",
+  "canonFile": "js/v8/data/SongCatalog.js",
+  "canonLine": 369,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "★ FINDABLE — Card 4",
+  "at": [
+   "js/v8/data/SongCatalog.js:424"
+  ]
+ },
+ {
+  "canon": "GP-00281",
+  "canonFile": "js/v8/OniBaba8.js",
+  "canonLine": 4693,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "transcendent",
+  "at": [
+   "js/v8/OniBaba8.js:4758"
+  ]
+ },
+ {
+  "canon": "GP-00282",
+  "canonFile": "js/v8/OniBaba8.js",
+  "canonLine": 4698,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "transcendent_dark",
+  "at": [
+   "js/v8/OniBaba8.js:4763"
+  ]
+ },
+ {
+  "canon": "GP-00283",
+  "canonFile": "js/v8/OniBaba8.js",
+  "canonLine": 4703,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "enraged_cancel",
+  "at": [
+   "js/v8/OniBaba8.js:4768"
+  ]
+ },
+ {
+  "canon": "GP-00285",
+  "canonFile": "js/v8/OniBaba8.js",
+  "canonLine": 4709,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "dragon_chaos",
+  "at": [
+   "js/v8/OniBaba8.js:4778"
+  ]
+ },
+ {
+  "canon": "GP-00286",
+  "canonFile": "js/v8/OniBaba8.js",
+  "canonLine": 4712,
+  "copies": 1,
+  "cls": "P0-PLAIN",
+  "linesReclaimable": 1,
+  "sample": "naga_blessed",
+  "at": [
+   "js/v8/OniBaba8.js:4781"
+  ]
+ }
+]

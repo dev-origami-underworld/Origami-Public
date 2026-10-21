@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOOR DESIGNER — a subfeature of the room system</title>
+<style>
+  :root{
+    --ink:#e8e2d6; --dim:#9a9384; --hot:#e8b06a; --bad:#e06a5a; --good:#7fd08a;
+    --panel:rgba(14,13,12,.86); --edge:rgba(232,176,106,.28);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:#0a0908;color:var(--ink);
+    font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;overflow:hidden}
+  canvas{display:block}
+  #hud{position:fixed;inset:0;pointer-events:none}
+  .card{position:absolute;background:var(--panel);border:1px solid var(--edge);
+    border-radius:10px;padding:14px 16px;backdrop-filter:blur(8px);pointer-events:auto}
+  #title{top:16px;left:16px;max-width:430px}
+  #title h1{margin:0 0 6px;font-size:15px;letter-spacing:.14em;color:var(--hot)}
+  #title p{margin:6px 0 0;color:var(--dim)}
+  #notes{bottom:16px;left:16px;max-width:520px;max-height:44vh;overflow:auto}
+  #notes h2{margin:0 0 8px;font-size:13px;letter-spacing:.1em;color:var(--hot)}
+  #notes ul{margin:6px 0 0;padding-left:18px}
+  #notes li{margin:4px 0;color:var(--ink)}
+  #notes li b{color:var(--hot);font-weight:600}
+  #notes .bad{color:var(--bad)}
+  #notes .good{color:var(--good)}
+  #keys{top:16px;right:16px;text-align:right;color:var(--dim)}
+  #keys b{color:var(--ink)}
+  #bays{bottom:16px;right:16px;display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+  .bay{pointer-events:auto;cursor:pointer;padding:6px 12px;border-radius:6px;border:1px solid transparent;
+    background:rgba(255,255,255,.04);color:var(--dim);white-space:nowrap}
+  .bay:hover{color:var(--ink);border-color:var(--edge)}
+  .bay.on{color:#0a0908;background:var(--hot);border-color:var(--hot)}
+  .num{opacity:.55;margin-right:8px}
+  #loading{position:fixed;inset:0;display:grid;place-items:center;background:#0a0908;color:var(--hot);
+    letter-spacing:.2em;font-size:12px;z-index:9}
+</style><style>
+  #themes{bottom:16px;right:16px;display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+  .chip{pointer-events:auto;cursor:pointer;padding:6px 12px;border-radius:6px;border:1px solid transparent;
+    background:rgba(255,255,255,.04);color:var(--dim);font:12px/1.4 ui-monospace,Menlo,monospace;
+    display:flex;gap:8px;align-items:center;min-width:190px;justify-content:flex-end}
+  .chip:hover{color:var(--ink);border-color:var(--edge)}
+  .chip.on{color:#0a0908;background:var(--hot);border-color:var(--hot)}
+  .chip .sw{width:11px;height:11px;border-radius:2px;border:1px solid rgba(0,0,0,.45)}
+  .chip .jp{opacity:.72;font-size:11px}
+  #spans{position:absolute;top:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
+  #readout{bottom:16px;left:16px;max-width:560px}
+  #readout table{border-collapse:collapse;width:100%}
+  #readout td{padding:2px 8px 2px 0;color:var(--ink)}
+  #readout td.k{color:var(--dim);width:210px}
+  #readout td b{color:var(--hot)}
+  .warn{color:var(--bad)} .ok{color:var(--good)}
+</style>
+</head>
+<body>
+<div id="hud">
+  <div class="card" id="title">
+    <h1>扉 DOOR DESIGNER</h1>
+    <div id="dName" style="color:var(--ink);font-size:14px"></div>
+    <p id="dLine"></p>
+    <p style="margin-top:8px;font-size:11px">
+      catalogue: <code>js/v8/map/DoorTypes.json</code> — the same file
+      <code>room.html</code> reads. A door is a <b>subfeature of the room system</b>.
+    </p>
+  </div>
+  <div class="card" id="keys">
+    <div><b>drag</b> orbit &nbsp; <b>wheel</b> zoom</div>
+    <div><b>1 2</b> span &nbsp; <b>← →</b> theme</div>
+    <div><b>T</b> top-down &nbsp; <b>W</b> wireframe &nbsp; <b>H</b> human</div>
+    <div><b>B</b> show back face</div>
+  </div>
+  <div class="card" id="spans"></div>
+  <div class="card" id="readout"><h2 style="margin:0 0 8px;font-size:13px;letter-spacing:.1em;color:var(--hot)">THE ARITHMETIC</h2><div id="roBody"></div></div>
+  <div id="themes" class="card" style="padding:8px"></div>
+</div>
+<div id="loading" style="position:fixed;inset:0;display:grid;place-items:center;background:#0a0908;color:#9a9384">loading…</div>
+<script src="vendor/three/r128/three.min.js"></script>
+<script src="vendor/three/r128/js/loaders/GLTFLoader.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════
+   doors.html — a SANDBOX, isolated from the live pipeline (Mark 2026-08-22: "lets create doors.html
+   - figure out how doors are supposed to render in games").
+   Nothing here touches NewOrigami.*.html. It runs on the same vendored three r128 and the same art.
+
+   THE ENGINE'S NUMBERS, so what you see here is comparable to the dungeon:
+     GRID 2.00   one tile          WALL_H 3.70  wall height      TWH 0.42  wall thickness
+     EYE  1.83   the player's eye  BODY_R 0.34  body radius
+   ═══════════════════════════════════════════════════════════════════════════════════════════════ */
+const GRID = 2.0, WALL_H = 3.7, TWH = 0.42, EYE = 1.83, BODY_R = 0.34;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0908);
+scene.fog = new THREE.Fog(0x0a0908, 22, 60);
+
+const camera = new THREE.PerspectiveCamera(46, innerWidth / innerHeight, 0.05, 200);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+
+/* ── LIGHT: a doorway reads by CONTRAST. Warm light on the approach side, cool spill from beyond,
+      so the reveal (the wall's thickness inside the opening) catches a highlight. That single
+      highlight is what makes a hole look like a doorway instead of a black rectangle. ───────── */
+scene.add(new THREE.HemisphereLight(0x9fb4c8, 0x1a1712, 0.55));
+const key = new THREE.DirectionalLight(0xffd9a8, 0.85);
+key.position.set(6, 9, 8); key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+key.shadow.camera.left = -30; key.shadow.camera.right = 30;
+key.shadow.camera.top = 20; key.shadow.camera.bottom = -10;
+scene.add(key);
+const back = new THREE.DirectionalLight(0x6f9fd0, 0.5); back.position.set(-4, 6, -10); scene.add(back);
+
+/* ── TEXTURES ───────────────────────────────────────────────────────────────────────────────────
+   ⚠ THE #1 THING GAMES GET RIGHT AND WE GET WRONG: a wall texture TILES (repeat), a door texture
+   FITS (clamp, 1:1 with the pane). The wall repeats ~1 brick per metre; the door art maps exactly
+   to the one pane it is painted on, at the aspect it was drawn. Nothing here stretches. ───────── */
+const TL = new THREE.TextureLoader();
+function tile(url, rx, ry, cb) {
+  return TL.load(url, t => {
+    t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(rx, ry);
+    t.encoding = THREE.sRGBEncoding; t.anisotropy = 8; if (cb) cb(t);
+  });
+}
+function fit(url) {
+  return TL.load(url, t => { t.wrapS = t.wrapT = THREE.ClampToEdgeWrapping; t.encoding = THREE.sRGBEncoding; t.anisotropy = 8; });
+}
+const texStone  = tile('assets/textures/underworld_wall.png', 1, 1);      // repeat set per-surface below
+
+const M = {   // only two materials survive the one-pane model
+  edge:   new THREE.MeshStandardMaterial({ color: 0x1d150e, roughness: .9 }),
+  floor:  new THREE.MeshStandardMaterial({ color: 0x1a1613, roughness: 1 })
+};
+
+
+function stoneMat(w, h) {            // a wall face gets its OWN repeat, ~1 tile of brick per metre
+  // ⚠ NOT `texture.clone()` on a texture that is still loading — the clone never receives the image
+  //   and the wall renders BLACK. Ask the loader for another instance instead; three's Cache shares
+  //   the decoded image, so this costs nothing and each surface keeps its own repeat.
+  return new THREE.MeshStandardMaterial({
+    map: tile('assets/textures/underworld_wall.png', Math.max(.25, w / 2), Math.max(.25, h / 2)),
+    color: 0xb4aea6, roughness: .96, metalness: 0 });
+}
+const box = (w, h, d, mat, x, y, z, rotY) => {
+  const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+  m.position.set(x, y, z); if (rotY) m.rotation.y = rotY;
+  m.castShadow = true; m.receiveShadow = true; return m;
+};
+
+
+/* ── THE FLOOR ─────────────────────────────────────────────────────────────────────────────── */
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), M.floor);
+floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; scene.add(floor);
+
+/* ═══ THE VOCABULARY — FOUR WORDS, EACH MEANING EXACTLY ONE THING ════════════════════════════
+   Mark 2026-08-26: "we had various naming that made it impossible to get right."
+
+   That is the whole bug, and it was never geometry. The word DOOR was used for THREE different
+   things at once across ~20 identifiers (_cabDoors, _cabDoorLeaves, _cabDoorTiles, _doorTiles,
+   _doorCarve, shoji_door, _mt.door, _mkDoor, _mkCabDoor._mkLeaf, _mkDoubleDoorUnit …). You could
+   not tell from a name whether it meant a HOLE, a MESH, or a TILE TYPE — so every fix landed on
+   the wrong object, and the next seat re-broke it. Nothing else is called a door from here:
+
+     DOORWAY  the OPENING. A property of the MAP — a tile type. An ABSENCE. No mesh, no material,
+              no theme. Delete a doorway and the dungeon SEALS. The GENERATOR owns it.
+     LEAF     the single PANE that fills a doorway. A MESH — one box, in the wall line, wearing
+              the art. Never a tile. RENDER owns it. If it is not a mesh, it is not a leaf.
+     SPAN     how many TILES wide. 1 or 2. Never metres; metres are span x GRID.
+     THEME    which ART the leaf wears. Mirrors the room's WALL_STYLE so room and door match.
+
+   This page designs a LEAF. room.html places the DOORWAY. Both read DoorTypes.json. ══════════ */
+
+/* ── THEME ART, WITH A PROCEDURAL FALLBACK ──────────────────────────────────────────────────────
+   Mark: "dont worry about textures we will have various ones to go through - so make sure doors
+   can change textures for different themes." So a theme is a NAME plus a PALETTE, and its PNG is
+   optional: if the file is missing (they all are — the old art was deleted 2026-08-26, recoverable
+   at b77b00c0) the leaf is drawn procedurally from the palette instead. A theme is therefore usable
+   the moment it is named in the catalogue, and dropping in real art later is a PATH CHANGE IN JSON
+   WITH NO CODE EDIT. That is the point: the door system must not care what the texture is. */
+function proceduralLeaf(theme, span, faceBack) {
+  const AR = span === 2 ? 1164 / 1510 : 418 / 656;      // the aspects the real art was drawn at
+  const W = span === 2 ? 1024 : 640, H = Math.round(W / AR);
+  const c = document.createElement('canvas'); c.width = W; c.height = H;
+  const g = c.getContext('2d'), P = theme.palette;
+  const leaves = span === 2 ? 2 : 1, lw = W / leaves;
+
+  g.fillStyle = P.frame; g.fillRect(0, 0, W, H);                       // the frame behind everything
+  const inset = Math.round(W * 0.045);
+  for (let L = 0; L < leaves; L++) {
+    const x0 = L * lw + inset, w0 = lw - inset * 2, y0 = inset, h0 = H - inset * 2;
+    g.fillStyle = P.panel; g.fillRect(x0, y0, w0, h0);
+    const planks = span === 2 ? 5 : 4, pw = w0 / planks;               // vertical planks
+    for (let i = 0; i < planks; i++) {
+      const t = (i % 2) ? 0.06 : -0.05;                                // alternate light/dark
+      g.fillStyle = shade(P.panel, t); g.fillRect(x0 + i * pw, y0, pw, h0);
+      g.fillStyle = shade(P.panel, -0.22); g.fillRect(x0 + i * pw, y0, 2, h0);   // the joint
+    }
+    g.strokeStyle = shade(P.frame, 0.1); g.lineWidth = Math.max(3, W * 0.012);
+    g.strokeRect(x0, y0, w0, h0);
+    for (const fy of [0.18, 0.5, 0.82]) {                              // iron bands + studs
+      const by = y0 + h0 * fy, bh = Math.max(6, H * 0.022);
+      g.fillStyle = P.iron; g.fillRect(x0, by - bh / 2, w0, bh);
+      const studs = span === 2 ? 6 : 5;
+      for (let s = 0; s < studs; s++) {
+        g.beginPath(); g.arc(x0 + w0 * (s + 0.5) / studs, by, bh * 0.42, 0, 7);
+        g.fillStyle = shade(P.iron, 0.35); g.fill();
+      }
+    }
+    g.beginPath();                                                      // the ring pull
+    const rx = x0 + (leaves === 2 ? (L === 0 ? w0 * 0.86 : w0 * 0.14) : w0 * 0.82), ry = y0 + h0 * 0.5;
+    g.lineWidth = Math.max(5, W * 0.018); g.strokeStyle = P.accent;
+    g.arc(rx, ry, w0 * 0.085, 0, 7); g.stroke();
+  }
+  if (faceBack) { g.globalAlpha = 0.22; g.fillStyle = '#000'; g.fillRect(0, 0, W, H); g.globalAlpha = 1; }
+  const t = new THREE.CanvasTexture(c);
+  t.wrapS = t.wrapT = THREE.ClampToEdgeWrapping; t.encoding = THREE.sRGBEncoding; t.anisotropy = 8;
+  t.userData = { procedural: true, w: W, h: H };
+  return t;
+}
+function shade(hex, d) {                                    // lighten (+) / darken (-) a #rrggbb
+  const n = parseInt(hex.slice(1), 16);
+  const f = v => Math.max(0, Math.min(255, Math.round(v + 255 * d)));
+  return 'rgb(' + f((n >> 16) & 255) + ',' + f((n >> 8) & 255) + ',' + f(n & 255) + ')';
+}
+
+/* Ask for a theme's real PNG; fall back to the procedural leaf if it is not there. Either way the
+   caller gets a texture and the door system never has to know which it got. */
+function leafTexture(theme, span, faceBack, onKnown) {
+  const url = faceBack ? theme.art.back : theme.art.front;
+  const tex = TL.load(url,
+    t => { t.wrapS = t.wrapT = THREE.ClampToEdgeWrapping; t.encoding = THREE.sRGBEncoding;
+           t.anisotropy = 8; onKnown && onKnown({ real: true, url, w: t.image.width, h: t.image.height }); },
+    undefined,
+    () => { const p = proceduralLeaf(theme, span, faceBack);            // 404 → draw it ourselves
+            mat.map = p; mat.needsUpdate = true;
+            onKnown && onKnown({ real: false, url, w: p.userData.w, h: p.userData.h }); });
+  const mat = new THREE.MeshStandardMaterial({ map: tex, roughness: .78, metalness: .12 });
+  return mat;
+}
+
+/* ═══ THE LEAF ═══════════════════════════════════════════════════════════════════════════════
+   ONE BOX, IN THE WALL LINE, WEARING THE ART. The only rule is aspect, and it is arithmetic:
+       k = min(spanW / artW, WALL_H / artH)    — CONTAIN-FIT. Letterbox. NEVER stretch.
+   Whatever the leaf does not fill, WALL fills: side fill, or a header band above (a real door is
+   SHORTER than the wall it sits in). No hole, no jambs, no reveal, no casing, no hinge — the art
+   already has all of that painted on it. ═══════════════════════════════════════════════════ */
+const WALL_W = 7.2;                       // wall run either side, so a leaf is seen IN a wall
+let stage = new THREE.Group(); scene.add(stage);
+let showBack = false, showHuman = true;
+
+function human(x, z) {
+  const g = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color: 0xb8c6d4, roughness: .9, transparent: true, opacity: .5 });
+  const b = new THREE.Mesh(new THREE.CylinderGeometry(BODY_R, BODY_R, 1.45, 16), mat); b.position.y = .725; g.add(b);
+  const h = new THREE.Mesh(new THREE.SphereGeometry(0.19, 16, 12), mat); h.position.y = 1.62; g.add(h);
+  g.position.set(x, 0, z); return g;
+}
+
+function buildLeaf(spanDef, theme) {
+  while (stage.children.length) stage.remove(stage.children[0]);
+  const span = spanDef.tiles, spanW = span * GRID;
+  let art = { real: null, w: 0, h: 0, url: '' };
+  const note = info => {                                  // fires once the art's real size is known
+    art = { real: info.real, w: info.w, h: info.h, url: info.url };
+    layout(); readout(spanDef, theme, art);
+  };
+  const front = leafTexture(theme, span, false, note);
+  const back  = leafTexture(theme, span, true,  null);
+  const holder = new THREE.Group(); holder.name = 'LEAF'; stage.add(holder);
+
+  function layout() {
+    while (holder.children.length) holder.remove(holder.children[0]);
+    if (!art.w) return;
+    const k = Math.min(spanW / art.w, WALL_H / art.h);    // ── CONTAIN-FIT. the one rule.
+    const lw = +(art.w * k).toFixed(3), lh = +(art.h * k).toFixed(3);
+    //                    +x      -x      +y      -y     FRONT  BACK
+    const mats = [M.edge, M.edge, M.edge, M.edge, front, back];
+    holder.add(box(lw, lh, TWH, mats, 0, lh / 2, 0));                       // <- THE LEAF
+    const side = +((spanW - lw) / 2).toFixed(3);
+    if (side > 0.001) for (const s of [-1, 1])
+      holder.add(box(side, WALL_H, TWH, stoneMat(side, WALL_H), s * (lw + side) / 2, WALL_H / 2, 0));
+    const head = +(WALL_H - lh).toFixed(3);
+    if (head > 0.001) holder.add(box(lw, head, TWH, stoneMat(lw, head), 0, lh + head / 2, 0));
+    const run = (WALL_W * 2 - spanW) / 2;
+    for (const s of [-1, 1])
+      holder.add(box(run, WALL_H, TWH, stoneMat(run, WALL_H), s * (spanW + run) / 2, WALL_H / 2, 0));
+    holder.userData.fit = { lw, lh, side, head, k };
+    console.log('[LEAF] ' + spanDef.key + '/' + theme.key + '  ' + lw + ' x ' + lh +
+                ' | side ' + side + ' | header ' + head + ' | art ' + art.w + 'x' + art.h +
+                (art.real ? ' (png)' : ' (procedural)'));
+  }
+  const h = human(-1.6, 3.0); h.visible = showHuman; stage.add(h);
+  stage.userData.human = h;
+  layout();
+}
+
+/* ═══ THE CATALOGUE DRIVES EVERYTHING ════════════════════════════════════════════════════════ */
+let CAT = null, spanIx = 0, themeIx = 0;
+function cur() { return { s: CAT.spans[spanIx], t: CAT.themes[themeIx] }; }
+
+function readout(spanDef, theme, art) {
+  const f = stage.getObjectByName('LEAF');
+  const fit = f && f.userData.fit;
+  const spanW = spanDef.tiles * GRID;
+  const stretch = art.w ? ((spanW / WALL_H) / (art.w / art.h)) : 0;
+  const rows = [
+    ['catalogue', '<b>' + spanDef.key + '</b> · ' + spanDef.tiles + ' tile' + (spanDef.tiles > 1 ? 's' : '') +
+       ' = ' + spanW.toFixed(2) + ' wide &nbsp;·&nbsp; theme <b>' + theme.key + '</b> (' + theme.name + ')'],
+    ['wall style it matches', theme.wallStyle],
+    ['art', art.real
+      ? '<span class="ok">PNG</span> ' + art.url.split('/').pop() + ' &nbsp; ' + art.w + ' × ' + art.h
+      : '<span class="warn">no PNG — procedural</span> from palette &nbsp; ' + art.w + ' × ' + art.h],
+    ['art aspect', art.w ? (art.w / art.h).toFixed(4) + (art.w / art.h < 1 ? ' (portrait)' : ' (landscape)') : '—'],
+    ['contain-fit k (world units / art px)', fit ? fit.k.toFixed(5) + ' = min(' + (spanW / art.w).toFixed(3) + ', ' + (WALL_H / art.h).toFixed(3) + ')' : '—'],
+    ['LEAF', fit ? '<b>' + fit.lw + ' × ' + fit.lh + '</b> &nbsp; (' + (fit.lw / GRID).toFixed(2) + ' tiles)' : '—'],
+    ['wall fills', fit ? fit.side + ' each side &nbsp;·&nbsp; header band ' + fit.head : '—'],
+    ['if it were stretched', art.w ? '<span class="warn">' + stretch.toFixed(2) + '× wider than drawn</span> — which is why it is not' : '—']
+  ];
+  document.getElementById('roBody').innerHTML =
+    '<table>' + rows.map(r => '<tr><td class="k">' + r[0] + '</td><td>' + r[1] + '</td></tr>').join('') + '</table>';
+}
+
+function rebuild() {
+  const { s, t } = cur();
+  document.getElementById('dName').textContent = s.key + ' · ' + t.name + ' — ' + t.key;
+  document.getElementById('dLine').textContent = s.role + '. ' + t.note;
+  [...document.querySelectorAll('#themes .chip')].forEach((el, i) => el.classList.toggle('on', i === themeIx));
+  [...document.querySelectorAll('#spans .chip')].forEach((el, i) => el.classList.toggle('on', i === spanIx));
+  buildLeaf(s, t);
+}
+
+/* ═══ CAMERA · INPUT · LOOP ═══════════════════════════════════════════════════════════════════ */
+let orbit = { th: 0.10, ph: 0.22, r: 6.6 }, target = new THREE.Vector3(0, 1.35, 0);
+let topDown = false, wire = false;
+
+addEventListener('keydown', e => {
+  if (!CAT) return;
+  const k = e.key.toLowerCase();
+  if (k === 'arrowright') { themeIx = (themeIx + 1) % CAT.themes.length; rebuild(); }
+  else if (k === 'arrowleft') { themeIx = (themeIx - 1 + CAT.themes.length) % CAT.themes.length; rebuild(); }
+  else if (k >= '1' && k <= String(CAT.spans.length)) { spanIx = +k - 1; rebuild(); }
+  else if (k === 'b') { showBack = !showBack; orbit.th = showBack ? Math.PI : 0.10; }
+  else if (k === 't') topDown = !topDown;
+  else if (k === 'h') { showHuman = !showHuman; const h = stage.userData.human; if (h) h.visible = showHuman; }
+  else if (k === 'w') { wire = !wire; scene.traverse(o => {
+      if (o.isMesh && o.material && !Array.isArray(o.material)) o.material.wireframe = wire; }); }
+});
+let drag = null;
+renderer.domElement.addEventListener('pointerdown', e => drag = { x: e.clientX, y: e.clientY });
+addEventListener('pointerup', () => drag = null);
+addEventListener('pointermove', e => {
+  if (!drag) return;
+  orbit.th -= (e.clientX - drag.x) * 0.006;
+  orbit.ph = Math.max(0.16, Math.min(1.5, orbit.ph - (e.clientY - drag.y) * 0.005));
+  drag = { x: e.clientX, y: e.clientY };
+});
+addEventListener('wheel', e => { orbit.r = Math.max(2.6, Math.min(22, orbit.r + e.deltaY * 0.008)); }, { passive: true });
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+function frame() {
+  requestAnimationFrame(frame);
+  const cx = target.x + (topDown ? 0.001 : Math.sin(orbit.th) * Math.cos(orbit.ph) * orbit.r);
+  const cz = target.z + (topDown ? 0.001 : Math.cos(orbit.th) * Math.cos(orbit.ph) * orbit.r);
+  const cy = topDown ? orbit.r * 1.5 : 1.05 + Math.sin(orbit.ph) * orbit.r;
+  camera.position.lerp(new THREE.Vector3(cx, cy, cz), 0.12);
+  camera.up.set(0, topDown ? 0 : 1, topDown ? -1 : 0);      // straight down + up=+Y is degenerate
+  camera.lookAt(target.x, topDown ? 0 : target.y, target.z);
+  renderer.render(scene, camera);
+}
+
+/* ═══ BOOT — the catalogue is the only source of truth, so nothing renders until it loads ════ */
+fetch('js/v8/map/DoorTypes.json?v=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('DoorTypes.json ' + r.status); return r.json(); })
+  .then(j => {
+    CAT = j;
+    const sb = document.getElementById('spans');
+    CAT.spans.forEach((s, i) => {
+      const el = document.createElement('button'); el.className = 'chip';
+      el.style.minWidth = '0'; el.textContent = s.key + ' · ' + s.tiles + ' tile' + (s.tiles > 1 ? 's' : '');
+      el.onclick = () => { spanIx = i; rebuild(); }; sb.appendChild(el);
+    });
+    const tb = document.getElementById('themes');
+    CAT.themes.forEach((t, i) => {
+      const el = document.createElement('div'); el.className = 'chip';
+      el.innerHTML = '<span class="jp">' + t.name + '</span><span>' + t.key + '</span>' +
+                     '<i class="sw" style="background:' + t.palette.panel + '"></i>' +
+                     '<i class="sw" style="background:' + t.palette.accent + '"></i>';
+      el.onclick = () => { themeIx = i; rebuild(); }; tb.appendChild(el);
+    });
+    // room.html opens this page with the door it wants designed: doors.html?span=D2&theme=cabaret
+    // That is the whole "subfeature" wiring — room.html places the DOORWAY and names the SPAN and
+    // THEME; this page designs the LEAF that fills it. One catalogue, one vocabulary, two views.
+    const q = new URLSearchParams(location.search);
+    const si = CAT.spans.findIndex(x => x.key === (q.get('span') || '').toUpperCase());
+    const ti = CAT.themes.findIndex(x => x.key === (q.get('theme') || '').toLowerCase());
+    if (si >= 0) spanIx = si;
+    if (ti >= 0) themeIx = ti;
+
+    document.getElementById('loading').style.display = 'none';
+    rebuild();
+    frame();
+    window.__doors = { scene, stage, CAT, cur, GRID, WALL_H, TWH };   // probe hook: select by identity
+  })
+  .catch(e => {
+    document.getElementById('loading').textContent = 'FAILED to load js/v8/map/DoorTypes.json — ' + e.message;
+    console.error('[DOORS] catalogue load failed', e);
+  });
+</script>
+</body>
+</html>

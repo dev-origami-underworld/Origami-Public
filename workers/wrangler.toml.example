@@ -1,0 +1,14 @@
+# Copy to wrangler.toml, fill in the KV id from `wrangler kv namespace create SONG_VOTES`, then
+# `wrangler deploy`. Kept as .example so a real namespace id is never committed.
+name = "origami-song-votes"
+main = "song-votes.js"
+compatibility_date = "2026-08-04"
+
+[[kv_namespaces]]
+binding = "SONG_VOTES"
+id = "PUT_THE_ID_FROM_WRANGLER_HERE"
+
+# Optional: serve it from the game's own domain instead of *.workers.dev
+# [[routes]]
+# pattern = "votes.origamiunderworld.com/vote"
+# custom_domain = true

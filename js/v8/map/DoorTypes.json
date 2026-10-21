@@ -1,0 +1,71 @@
+{
+  "$comment": [
+    "DoorTypes.json — THE DOOR CATALOGUE. Sits beside RoomShapes.json because a door is a",
+    "SUBFEATURE OF THE ROOM SYSTEM, not a thing of its own: room.html places doorways on a room's",
+    "walls, doors.html designs what fills them, and both read THIS file. One catalogue, one truth.",
+    "",
+    "WHY THIS FILE EXISTS AT ALL (Mark, 2026-08-26):",
+    "  'we had various naming that made it impossible to get right.'",
+    "  He is right, and here is the exact failure. The word DOOR was used for THREE different",
+    "  things at once, across ~20 identifiers — _cabDoors, _cabDoorLeaves, _cabDoorTiles,",
+    "  _woodDoubleDoors, shojiDoorPanels, _pendingExtraDoors, _sectionDoorsOpenNow, _doorTiles,",
+    "  _doorSet, _doorCarve, _doorJambs, shoji_door, _mt.door, _mkDoor, _mkCabDoor._mkLeaf,",
+    "  _mkDoubleDoorUnit. Nobody could tell from a name whether it meant a HOLE, a MESH, or a",
+    "  TILE TYPE, so every fix landed on the wrong object and the next seat re-broke it.",
+    "",
+    "THE VOCABULARY. FOUR WORDS. EACH MEANS EXACTLY ONE THING. NOTHING ELSE IS CALLED A DOOR:",
+    "  DOORWAY  the OPENING. A property of the MAP — a tile type. It is an ABSENCE. It has no mesh,",
+    "           no material and no theme. Delete a doorway and the dungeon SEALS. Generators own it.",
+    "  LEAF     the single PANE that fills a doorway. A MESH, one box, in the wall line, wearing the",
+    "           art. It is never a tile. Render owns it. If it is not a mesh, it is not a leaf.",
+    "  SPAN     how many TILES wide the doorway is. 1 or 2. Never metres — metres are span x grid.",
+    "  THEME    which ART a leaf wears. Mirrors the room's WALL_STYLE so a room and its doors match.",
+    "",
+    "THE ONE GEOMETRY RULE, and it is arithmetic, not architecture:",
+    "  CONTAIN-FIT the art inside its (span*grid x wallHeight) box:  k = min(w/artW, h/artH).",
+    "  Letterbox. NEVER stretch. Whatever the leaf does not fill, WALL fills — at the sides, or as",
+    "  a header band above (a real door is SHORTER than the wall it sits in)."
+  ],
+  "version": 1,
+  "grid": 2.0,
+  "wallHeight": 3.7,
+  "wallThickness": 0.42,
+
+  "spans": [
+    { "key": "D1", "tiles": 1, "metres": 2.0, "role": "room, closet, side passage",
+      "note": "the default. One tile of wall becomes doorway." },
+    { "key": "D2", "tiles": 2, "metres": 4.0, "role": "hall, cabaret, temple gate, stair head",
+      "note": "needs a 2-tile wall run; room.html REFUSES it on a 1-tile side rather than sliding it." }
+  ],
+
+  "themes": [
+    { "key": "shoji",   "name": "障子",   "wallStyle": "mainHall",
+      "art": { "front": "assets/textures/doors/shoji.front.png",   "back": "assets/textures/doors/shoji.back.png" },
+      "palette": { "panel": "#d9cfb4", "frame": "#2a1d12", "iron": "#3b3b40", "accent": "#8a6a3a" },
+      "note": "paper and lattice; the lightest leaf." },
+    { "key": "cabaret", "name": "キャバレー", "wallStyle": "cabaret",
+      "art": { "front": "assets/textures/doors/cabaret.front.png", "back": "assets/textures/doors/cabaret.back.png" },
+      "palette": { "panel": "#5a1f2d", "frame": "#2b1016", "iron": "#c9a227", "accent": "#e4b04a" },
+      "note": "lacquer red and brass; Mark's treasured room, so its door is the loudest." },
+    { "key": "guard",   "name": "番所",   "wallStyle": "guard",
+      "art": { "front": "assets/textures/doors/guard.front.png",   "back": "assets/textures/doors/guard.back.png" },
+      "palette": { "panel": "#4a4038", "frame": "#241c15", "iron": "#2b2b2e", "accent": "#6b5a3e" },
+      "note": "banded timber and iron; the heaviest leaf." },
+    { "key": "konbini", "name": "コンビニ", "wallStyle": "konbini",
+      "art": { "front": "assets/textures/doors/konbini.front.png", "back": "assets/textures/doors/konbini.back.png" },
+      "palette": { "panel": "#cfd8dc", "frame": "#8a9aa3", "iron": "#5b6a72", "accent": "#3aa8c1" },
+      "note": "glass and alloy; the only modern leaf. Dedication room — keep it warm, never clinical." },
+    { "key": "stone",   "name": "石戸",   "wallStyle": "mainHall",
+      "art": { "front": "assets/textures/doors/stone.front.png",   "back": "assets/textures/doors/stone.back.png" },
+      "palette": { "panel": "#6d6862", "frame": "#4a4540", "iron": "#3a3a3d", "accent": "#8d8880" },
+      "note": "for sealed and boss doorways." }
+  ],
+
+  "$art": [
+    "EVERY `art` PATH ABOVE MAY BE MISSING, AND THAT IS FINE ON PURPOSE. Mark 2026-08-26: 'dont",
+    "worry about textures we will have various ones to go through.' A leaf whose PNG does not load",
+    "falls back to a PROCEDURAL leaf drawn from `palette`, so a theme is usable the moment it is",
+    "named here and swapping in real art later is a one-line path change with no code edit.",
+    "The old art was deleted on 2026-08-26 and is recoverable from git at b77b00c0 if wanted."
+  ]
+}

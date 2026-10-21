@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stinger SMG - Fortnite (PBR)
+* source:	https://sketchfab.com/3d-models/stinger-smg-fortnite-pbr-65162521dc6349cda614ba6ededcc5ed
+* author:	Wicked_Vixx (https://sketchfab.com/tylukex)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stinger SMG - Fortnite (PBR)" (https://sketchfab.com/3d-models/stinger-smg-fortnite-pbr-65162521dc6349cda614ba6ededcc5ed) by Wicked_Vixx (https://sketchfab.com/tylukex) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

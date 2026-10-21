@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Paper Samurai — Animation Studio</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script>
+  <style>
+    :root { color-scheme: dark; font: 14px/1.5 system-ui, sans-serif; color: #f3f4f6; background: #14121a; }
+    * { box-sizing: border-box; } body { margin: 0; }
+    main { max-width: 1440px; margin: auto; padding: 24px; }
+    header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+    h1 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -.03em; }
+    h2 { margin: 0 0 16px; font-size: 16px; } p { color: #b9b3c4; }
+    header p { margin: 0; font-size: 12px; }
+    .studio { display: grid; grid-template-columns: 184px minmax(0,1fr) 184px; gap: 16px; }
+    aside { padding: 20px 16px; background: #211c2b; border: 1px solid #393044; border-radius: 12px; }
+    fieldset { padding: 0; margin: 0; border: 0; min-width: 0; }
+    button { font: inherit; color: inherit; cursor: pointer; border: 1px solid #51425f; border-radius: 8px; background: #2c2437; padding: 10px 12px; }
+    button:hover { background: #3b2e4c; } button:focus-visible, input:focus-visible { outline: 2px solid #c4b5fd; outline-offset: 3px; }
+    button[aria-pressed="true"] { background: #5b3c7b; border-color: #b497d5; }
+    button:disabled { opacity: .45; cursor: wait; }
+    select { width: 100%; padding: 10px 8px; margin-bottom: 20px; font: inherit; color: #f3f4f6; background: #2c2437; border: 1px solid #b497d5; border-radius: 8px; }
+    .choices { display: grid; gap: 8px; } .choices button { text-align: left; }
+    .note { font-size: 12px; line-height: 1.6; margin: 16px 0 24px; }
+    .stage { min-width: 0; overflow: hidden; border: 1px solid #51425f; border-radius: 12px; background: radial-gradient(ellipse at 50% 35%, #3b2850, #14121a 75%); }
+    model-viewer { width: 100%; height: min(72vh,760px); min-height: 380px; }
+    .transport { border-top: 1px solid #393044; padding: 16px; display: grid; gap: 12px; }
+    .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    input[type="range"] { accent-color: #c4b5fd; width: 100%; min-width: 0; }
+    #timeline { flex: 1; width: auto; } output { font-variant-numeric: tabular-nums; color: #d8c8ed; }
+    label { display: block; margin-top: 20px; margin-bottom: 8px; }
+    #status { min-height: 21px; margin: 0; font-size: 12px; color: #d8c8ed; }
+    .view { display: grid; gap: 8px; }
+    @media(max-width:760px) { main { padding: 12px; } header { display: block; } .studio { grid-template-columns: 1fr 1fr; } .stage { grid-column: 1/-1; grid-row: 1; } model-viewer { height: 55vh; } aside { padding: 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Paper Samurai</h1><p>Animation studio · drag to orbit · scroll to zoom</p></header>
+    <div class="studio">
+      <aside><h2>Animations</h2><label for="clips">Model clips <output id="clipCount"></output></label>
+      <select id="clips" disabled><option>Loading clips…</option></select>
+      <h2>Movement</h2><fieldset id="movement" disabled class="choices">
+        <button data-motion="Stand" aria-pressed="false">Stand</button>
+        <button data-motion="Walk" aria-pressed="true">Walk</button>
+        <button data-motion="March" aria-pressed="false">March</button>
+        <button data-motion="Sneak" aria-pressed="false">Sneak</button>
+      </fieldset><p class="note">In-place cycles. Combine any movement with an expression.</p>
+      <label for="speed">Playback speed <output id="speedValue">1.00×</output></label>
+      <input id="speed" type="range" min="0.25" max="2" step="0.05" value="1" disabled>
+      </aside>
+      <section class="stage" aria-label="Samurai animation preview">
+        <model-viewer id="samurai" src="paper-samurai-animated.glb?v=button-holes25" camera-controls camera-orbit="0deg 90deg 105%" shadow-intensity="1" exposure="1.1" animation-name="Walk / Neutral" animation-crossfade-duration="200" alt="Animated purple paper samurai with helmet and katana"></model-viewer>
+        <div class="transport"><fieldset id="playback" disabled><div class="row">
+          <button id="toggle">Pause</button><button id="restart">Restart</button>
+          <input id="timeline" aria-label="Animation position" type="range" min="0" max="1000" value="0"><output id="time">0.00 s</output>
+        </div></fieldset><p id="status" role="status">Loading animated model…</p></div>
+      </section>
+      <aside><h2>Mouth</h2><fieldset id="mouth" disabled class="choices">
+        <button data-mouth="Neutral" aria-pressed="true">Neutral</button>
+        <button data-mouth="Smile" aria-pressed="false">Smile</button>
+        <button data-mouth="Snarl" aria-pressed="false">Snarl</button>
+        <button data-mouth="Growl" aria-pressed="false">Growl</button>
+      </fieldset><p class="note">Smile lifts the corners. Snarl curls one side. Growl pulses the stitched mouth. Motion only; no sound.</p>
+      <fieldset id="views" disabled class="view"><button id="face">Face close-up</button><button id="full">Full body</button></fieldset>
+      </aside>
+    </div>
+  </main>
+  <script type="module">
+    const viewer = document.querySelector('#samurai');
+    const status = document.querySelector('#status');
+    const toggle = document.querySelector('#toggle');
+    const timeline = document.querySelector('#timeline');
+    const clips = document.querySelector('#clips');
+    let motion = 'Walk', mouth = 'Neutral', playing = true, ready = false;
+    function selectClip(name = `${motion} / ${mouth}`) {
+      if (!ready) return;
+      if (!viewer.availableAnimations.includes(name)) { status.textContent = `Missing animation: ${name}`; return; }
+      clips.value = name;
+      viewer.animationName = name;
+      viewer.currentTime = 0;
+      if (playing) viewer.play(); else viewer.pause();
+      status.textContent = name;
+      document.querySelectorAll('[data-motion]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.motion === motion)));
+      document.querySelectorAll('[data-mouth]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mouth === mouth)));
+    }
+    viewer.addEventListener('load', () => {
+      ready = true;
+      document.querySelectorAll('fieldset, #speed').forEach(el => el.disabled = false);
+      clips.replaceChildren(...viewer.availableAnimations.map(name => new Option(name, name)));
+      document.querySelector('#clipCount').value = `(${viewer.availableAnimations.length})`;
+      clips.disabled = viewer.availableAnimations.length === 0;
+      if (clips.disabled) { clips.add(new Option('No embedded clips', '')); status.textContent = 'This model contains no animation clips.'; return; }
+      selectClip(viewer.availableAnimations.includes(`${motion} / ${mouth}`) ? `${motion} / ${mouth}` : viewer.availableAnimations[0]);
+    });
+    clips.addEventListener('change', () => {
+      [motion, mouth] = clips.value.split(' / ');
+      playing = true;
+      toggle.textContent = 'Pause';
+      selectClip(clips.value);
+    });
+    viewer.addEventListener('error', () => { ready = false; clips.disabled = true; status.textContent = 'Model could not load. Check the GLB path or browser console.'; document.querySelectorAll('fieldset, #speed').forEach(el => el.disabled = true); });
+    document.querySelectorAll('[data-motion]').forEach(b => b.addEventListener('click', () => { motion = b.dataset.motion; selectClip(); }));
+    document.querySelectorAll('[data-mouth]').forEach(b => b.addEventListener('click', () => { mouth = b.dataset.mouth; selectClip(); }));
+    toggle.addEventListener('click', () => { playing = !playing; if (playing) viewer.play(); else viewer.pause(); toggle.textContent = playing ? 'Pause' : 'Play'; });
+    document.querySelector('#restart').addEventListener('click', () => { viewer.currentTime = 0; });
+    document.querySelector('#speed').addEventListener('input', e => { viewer.timeScale = Number(e.target.value); document.querySelector('#speedValue').value = `${viewer.timeScale.toFixed(2)}×`; });
+    timeline.addEventListener('input', () => { playing = false; viewer.pause(); toggle.textContent = 'Play'; viewer.currentTime = Number(timeline.value) / 1000 * viewer.duration; });
+    document.querySelector('#face').addEventListener('click', () => { viewer.cameraTarget = '0m 0.81m 0.05m'; viewer.cameraOrbit = '0deg 85deg 0.45m'; });
+    document.querySelector('#full').addEventListener('click', () => { viewer.cameraTarget = 'auto auto auto'; viewer.cameraOrbit = '0deg 90deg 105%'; });
+    setInterval(() => {
+      if (!ready || !Number.isFinite(viewer.duration) || viewer.duration <= 0) return;
+      if (document.activeElement !== timeline) timeline.value = String(viewer.currentTime / viewer.duration * 1000);
+      document.querySelector('#time').value = `${viewer.currentTime.toFixed(2)} s`;
+    }, 100);
+  </script>
+</body>
+</html>

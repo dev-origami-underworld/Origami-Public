@@ -1,0 +1,598 @@
+/**
+ * ORIGAMI ADVENTURE - COMPONENT STYLES
+ * 
+ * This file contains all component-specific styles using design system variables.
+ * Modify design-system.css to change colors, spacing, and themes.
+ */
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-primary);
+  background-color: var(--bg-main);
+  background-image: var(--gradient-radial-1), var(--gradient-radial-2);
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: background-color var(--transition-theme),
+    color var(--transition-theme);
+}
+
+/* ========================================
+   LAYOUT CONTAINERS
+   ======================================== */
+
+#dnd-game-app-container {
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+}
+
+#dnd-game-prompt-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  background: var(--panel-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: var(--panel-shadow);
+  border: var(--border-width) solid var(--border-color);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* ========================================
+   ADVENTURE LOG
+   ======================================== */
+
+#dnd-game-adventure-log {
+  height: var(--log-height);
+  min-height: var(--log-min-height);
+  overflow-y: auto;
+  padding: var(--log-padding);
+  background: var(--log-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--neu-shadow-inset);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  display: flex;
+  flex-direction: column;
+}
+
+.log-entry {
+  padding: var(--space-sm);
+}
+
+.log-entry p {
+  margin: 0 0 var(--space-sm);
+}
+
+.log-entry p:last-child {
+  margin-bottom: 0;
+}
+
+#dnd-game-adventure-log hr {
+  border: none;
+  border-top: 1px dashed var(--text-secondary);
+  opacity: 0.3;
+  margin: 20px 0;
+}
+
+/* Custom Scrollbar */
+#dnd-game-adventure-log::-webkit-scrollbar {
+  width: 8px;
+}
+
+#dnd-game-adventure-log::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 10px;
+}
+
+#dnd-game-adventure-log::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+}
+
+#dnd-game-adventure-log::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* ========================================
+   TEXT STYLING
+   ======================================== */
+
+.interactive-item {
+  color: var(--color-gold);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.puzzle-item-text {
+  color: var(--color-gold);
+  font-weight: var(--font-weight-bold);
+}
+
+.combat-text {
+  color: var(--color-combat);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========================================
+   INPUT BAR
+   ======================================== */
+
+#dnd-game-input-bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+#dnd-game-command-ui-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-sm);
+}
+
+#dnd-game-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#dnd-game-prompt-icon {
+  position: absolute;
+  left: var(--space-lg);
+  color: var(--text-secondary);
+  pointer-events: none;
+  z-index: var(--z-base);
+}
+
+#dnd-game-command-input {
+  width: 100%;
+  padding: var(--input-padding);
+  font-size: var(--font-size-base);
+  box-sizing: border-box;
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
+  box-shadow: var(--neu-shadow-inset);
+  outline: none;
+  transition: box-shadow var(--transition-base),
+    background-color var(--transition-theme), color var(--transition-theme);
+}
+
+#dnd-game-command-input:focus {
+  box-shadow: var(--neu-shadow-inset), var(--input-focus-ring);
+  border-color: var(--color-interactive);
+}
+
+/* ========================================
+   BUTTONS - HEADER
+   ======================================== */
+
+.dnd-game-header-button {
+  background: linear-gradient(
+    145deg,
+    var(--button-bg-start),
+    var(--button-bg-end)
+  );
+  color: var(--button-text);
+  border: var(--border-width) solid var(--button-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--button-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--button-size-md);
+  height: var(--button-size-md);
+}
+
+.dnd-game-header-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--button-shadow-hover);
+}
+
+.dnd-game-header-button:active {
+  box-shadow: var(--button-shadow-active);
+  transform: translateY(1px);
+}
+
+.dnd-game-header-button svg {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+  opacity: 0.8;
+}
+
+.dnd-game-header-button:hover svg {
+  opacity: 1;
+}
+
+/* ========================================
+   LEVEL DISPLAY
+   ======================================== */
+
+#dnd-game-level-display {
+  position: relative;
+  width: var(--level-display-size);
+  height: var(--level-display-size);
+  border: var(--level-display-border);
+  box-shadow: var(--neu-shadow);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: transform var(--transition-base), border-color 0.5s ease;
+}
+
+#dnd-game-level-display:hover {
+  transform: scale(1.05);
+}
+
+#stats-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  box-shadow: var(--neu-shadow-inset);
+}
+
+#stats-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.level-num {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.level-label {
+  font-size: 0.5em;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+/* ========================================
+   GUIDE BUTTONS
+   ======================================== */
+
+#dnd-game-guide-buttons {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.dnd-game-guide-btn {
+  background: linear-gradient(
+    145deg,
+    var(--button-bg-start),
+    var(--button-bg-end)
+  );
+  color: #524332;
+  padding: 6px var(--space-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  box-shadow: var(--button-shadow);
+  height: var(--guide-button-height);
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid rgba(118, 93, 72, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--guide-button-min-width);
+}
+
+.dnd-game-guide-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--button-shadow-hover);
+}
+
+.dnd-game-guide-btn:active {
+  box-shadow: var(--button-shadow-active);
+  transform: translateY(1px);
+}
+
+/* Guide Button Variants */
+.dnd-game-guide-btn.attack-btn {
+  background: var(--color-combat);
+  color: white;
+  border-color: transparent;
+  font-weight: var(--font-weight-bold);
+}
+
+.riddle-answer-btn {
+  background: var(--color-interactive);
+  color: black;
+  border-color: var(--color-interactive);
+}
+
+.dnd-game-guide-btn.search-btn,
+.dnd-game-guide-btn.traveled-btn {
+  background: #2f2f2f;
+  border-color: #555;
+  color: #f8f8f8;
+}
+
+body.dark-mode .dnd-game-guide-btn.search-btn,
+body.dark-mode .dnd-game-guide-btn.traveled-btn {
+  color: #f8f8f8;
+}
+
+/* Featured Action Button - TAKE LANTERN - v2.1 with bright blue bloom */
+.dnd-game-guide-btn.featured-action {
+  background: linear-gradient(145deg, #ffd700, #ffed4e) !important;
+  color: #1a1a1a !important;
+  border: 2px solid #00bfff !important;
+  font-weight: var(--font-weight-bold) !important;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4), 0 0 30px rgba(0, 191, 255, 0.6) !important;
+  animation: pulse-glow 1.5s ease-in-out infinite !important;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dnd-game-guide-btn.featured-action::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    rgba(0, 191, 255, 0.9),
+    rgba(0, 150, 255, 0.4) 50%,
+    transparent 70%
+  );
+  animation: blue-bloom 1.5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(16px);
+}
+
+.dnd-game-guide-btn.featured-action:hover {
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7), 0 0 50px rgba(0, 191, 255, 0.9) !important;
+  transform: translateY(-2px);
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4),
+      0 0 40px rgba(0, 191, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.7), 0 0 70px rgba(0, 191, 255, 1);
+  }
+}
+
+@keyframes blue-bloom {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+/* ========================================
+   MODALS
+   ======================================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: var(--z-modal);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-overlay);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-panel {
+  background-color: var(--panel-bg);
+  padding: var(--modal-padding);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: var(--modal-max-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  position: relative;
+  border: var(--border-width) solid var(--border-color);
+}
+
+.modal-close-btn {
+  color: var(--text-secondary);
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  line-height: var(--line-height-tight);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+}
+
+.modal-title {
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+/* ========================================
+   INVENTORY
+   ======================================== */
+
+#dnd-game-inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--inventory-slot-size), 1fr)
+  );
+  gap: var(--inventory-grid-gap);
+  background: var(--log-bg);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--neu-shadow-inset);
+  max-height: var(--inventory-max-height);
+  overflow-y: auto;
+}
+
+.inventory-slot {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--bg-main);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--neu-shadow-inset);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  padding: var(--space-xs);
+  text-align: center;
+  color: var(--text-primary);
+  overflow: hidden;
+  word-break: break-word;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color var(--transition-base);
+}
+
+.inventory-slot.selected {
+  border-color: var(--color-gold);
+}
+
+#dnd-game-gold-counter {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========================================
+   CHARACTER PANEL
+   ======================================== */
+
+#dnd-game-character-panel-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.equipment-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.equipment-slot {
+  width: var(--equipment-slot-size);
+  height: var(--equipment-slot-size);
+  font-size: var(--font-size-2xl);
+}
+
+.samurai-silhouette {
+  width: 100%;
+  height: auto;
+  fill: var(--text-secondary);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+.damage-flash {
+  animation: damage-flash 0.5s ease-out;
+}
+
+.damage-indicator {
+  --flash-color: var(--color-danger);
+  animation: border-flash 0.7s ease-out;
+}
+
+.heal-indicator {
+  --flash-color: var(--color-success);
+  animation: border-flash 0.7s ease-out;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 480px) {
+  #dnd-game-app-container {
+    padding: var(--space-sm);
+  }
+
+  #dnd-game-prompt-container {
+    padding: var(--space-lg);
+    max-width: 100%;
+  }
+
+  #dnd-game-input-bar {
+    grid-template-columns: auto 1fr;
+    gap: var(--space-sm);
+  }
+
+  #dnd-game-command-ui-buttons {
+    grid-column: 1 / -1;
+    justify-content: center;
+    order: -1;
+  }
+
+  .dnd-game-guide-btn {
+    font-size: var(--font-size-xs);
+    padding: 4px var(--space-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+}
