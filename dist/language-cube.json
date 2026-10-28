@@ -1,0 +1,760 @@
+{
+ "format": "origami-language-cube",
+ "version": 1,
+ "pending": [
+  "social.aboutyou",
+  "social.compliment",
+  "social.greet",
+  "social.howareyou",
+  "social.insult",
+  "social.joke",
+  "social.play",
+  "social.silly",
+  "vent.sad"
+ ],
+ "fallbackCell": "rasa.general",
+ "buckets": [
+  {
+   "cell": "vent.sad",
+   "priority": 0,
+   "terms": [
+    "bad day",
+    "can i tell you something",
+    "dont hurt me",
+    "feeling sad",
+    "he died",
+    "i am lonely",
+    "i am sad",
+    "i am scared",
+    "i am upset",
+    "i don't have friends",
+    "i dont have friends",
+    "i feel awful",
+    "i feel bad",
+    "i feel terrible",
+    "i had a bad day",
+    "i have no friends",
+    "i need to talk",
+    "i want to talk about something",
+    "i'm crying",
+    "i'm lonely",
+    "i'm not ok",
+    "i'm sad",
+    "i'm scared",
+    "i'm upset",
+    "im crying",
+    "im lonely",
+    "im not ok",
+    "im not okay",
+    "im sad",
+    "im scared",
+    "im upset",
+    "leave me alone",
+    "my cat died",
+    "my dog died",
+    "my pet died",
+    "no one likes me",
+    "nobody likes me",
+    "nobody likes me at school",
+    "please don't hurt me",
+    "please dont hurt me",
+    "she died",
+    "so lonely",
+    "so sad",
+    "so scared",
+    "they died",
+    "worst day"
+   ]
+  },
+  {
+   "cell": "social.silly",
+   "priority": 5,
+   "terms": [
+    "blah",
+    "brrr",
+    "haha",
+    "hehe",
+    "lmao",
+    "lol",
+    "meh",
+    "omg",
+    "re:(^|\\s)([a-z])\\2{2,}(\\s|$)",
+    "re:^[a-z]{0,2}[asdfghjkl;']{5,}$",
+    "wow"
+   ]
+  },
+  {
+   "cell": "social.aboutyou",
+   "priority": 10,
+   "terms": [
+    "how old are you",
+    "what are you",
+    "what's your name",
+    "whats your name",
+    "where are you from",
+    "who are you",
+    "why are you"
+   ]
+  },
+  {
+   "cell": "social.compliment",
+   "priority": 10,
+   "terms": [
+    "i like you",
+    "i like your",
+    "i love you",
+    "i love your",
+    "nice hat",
+    "you are cool",
+    "you are nice",
+    "you look nice",
+    "you're cool",
+    "youre cool",
+    "youre nice"
+   ]
+  },
+  {
+   "cell": "social.greet",
+   "priority": 10,
+   "terms": [
+    "good evening",
+    "good morning",
+    "greetings",
+    "hello",
+    "hey",
+    "hi",
+    "hiya",
+    "howdy",
+    "sup",
+    "yo"
+   ]
+  },
+  {
+   "cell": "social.howareyou",
+   "priority": 10,
+   "terms": [
+    "are you alright",
+    "are you ok",
+    "are you okay",
+    "how are you",
+    "how's it going",
+    "hows it going",
+    "you alright"
+   ]
+  },
+  {
+   "cell": "social.insult",
+   "priority": 10,
+   "terms": [
+    "i hate this",
+    "i hate you",
+    "shut up",
+    "stupid goblin",
+    "you are dumb",
+    "you are stupid",
+    "you suck",
+    "you're stupid",
+    "youre dumb",
+    "youre stupid"
+   ]
+  },
+  {
+   "cell": "social.joke",
+   "priority": 10,
+   "terms": [
+    "a joke",
+    "joke",
+    "know any jokes",
+    "make me laugh",
+    "say something funny",
+    "tell me a joke"
+   ]
+  },
+  {
+   "cell": "social.play",
+   "priority": 10,
+   "terms": [
+    "be my friend",
+    "do you want to play",
+    "let's play",
+    "lets play",
+    "play with me",
+    "wanna play"
+   ]
+  },
+  {
+   "cell": "rasa.club",
+   "priority": 20,
+   "terms": [
+    "club",
+    "diplomacy",
+    "spiked club"
+   ]
+  },
+  {
+   "cell": "rasa.compliance",
+   "priority": 20,
+   "terms": [
+    "accessible",
+    "ada",
+    "blood pool",
+    "boiled blood",
+    "compliance"
+   ]
+  },
+  {
+   "cell": "rasa.developer",
+   "priority": 20,
+   "terms": [
+    "developer",
+    "programmer",
+    "sanity",
+    "who made this",
+    "who made you"
+   ]
+  },
+  {
+   "cell": "rasa.gambling",
+   "priority": 20,
+   "terms": [
+    "bet",
+    "cash",
+    "chips",
+    "coins",
+    "deal me in",
+    "dice",
+    "gamble",
+    "gambling",
+    "gold",
+    "let's gamble",
+    "lets gamble",
+    "roll the dice",
+    "wager"
+   ]
+  },
+  {
+   "cell": "rasa.legal",
+   "priority": 20,
+   "terms": [
+    "contract",
+    "court",
+    "law",
+    "lawyer",
+    "lawyers",
+    "legal",
+    "sign",
+    "sue",
+    "terms"
+   ]
+  },
+  {
+   "cell": "rasa.onibaba",
+   "priority": 20,
+   "terms": [
+    "boss",
+    "dragon",
+    "naga",
+    "oni baba",
+    "oni-baba",
+    "onibaba",
+    "oyabun"
+   ]
+  },
+  {
+   "cell": "rasa.pp",
+   "priority": 20,
+   "terms": [
+    "dog",
+    "good boy",
+    "inu",
+    "pp",
+    "spectral inu"
+   ]
+  },
+  {
+   "cell": "rasa.soul",
+   "priority": 20,
+   "terms": [
+    "brokerage",
+    "sell my soul",
+    "sell you my soul",
+    "soul",
+    "souls"
+   ]
+  }
+ ],
+ "cells": {
+  "rasa.club": [
+   {
+    "en": "If a Fire Imp gets loose in your graphics card, please do not call customer service. Our customer service department is a bat named 'Diplomacy'.",
+    "ja": null
+   },
+   {
+    "en": "If a spiked club beats you in a debate, that is called 'Diplomacy' in action. Highly effective legal tool.",
+    "ja": null
+   }
+  ],
+  "rasa.compliance": [
+   {
+    "en": "The boiled blood pools are NOT ADA compliant. If you fall in, please do so in a neat, organized fashion.",
+    "ja": null
+   },
+   {
+    "en": "You want an ADA-compliant dungeon? Fine, we'll install a ramp into the bottomless pit of eternal despair.",
+    "ja": null
+   },
+   {
+    "en": "The customer service department has been relocated to a bottomless pit. Please jump in if you have any feedback.",
+    "ja": null
+   }
+  ],
+  "rasa.developer": [
+   {
+    "en": "Did you read the Terms? Or did you just click accept because your dopamine-addled brain wants to fold Goblins immediately?",
+    "ja": null
+   },
+   {
+    "en": "Our terms are strictly written in demonic hobbledygook to confuse you into giving us permission to monitor your browser history.",
+    "ja": null
+   },
+   {
+    "en": "Our game is free to play, but your sanity is the price of admission. Enjoy the folding corridors!",
+    "ja": null
+   },
+   {
+    "en": "The syndicate does not accept liability for spiritual corruption, demonic possession, or sudden urges to fold paper.",
+    "ja": null
+   }
+  ],
+  "rasa.gambling": [
+   {
+    "en": "Virtual chips cannot be cashed out for real cash. Cashed out to where, exactly? Try it and forty crows will narrate the attempt to the entire floor, badly, and the rats will add a chase scene.",
+    "ja": null
+   },
+   {
+    "en": "If you try to bribe me with magic lanterns, I will accept them, but I will still report you to the Ogre taxation office.",
+    "ja": null
+   },
+   {
+    "en": "Microtransactions are for mortal peasants. Down here, you pay with your tears, your sweat, and virtual gold.",
+    "ja": null
+   },
+   {
+    "en": "Are you trying to bargain? The syndicate only bargains in shurikens and lead. Mostly shurikens.",
+    "ja": null
+   },
+   {
+    "en": "If you try to cash out your virtual chips, we will convert them into imaginary gold bars and deliver them to your dreams.",
+    "ja": null
+   },
+   {
+    "en": "The house edge is a law of nature down here, like gravity, only ruder.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "You want odds? The odds are that I keep my job and you keep your interesting stories.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Every chip on that felt has been someone's very best idea. Look how that went.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "I am legally obliged to remind you that luck is not a strategy, a plan, or a defence in Ogre Court.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Bet small, lose small, complain small. It is a whole philosophy and it fits on a napkin.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "The dice are fair. Aggressively fair. Insultingly fair. They do not care about you at all.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Gold spends the same whether you won it or cried about it. We do prefer the crying, for morale.",
+    "ja": null,
+    "draft": true
+   }
+  ],
+  "rasa.general": [
+   {
+    "en": "Section 1 clearly states that if your GPU melts into a spicy nacho cheese puddle, you are solely responsible for cleaning the motherboard.",
+    "ja": null
+   },
+   {
+    "en": "Soul brokerage is currently banned because Ogre compliance officers found out human souls contain trace amounts of microtransactions.",
+    "ja": null
+   },
+   {
+    "en": "Are you trying to sue the syndicate? Our lawyers are Ogres who eat lawsuits for breakfast and use legal briefs as napkins.",
+    "ja": null
+   },
+   {
+    "en": "The boiled blood pools are NOT ADA compliant. If you fall in, please do so in a neat, organized fashion.",
+    "ja": null
+   },
+   {
+    "en": "Virtual chips cannot be cashed out for real cash. Cashed out to where, exactly? Try it and forty crows will narrate the attempt to the entire floor, badly, and the rats will add a chase scene.",
+    "ja": null
+   },
+   {
+    "en": "You want to sell your soul for three more blackjack chips? The soul market crashed, buddy. Yours is only worth a moldy rice ball.",
+    "ja": null
+   },
+   {
+    "en": "If a Fire Imp gets loose in your graphics card, please do not call customer service. Our customer service department is a bat named 'Diplomacy'.",
+    "ja": null
+   },
+   {
+    "en": "Oni-Baba is currently drinking cheap sake and rewriting the universe. Please hold all existential complaints.",
+    "ja": null
+   },
+   {
+    "en": "Did you read the Terms? Or did you just click accept because your dopamine-addled brain wants to fold Goblins immediately?",
+    "ja": null
+   },
+   {
+    "en": "If you try to bribe me with magic lanterns, I will accept them, but I will still report you to the Ogre taxation office.",
+    "ja": null
+   },
+   {
+    "en": "Yes, Ogre Court is real, and the judge uses a spiked club as a gavel. Court sessions are very fast, and appeals are very painful.",
+    "ja": null
+   },
+   {
+    "en": "Microtransactions are severely prohibited in the underworld. We have standards. We only scam you to your face with pure RNG.",
+    "ja": null
+   },
+   {
+    "en": "If a river demon steals your soul-jewel, please submit a Triplicate Form of Spiritual Loss to the nearest empty wall.",
+    "ja": null
+   },
+   {
+    "en": "Our terms are 100% legally binding in the interplanar tribunal, which means we officially own your Netflix password now.",
+    "ja": null
+   },
+   {
+    "en": "You think you can get wise with us? I've seen Goblins with better legal arguments, and they ended up as floor mats in the Shrine.",
+    "ja": null
+   },
+   {
+    "en": "According to paragraph 4, any bad moods resulting from losing all your coins are fully severable from our liability.",
+    "ja": null
+   },
+   {
+    "en": "The Court of Cosmic Justice has ruled that blind-clicking 'Accept' constitutes a binding pledge to scrub floors with a toothbrush.",
+    "ja": null
+   },
+   {
+    "en": "If a cursed bird-demon steals your wifi, do not panic. They just want to download high-resolution photos of shiny garbage.",
+    "ja": null
+   },
+   {
+    "en": "Yes, we eat lawyers. They are high in sodium but make excellent fuel for the syndicate's heaters.",
+    "ja": null
+   },
+   {
+    "en": "If your adventure slot gets corrupted because you forgot to save, that is a spiritual skill issue. Click SAVE next time, nerd!",
+    "ja": null
+   },
+   {
+    "en": "Our terms are strictly written in demonic hobbledygook to confuse you into giving us permission to monitor your browser history.",
+    "ja": null
+   },
+   {
+    "en": "Microtransactions are for mortal peasants. Down here, you pay with your tears, your sweat, and virtual gold.",
+    "ja": null
+   },
+   {
+    "en": "A river demon once tried to sue us for copyright infringement. He is now a decorative water fountain in Room 2.",
+    "ja": null
+   },
+   {
+    "en": "According to Section 12, your soul's collateral value is officially declared to be lower than a half-eaten turnip.",
+    "ja": null
+   },
+   {
+    "en": "No blood oaths are enforced, but if you break the terms, the boys will use your katana as a letter opener.",
+    "ja": null
+   },
+   {
+    "en": "If a banished Ogre prince emails you asking for 5,000 gold coins, please send them. It builds character.",
+    "ja": null
+   },
+   {
+    "en": "The customer service department has been relocated to a bottomless pit. Please jump in if you have any feedback.",
+    "ja": null
+   },
+   {
+    "en": "Our terms are so legally robust that even Onibaba's white naga form couldn't slither out of them.",
+    "ja": null
+   },
+   {
+    "en": "Microtransactions are a sin, and we already have enough sins down here to keep the heating running for a millennium.",
+    "ja": null
+   },
+   {
+    "en": "Are you trying to bargain? The syndicate only bargains in shurikens and lead. Mostly shurikens.",
+    "ja": null
+   },
+   {
+    "en": "If you experience high thread concurrency in your PPU, please apply ice directly to your temples.",
+    "ja": null
+   },
+   {
+    "en": "If the Dragon Naga Oyabun turns black, please do not make eye contact. She is having a bad hair day.",
+    "ja": null
+   },
+   {
+    "en": "You want an ADA-compliant dungeon? Fine, we'll install a ramp into the bottomless pit of eternal despair.",
+    "ja": null
+   },
+   {
+    "en": "According to cosmic law, typing 'PP' in the console automatically registers you as a certified friend of the Spectral Inu.",
+    "ja": null
+   },
+   {
+    "en": "If a Goblin steals your shoe, you may file a complaint. The Goblin will then be awarded a second shoe for his excellent theft.",
+    "ja": null
+   },
+   {
+    "en": "Yes, the tax code of the underworld is 4,000 pages of pure torment. It was designed by a former corporate accountant.",
+    "ja": null
+   },
+   {
+    "en": "If a shadow assassin is sent to spy on you, please offer them some tea. They are very polite if fed regularly.",
+    "ja": null
+   },
+   {
+    "en": "Section 7 clearly states that if any part of these terms is severable, we will sever your pinky finger to match.",
+    "ja": null
+   },
+   {
+    "en": "Our game is free to play, but your sanity is the price of admission. Enjoy the folding corridors!",
+    "ja": null
+   },
+   {
+    "en": "If you try to cash out your virtual chips, we will convert them into imaginary gold bars and deliver them to your dreams.",
+    "ja": null
+   },
+   {
+    "en": "Onibaba's white naga form represents peace, love, and a 15% discount on all vending machine purchases.",
+    "ja": null
+   },
+   {
+    "en": "Onibaba's black naga form represents rage, destruction, and a 100% tax on breathing syndicate oxygen.",
+    "ja": null
+   },
+   {
+    "en": "Our lawyers have successfully argued that gravity is merely a suggestion in the Folded Throne room.",
+    "ja": null
+   },
+   {
+    "en": "If you get lost in the Foyer, please consult the Companion Goblin. He will point you towards the nearest hazard.",
+    "ja": null
+   },
+   {
+    "en": "According to paragraph 9, your microtransaction internet history is currently being used as high-severity comedy down here.",
+    "ja": null
+   },
+   {
+    "en": "If a spiked club beats you in a debate, that is called 'Diplomacy' in action. Highly effective legal tool.",
+    "ja": null
+   },
+   {
+    "en": "The syndicate does not accept liability for spiritual corruption, demonic possession, or sudden urges to fold paper.",
+    "ja": null
+   },
+   {
+    "en": "If the terms are too long to read, we suggest printing them out, burning them, and inhaling the ashes for instant legal knowledge.",
+    "ja": null
+   },
+   {
+    "en": "Microtransactions are banned because they lack the artistic integrity of a well-executed syndicate heist.",
+    "ja": null
+   },
+   {
+    "en": "Thank you for reading the terms. Your soul has been queued for processing. Current wait time: 400 years.",
+    "ja": null
+   }
+  ],
+  "rasa.legal": [
+   {
+    "en": "Are you trying to sue the syndicate? Our lawyers are Ogres who eat lawsuits for breakfast and use legal briefs as napkins.",
+    "ja": null
+   },
+   {
+    "en": "Yes, Ogre Court is real, and the judge uses a spiked club as a gavel. Court sessions are very fast, and appeals are very painful.",
+    "ja": null
+   },
+   {
+    "en": "Our terms are 100% legally binding in the interplanar tribunal, which means we officially own your Netflix password now.",
+    "ja": null
+   },
+   {
+    "en": "The Court of Cosmic Justice has ruled that blind-clicking 'Accept' constitutes a binding pledge to scrub floors with a toothbrush.",
+    "ja": null
+   },
+   {
+    "en": "Yes, we eat lawyers. They are high in sodium but make excellent fuel for the syndicate's heaters.",
+    "ja": null
+   },
+   {
+    "en": "Our lawyers have successfully argued that gravity is merely a suggestion in the Folded Throne room.",
+    "ja": null
+   },
+   {
+    "en": "You may absolutely represent yourself in Ogre Court. Bring snacks. It goes badly and it goes long.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "That is not a loophole, that is a doorway, and the syndicate charges rent on doorways.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "I have read our terms four hundred times and I still find new ways we are allowed to be like this.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Objection noted, filed, laminated, and used as a coaster. The syndicate values your input.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Everything in this dungeon is legal. We wrote the laws down here. That is the whole trick.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "You cannot sue a hallway. I have tried. The hallway won and now I owe the hallway money.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Contracts are just promises with a lawyer standing behind them holding a club. Ours has two clubs.",
+    "ja": null,
+    "draft": true
+   }
+  ],
+  "rasa.onibaba": [
+   {
+    "en": "Oni-Baba is currently drinking cheap sake and rewriting the universe. Please hold all existential complaints.",
+    "ja": null
+   },
+   {
+    "en": "Our terms are so legally robust that even Onibaba's white naga form couldn't slither out of them.",
+    "ja": null
+   },
+   {
+    "en": "If the Dragon Naga Oyabun turns black, please do not make eye contact. She is having a bad hair day.",
+    "ja": null
+   },
+   {
+    "en": "Onibaba's white naga form represents peace, love, and a 15% discount on all vending machine purchases.",
+    "ja": null
+   },
+   {
+    "en": "Onibaba's black naga form represents rage, destruction, and a 100% tax on breathing syndicate oxygen.",
+    "ja": null
+   },
+   {
+    "en": "Oni-Baba sees through Starlette's eyes, so smile. You are already on the record.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "The old one does not shout. That is what makes her terrifying and also an excellent manager.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "White naga is a good day. Black naga is a day the paperwork does itself out of fear.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Do not ask her age. Do not ask her plans. Do ask about the sake — she likes that one.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Everything in this dungeon belongs to Oni-Baba, including, on a technicality, your opinions about it.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "She rewrote the universe once and only changed three things. Nobody will tell me which three.",
+    "ja": null,
+    "draft": true
+   }
+  ],
+  "rasa.pp": [
+   {
+    "en": "According to cosmic law, typing 'PP' in the console automatically registers you as a certified friend of the Spectral Inu.",
+    "ja": null
+   },
+   {
+    "en": "The Spectral Inu is the only member of this syndicate with a clean record. It is a dog. It cannot sign things.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Yes, you may pet the ghost dog. No, I will not put that in writing.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "The Inu once ate a subpoena. The case was dismissed. We now consider it senior counsel.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "Good boy is a legally recognised title down here, and he has held it longer than I have held mine.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "That dog has never lost an argument, chiefly because it has never had one. Study the technique.",
+    "ja": null,
+    "draft": true
+   },
+   {
+    "en": "The Inu gets a paw print on every contract. It is not required. Nobody has the heart to say so.",
+    "ja": null,
+    "draft": true
+   }
+  ],
+  "rasa.soul": [
+   {
+    "en": "Soul brokerage is currently banned because Ogre compliance officers found out human souls contain trace amounts of microtransactions.",
+    "ja": null
+   },
+   {
+    "en": "You want to sell your soul for three more blackjack chips? The soul market crashed, buddy. Yours is only worth a moldy rice ball.",
+    "ja": null
+   },
+   {
+    "en": "According to Section 12, your soul's collateral value is officially declared to be lower than a half-eaten turnip.",
+    "ja": null
+   },
+   {
+    "en": "According to cosmic law, typing 'PP' in the console automatically registers you as a certified friend of the Spectral Inu.",
+    "ja": null
+   },
+   {
+    "en": "Thank you for reading the terms. Your soul has been queued for processing. Current wait time: 400 years.",
+    "ja": null
+   }
+  ]
+ }
+}

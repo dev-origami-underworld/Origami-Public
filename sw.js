@@ -37,7 +37,7 @@
  *
  * BUMPING `CACHE` DROPS EVERY OLD ENTRY — the same one-line ritual, for the same reason.
  */
-const CACHE = "origami-v8-2026-10-21-card-compile-finish-2743";
+const CACHE = "origami-v8-2026-10-27-8.4.3336-tap-pay";
 
 // Anything on this list is CODE and must never be served stale while a server can be reached. [REF#CR-00103]
 const _isCode = (url) => /\.(html|js|mjs|json|css)(\?|$)/i.test(url);

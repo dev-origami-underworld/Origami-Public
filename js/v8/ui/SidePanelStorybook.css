@@ -1,0 +1,58 @@
+/* Mark: restore the original inline panel skin. This sheet only replaces portraits with results.
+   Retained filename keeps existing asset references stable; Storybook styling is retired. */
+#encounter-zone.combat-feedback-panels { top: 0; transform: none; --sp-ui-gap: 20px; }
+#encounter-zone.combat-feedback-panels :is(#pax-console, #action-rail) { overflow: hidden !important; }
+#monster-avatar-container { display: flex !important; align-items: center; justify-content: center; }
+#monster-avatar-container .portrait-image {
+    display: block;
+    width: 88%;
+    height: 94%;
+    object-fit: contain;
+    object-position: center;
+    pointer-events: none;
+}
+#player-avatar-container .portrait-image {
+    display: block;
+    width: 86%;
+    height: 94%;
+    object-fit: contain;
+    object-position: center;
+    pointer-events: none;
+}
+body.portrait-images-active :is(#combat-result-card, #combat-result-idle) { display: none !important; }
+#combat-result-card, #combat-result-idle {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 6px;
+    padding: 5px;
+    border: 1px solid rgba(34,211,238,.25);
+    border-radius: 8px;
+    background: rgba(10,20,26,.04);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,.15);
+    color: inherit;
+    text-align: center;
+    overflow: hidden;
+}
+#combat-result-card[hidden], #combat-result-idle[hidden], #combat-result-incoming[hidden] { display: none; }
+#combat-result-idle { display: flex; align-items: center; justify-content: center; font-size: 10px; }
+.result-kicker { font-size: 9px; line-height: 1.3; color: var(--color-text-dim); }
+#combat-result-story { margin: 4px 0; font-size: 10px; line-height: 1.3; }
+.result-headline { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 4px; }
+.result-outcome { font-size: 10px; line-height: 1.3; font-weight: 800; }
+.result-damage { font: 900 18px/1.2 monospace; font-variant-numeric: tabular-nums; }
+.result-detail, .result-incoming { font-size: 9px; line-height: 1.3; }
+.result-incoming { margin-top: 4px; padding-top: 4px; border-top: 1px solid rgba(128,128,128,.25); white-space: pre-line; }
+#combat-result-card :is(p, .result-detail, .result-damage):empty { display: none; }
+#combat-result-card :is(#combat-result-story, .result-detail, .result-incoming):not(:empty):not([hidden]) {
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+    max-height: 2.6em; overflow: hidden; overflow-wrap: anywhere;
+}
+.result-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.portrait-controls-label { font: 800 12px/1 sans-serif; letter-spacing: .08em; color: inherit; pointer-events: none; }
+#chat-band .cb-narr[data-kind="combat"]:not(:empty) {
+    font-size: clamp(11px, 1.15vw, 13px); line-height: 1.3; font-style: normal;
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+    max-height: 2.6em; overflow: hidden; overflow-wrap: anywhere;
+}

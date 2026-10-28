@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /vendor/
+Disallow: /data/
+Disallow: /dist/
+Sitemap: https://dev-ideasoftware-studio.github.io/Origami-Release/sitemap.xml
